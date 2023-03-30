@@ -1,0 +1,10 @@
+#main-header{
+    text-align: center;
+}
+#subtitle-area{
+    background-color: yellow;
+    border-top: 3px solid orange;
+    height: 50px;
+    line-height: 50px;
+
+}
