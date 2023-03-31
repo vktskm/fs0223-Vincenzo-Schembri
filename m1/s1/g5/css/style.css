@@ -1,0 +1,89 @@
+body { 
+    font-family:'Open Sans';
+    font-size: 1.2rem;
+    line-height: 1.65;
+    padding: 15px;
+    background-position: center center;
+    text-align:center;
+}
+
+* {box-sizing: border-box;}
+hr {display: none;} 
+
+
+
+/* Header */
+header #logo{
+    
+    background: black;
+
+}
+
+header #sfondo {
+     
+    background-image: url('../images/banner.jpg');
+    height:auto;
+   
+    box-shadow: 0 3px 3px #444;
+
+}
+
+header div h1{
+    color: blue;
+    font-size: 2.6rem;
+    font-weight: bold;
+    
+}
+
+header div span{
+    background: red;
+    color: white;
+}
+
+header div h3{
+    color: blue;
+    font-size: 1.6rem;
+    font-weight: bold;     
+}
+
+header div #img-rotonda{
+    border-radius: 100%;
+}
+
+/* Main */
+main section{
+
+    background:red;
+    color: white;
+}h2
+
+main section h2{
+    font-size: 2.0rem;
+    font-weight: bold;  
+}
+
+main article div h3{
+    color: blue;
+    font-size: 1.6rem;
+    font-weight: bold;  
+}
+
+/* footer */
+footer{
+    background: #25a2c3;
+    color: white;
+}
+
+footer h2 {
+    font-size: 2.0rem;
+    font-weight: bold;  
+}
+
+footer span a{
+    color: white;
+
+}
+
+footer p a{
+    color: white;
+}
