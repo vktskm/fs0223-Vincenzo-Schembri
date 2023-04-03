@@ -4,7 +4,6 @@ body {
     font-size: 1.2rem;
     line-height: 1.65;
     padding: 15px;
-    background-position: center center;
     text-align:center;
     margin-top: auto;
     margin-bottom: auto;
@@ -22,6 +21,7 @@ header #sfondo {
      
     background-image: url('../images/banner.jpg');
     padding: 2em 1.5em;
+    background-position: center ;
 
 }
 
