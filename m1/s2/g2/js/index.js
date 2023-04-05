@@ -38,8 +38,8 @@ Se rimandato da una logica booleana indica false.
  Crea una variable chiamata "name" e assegna ad essa il tuo nome, 
  sotto forma di stringa.
 */
-let name="Vincenzo";
-console.log(name);
+let nome="Vincenzo";
+console.log(nome);
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 /* ESERCIZIO 3
@@ -73,8 +73,8 @@ console.log(x);
   con il costrutto const.
 */
 
-name="Schembri";
-console.log(name);
+nome="Schembri";
+console.log(nome);
 
 /*const NOMECONST = "Angelo"
 console.log(NOMECONST);
