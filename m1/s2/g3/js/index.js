@@ -137,7 +137,7 @@ se inserisco un numero divero a 5 compare not equal  */
 
   if (sconto > 50) {
     console.log("Checkout" + sconto);
-
+    console.log("Il costo di spedizione è gratuito")
   } else {
     console.log("La tua spesa è di" + '' + sconto);
     console.log("Il costo di spedizione è di 10");
@@ -153,29 +153,30 @@ se inserisco un numero divero a 5 compare not equal  */
   Alla fine mostra il risultato in console.
 */
 {
-  let a1 = 12;
-  let a2 = 19;
-  let a3 = 27;
+  console.log("--------------------------\n ---------------");
+  let a = 12;
+  let b = 19;
+  let c = 27;
   let max = 0;
   let min = 0;
   let med = 0;
-  if (a1 > a2) {
-    max = a1;
-    min = a2;
+  //trovo il massimo e il minimo fra a e b
+  if (a > b) {
+    max = a;
+    min = b;
   } else {
-    max = a2;
-    min = a1;
+    max = b;
+    min = a;
   }
-
-
-  if (a3 > max) {
+  
+  if (c > max) {
     med = max;
-    max = a3;
-  } else if (a3 < min) {
+    max = c;
+  } else if (c < min) {
     med = min;
-    min = a3;
+    min = c;
   } else {
-    med = a3;
+    med = c;
   }
 
   console.log(max);
@@ -226,7 +227,7 @@ se inserisco un numero divero a 5 compare not equal  */
 /* ESERCIZIO 10
   Modifica la logica del seguente algoritmo in modo che mostri in console il messaggio 
   corretto in ogni circostanza.
-
+ 
   let val = 7
   if (val < 10) {
       console.log("Meno di 10");
@@ -236,15 +237,16 @@ se inserisco un numero divero a 5 compare not equal  */
       console.log("Uguale a 10 o maggiore");
     }
 */
-{let val = 7
+{
+  let val = 7
   if (val < 5) {
-      console.log("Meno di 5");
-    } else if (val < 10) {
-      console.log("Meno di 10");
-    } else  {
-      console.log("Uguale a 10 o maggiore");
-    }
+    console.log("Meno di 5");
+  } else if (val < 10) {
+    console.log("Meno di 10");
+  } else {
+    console.log("Uguale a 10 o maggiore");
   }
+}
 
 
 /* ESERCIZIO 11
@@ -252,15 +254,15 @@ se inserisco un numero divero a 5 compare not equal  */
   il cui valore sarà "Toronto".
 */
 {
-const me = {
-  name: 'John',
-  lastName: 'Doe',
-  skills: ['javascript', 'html', 'css'],
-}
+  const me = {
+    name: 'John',
+    lastName: 'Doe',
+    skills: ['javascript', 'html', 'css'],
+  }
 
-me.city='Toronto';
-//prototype viene usato per modificare i costruttori
-console.log(me);
+  me.city = 'Toronto';
+  //prototype viene usato per modificare i costruttori
+  console.log(me);
 }
 
 
@@ -274,11 +276,11 @@ console.log(me);
     lastName: 'Doe',
     skills: ['javascript', 'html', 'css'],
   }
-  
+
   delete me.lastName;
- 
+
   console.log(me);
-  }
+}
 
 /* ESERCIZIO 13
   Lavorando sempre sull'oggetto precedentemente fornito, scrivi del codice per
@@ -290,12 +292,12 @@ console.log(me);
     lastName: 'Doe',
     skills: ['javascript', 'html', 'css'],
   }
-  
+
   me.skills.pop();
- 
+
   // me.skills.splice(1, 2); limit test
   console.log(me);
-  }
+}
 
 
 /* ESERCIZIO 14
@@ -303,16 +305,16 @@ console.log(me);
   successivamente con i numeri da 1 a 10.
 */
 {
-let arr = []
+  let arr = []
 
-/*
-arr.push(1);
-console.log(arr);
-abbiamo provato il metodo push su un singolo elemento per poi andare ad applicarlo
-agli altri elementi dell'esercizio 
-*/
-arr.push(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
-console.log(arr);
+  /*
+  arr.push(1);
+  console.log(arr);
+  abbiamo provato il metodo push su un singolo elemento per poi andare ad applicarlo
+  agli altri elementi dell'esercizio 
+  */
+  arr.push(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+  console.log(arr);
 }
 
 /* ESERCIZIO 15
@@ -335,5 +337,5 @@ il 100. Però poi miche ci picchia.
 
 
 
-  
+
 
