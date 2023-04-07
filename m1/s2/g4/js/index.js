@@ -142,8 +142,8 @@ let femaleCharacters=[];
  // {name: "Leia Organa",  hair_color: "brown", eye_color: "brown"}]
 
 
-  for(i=0; i<starWarsCharacters.length; i++)
-  {
+ for(i=0; i<starWarsCharacters.length; i++)
+ {
         if(starWarsCharacters[i].gender == "female")
         { femaleCharacters.push({ name : starWarsCharacters[i].name,
           hair_color:starWarsCharacters[i].hair_color,
@@ -210,7 +210,7 @@ while(lunWhile < starWarsCharacters.length)
 }
 
 console.log("La massa totale è : " + massa);
-
+console.log("----------------------------");
 
 /* ESERCIZIO 7
 
@@ -229,24 +229,33 @@ Una volta fatto, modifica la massa di qualche elemento dell'equipaggio
 e vedi se riesci ad ottenere un messaggio diverso.
 */
 
-switch(massa){
-  case massa < 500 :
-       console.log("Ship is under loaded");
-      break;
-  case massa == 500 :
-     console.log("Ship is half loaded");
-      break;
-  case massa <= 700 :
-      console.log("Working: Load is over 700");
-     break;
- case  massa <= 900:
-    console.log("Working: Load is over 900");
-    break;
-case massa > 1000 :
+console.log("Il tipo di dato di massa è")
+console.log(typeof (massa));
+
+/*for(let i=0; i<femaleCharacters.length; i++)
+{
+  if(characters.includes(femaleCharacters[i].name)) characters.splice(characters.indexOf(femaleCharacters[i].name),1)
+}
+console.log(characters);
+*/
+switch(true){
+  case (massa > 1000):
       console.log("DANGER! OVERLOAD ALERT: Jump ship now!");
     break;
+  case (massa < 500):
+       console.log("Ship is under loaded");
+      break;
+  case (massa == 500):
+     console.log("Ship is half loaded");
+      break;
+  case  (massa <= 700):
+      console.log("Working: Load is over 700");
+     break;
+  case ( massa <= 900):
+    console.log("Working: Load is over 900");
+    break;
 
-default:
+  default:
       console.log("ERRORE")
       break;
 }
@@ -298,9 +307,10 @@ for(i=0; i<starWarsCharacters.length ; i++)
 {
   for(j=1; j<starWarsCharacters.length ; j++) 
   {
-       if( starWarsCharacters[i].name == starWarsCharacters[i].name )
+       if( starWarsCharacters[i].name == starWarsCharacters[j].name )
        {
         //elimina 
+         //delete.starWarsCharacters[j];
        }
   }
 }
