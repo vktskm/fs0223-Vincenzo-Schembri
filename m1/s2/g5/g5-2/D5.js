@@ -168,4 +168,30 @@ while(numero != 32)
 console.log("-------ESERCIZIO 10--------");
 const charactersArray = ["g", "n", "u", "z", "d"]
 
+const arrayVuoto = [];
 
+/*
+for(i=0; i < charactersArray.length, i++)
+{
+  switch (charactersArray[i]) {
+    case 'd':
+         arrayVuoto.push(4);
+      break;
+    case 'g':
+        arrayVuoto.push(7);
+      break;
+    case 'n':
+         arrayVuoto.push(12);
+      break;
+    case 'u':
+        arrayVuoto.push(20);
+      break;
+    case 'z':
+        arrayVuoto.push(21);
+      break;
+    
+    default:
+      console.log("Errore");
+}
+
+console.log(arrayVuoto); */
