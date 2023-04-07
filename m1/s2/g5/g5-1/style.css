@@ -43,11 +43,67 @@ main #titolo{
     margin : 1em 1em;
 }
 
-main #
+#im1{
+    
+    background-size:cover ;
+    border-radius: 15px;
+    height: 400 px;
+    width: 350px;
+    box-shadow: 0 5px 5px black;
+    display: inline;
+}
+
+
+#im2{
+    background-image: url(assets/img_2.jpg);
+    background-size:cover ;
+    border-radius: 15px;
+    height: 400 px;
+    width: 350px;
+    box-shadow: 0 5px 5px black;
+    display: inline;
+}
+
+
+#im3{
+    background-image: url(assets/img_3.jpg);
+    background-size:cover ;
+    border-radius: 15px;
+    height: 400 px;
+    width: 350px;
+    box-shadow: 0 5px 5px black;
+    display: inline;
+}
+
+#im4{
+    background-image: url(assets/img_4.jpg);
+    background-size:cover ;
+    border-radius: 15px;
+    height: 400 px;
+    width: 350px;
+    box-shadow: 0 5px 5px black;
+    display: inline;
+}
+
+
+.im{
+    display: flex;
+    justify-content: space-between;
+    background-size:cover ;
+    border-radius: 15px;
+    height: 400 px;
+    width: 350px;
+    box-shadow: 0 5px 5px black;
+    display: inline;
+}
+
+
 
 
 
 /* FOOTER */
+footer
+
 footer div {
 
     background: #222f12;
