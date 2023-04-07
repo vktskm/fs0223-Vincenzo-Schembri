@@ -1,112 +1,169 @@
-body { 
-    font-family:'Open Sans',"";
-    font-size: 1.2rem;
-   
+body {
+    background-color: rgb(237, 229, 229);
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-
-header div {
-
-    background: #222f12;
-}
-
-header nav{
-    background:mediumblue ;
-}
-
-header .menu{
-  font-size: 2.0rem;
-  padding:0.5em 0.5em;
-  color:white;
-}
-
-
-/* MAIN */
 main {
-    margin : 2em 2em;
-    blackground: grey;
-}
-
-main h3{
-    background: orange;
-    color : white;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
     text-align: center;
-    padding: 1em 1em;
-    margin : 1em 1em;
 }
 
-main #titolo{
-    background-image: url('assets/bg-img.png');
-    color : white;
+h1 {
+    color: white;
+    line-height: 1;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 1.3rem;
+}
+
+h3 {
+    font-size: 1.1rem;
+}
+
+h4 {
+    font-size: 1rem;
+}
+
+.header {
+    background-color: #222f3e;
+}
+
+.navigazione {
+    background-color: #364757;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.anav {
+    color: white;
+    text-decoration: none;
+}
+
+.anav:hover {
+    border: 1px solid;
+    border-color: white;
+}
+
+#firstsection {
+    background-color: #d35b46;
+    background-size: cover;
+    padding: 10px;
+
+}
+
+#button {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
     text-align: center;
-    padding: 3em 3em;
-    margin : 1em 1em;
 }
 
-#im1{
-    
-    background-size:cover ;
-    border-radius: 15px;
-    height: 400 px;
-    width: 350px;
-    box-shadow: 0 5px 5px black;
+#second {
+    background-image: url(../img/bg-image.png);
+    background-size: cover;
+    padding: 40px;
+}
+
+.margintop {
+    margin-top: 30px;
+}
+
+#whitetitle {
+    color: white;
+    font-weight: bold;
+}
+
+#third {
+    background-color: white;
+    padding: 20px;
+    text-align: left;
+}
+
+.aline {
     display: inline;
+    font-size: bold;
 }
 
-
-#im2{
-    background-image: url(assets/img_2.jpg);
-    background-size:cover ;
-    border-radius: 15px;
-    height: 400 px;
-    width: 350px;
-    box-shadow: 0 5px 5px black;
-    display: inline;
-}
-
-
-#im3{
-    background-image: url(assets/img_3.jpg);
-    background-size:cover ;
-    border-radius: 15px;
-    height: 400 px;
-    width: 350px;
-    box-shadow: 0 5px 5px black;
-    display: inline;
-}
-
-#im4{
-    background-image: url(assets/img_4.jpg);
-    background-size:cover ;
-    border-radius: 15px;
-    height: 400 px;
-    width: 350px;
-    box-shadow: 0 5px 5px black;
-    display: inline;
-}
-
-
-.im{
+.flex {
     display: flex;
     justify-content: space-between;
-    background-size:cover ;
-    border-radius: 15px;
-    height: 400 px;
-    width: 350px;
-    box-shadow: 0 5px 5px black;
-    display: inline;
+    margin-top: 20px;
 }
 
+#primo {
+    background-image: url(../img/img_1.jpg);
+    background-size: cover;
+    height: 400px;
+    width: 300px;
+    border-radius: 15px;
+    box-shadow: 1px 1px 10px black;
+}
 
+#secondo {
+    background-image: url(../img/img_2.jpg);
+    background-size: cover;
+    height: 400px;
+    width: 300px;
+    border-radius: 15px;
+    box-shadow: 1px 1px 10px black;
+}
 
+#terzo {
+    background-image: url(../img/img_3.jpg);
+    background-size: cover;
+    height: 400px;
+    width: 300px;
+    border-radius: 15px;
+    box-shadow: 1px 1px 10px black;
+}
 
+#quarto {
+    background-image: url(../img/img_4.jpg);
+    background-size: cover;
+    height: 400px;
+    width: 300px;
+    border-radius: 15px;
+    box-shadow: 1px 1px 10px black;
+}
 
-/* FOOTER */
-footer
+.azzurro {
+    color: rgb(42, 126, 139);
+    text-decoration: none;
+    font-weight: bold;
+}
 
-footer div {
+#fourth {
+    background-image: url(../img/img_9.png);
+    background-size: cover;
+    width: 100%;
+    height: 500px;
+}
 
-    background: #222f12;
+#fifth {
+    background-image: url(../img/img_10.png);
+    background-size: cover;
+    width: 100%;
+    height: 500px;
+}
+
+footer {
     text-align: center;
-    padding: 2em 2em;
+}
+
+#tornasu {
+    color: white;
+    font-size: bold;
+}
+
+#footer {
+    background-color: #222f3e;
+    padding: 50px;
 }
