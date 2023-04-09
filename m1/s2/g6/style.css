@@ -1,0 +1,137 @@
+body {
+    background-color: rgb(237, 229, 229);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
+    text-align: center; 
+}
+
+h1 {
+    color: white;
+    line-height: 4.0rem;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+h3 {
+    font-size: 1.2rem;
+}
+
+h4 {
+    font-size: 1rem;
+}
+
+
+
+
+/* HEADER */
+.testa{
+    background-color: #222f3e;
+}
+
+.navig {
+    background-color: #364757;      
+}
+
+.ancor {
+     color: white;
+     text-decoration: none; /*Tolgo la sottolineatura dell'ancoraggio */ 
+     padding: 5px;
+}
+
+.ancor:hover{ /* hover serve ad eliminare i bordi quando non sono sopra il testo */
+    border: 1px solid; 
+    /* border-color: white;  */
+}
+
+/* PRIMO BLOCCO */
+#primoblocco {
+    background-color: #d35b46;
+    background-size: cover;
+    padding: 20px;
+}
+
+#bottone {
+    text-decoration: none; 
+    color: white;
+    font-weight: bold;   
+}
+
+/* SECONDO BLOCCO */
+#secondoblocco {
+    background-image: url(assets/bg-image.png);
+    background-size: cover;
+    padding: 40px;
+}
+
+#sottotitolo {
+    color: white;
+    font-weight: bold;
+}
+
+
+/* TERZO BLOCCO */
+#terzoblocco {
+    background-color: white;
+    padding: 20px;
+    text-align: left;
+}
+/* Mette in linea testo terzo blocco */
+.aline {
+    display: inline;
+    font-size: bold;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+#primo {
+    background-image: url(assets/img_1.jpg);
+    background-size: cover;
+    height: 400px;
+    width: 300px;
+    border-radius: 15px;
+    box-shadow: 1px 1px 10px black;
+}
+
+#secondo {
+    background-image: url(assets/img_2.jpg);
+    background-size: cover;
+    height: 400px;
+    width: 300px;
+    border-radius: 15px;
+    box-shadow: 1px 1px 10px black;
+}
+
+#terzo {
+    background-image: url(assets/img_3.jpg);
+    background-size: cover;
+    height: 400px;
+    width: 300px;
+    border-radius: 15px;
+    box-shadow: 1px 1px 10px black;
+}
+
+#quarto {
+    background-image: url(assets/img_4.jpg);
+    background-size: cover;
+    height: 400px;
+    width: 300px;
+    border-radius: 15px;
+    box-shadow: 1px 1px 10px black;
+}
+
+
+
