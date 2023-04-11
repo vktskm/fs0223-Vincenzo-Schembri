@@ -30,9 +30,6 @@ h4 {
     font-size: 1rem;
 }
 
-
-
-
 /* HEADER */
 .testa{
     background-color: #222f3e;
@@ -56,7 +53,7 @@ h4 {
 /* PRIMO BLOCCO */
 #primoblocco {
     background-color: #d35b46;
-    background-size: cover;
+    background-size: cover; 
     padding: 20px;
 }
 
@@ -76,6 +73,10 @@ h4 {
 #sottotitolo {
     color: white;
     font-weight: bold;
+}
+/* sposto i blocchidall'alto */
+.margintop {
+    margin-top: 30px;
 }
 
 
@@ -133,5 +134,39 @@ h4 {
     box-shadow: 1px 1px 10px black;
 }
 
+.azzurro {
+    color: rgb(42, 126, 139);
+    text-decoration: none;
+    font-weight: bold;
+}
 
+#quartoblocco {
+    background-image: url(assets/img_9.png);
+    background-size: cover;
+    width: 100%;
+    height: 500px;
+}
+
+#quintoblocco {
+    background-image: url(assets/img_10.png);
+    background-size: cover;
+    width: 100%;
+    height: 500px;
+}
+
+
+
+footer {
+    text-align: center;
+}
+
+#tornasu {
+    color: white;
+    font-size: bold;
+}
+
+#footer {
+    background-color: #222f3e;
+    padding: 50px;
+}
 
