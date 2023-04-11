@@ -1,8 +1,15 @@
-* General */
+/* General */
 * {
     box-sizing: border-box;
 }
-
+.flex-container{
+    display: flex;
+    padding-top: 150px;
+    padding-bottom: 100px;
+    padding-left: 200px;
+    padding-right: 150px;
+    text-align: left;
+}
 body{
     color: #393d41;
     font-family: 'Open Sans', sans-serif;
@@ -34,13 +41,16 @@ header div{
     padding: 40px;
 }
 /*MAIN*/
+.bottom {
+    margin-bottom: 150px;
+}
 #primissima {
     background-image:url(../images/banner.jpg);
     background-size: cover;
-    padding-top: 50px;
+    padding-top: 150px;
     padding-left: 30px;
     padding-right: 30px;
-    padding-bottom: 40px;
+    padding-bottom: 150px;
 }
 #titolone {
     margin-bottom: 20px;
@@ -58,10 +68,7 @@ header div{
     font-weight: bold;
 }
 .section {
-    padding-top: 60px;
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-bottom: 30px;
+    flex-direction: row-reverse;
 }
 .sectiondiv h3 {
     margin-bottom: 10px;
@@ -70,13 +77,8 @@ header div{
     margin-bottom: 30px;
 }
 #pcimg {
-    width: 100%;
     object-fit: cover;
     border-radius: 100%;
-    padding-left: 30px;
-    padding-right: 30px;
-    margin-top: 10px;
-    margin-bottom: 35px;
 }
 #pop {
     color: white;
@@ -99,16 +101,21 @@ header div{
 }
 /* ASIDE */
 .box {
+    width: 500px;
     border: 1px solid #dee1e3;
-    padding-bottom: 30px;
-    margin-bottom: 29px;
+    margin: 15px;
 }
 .box h3{
     padding-bottom: 5px;
 }
-.asideimg {
+.asideimg { 
     width: 100%;
-    object-fit: cover;
+    height: 350px;
+}
+.space {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 150px;
 }
 
 /* FOOTER */
@@ -130,3 +137,4 @@ hr{
     margin-top: 30px;
     margin-bottom: 30px;
 }
+

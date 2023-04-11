@@ -221,13 +221,13 @@ upperFirst("ciao mondo");
         }
     }*/
 
-    function cutString(stringa) {
+    function cutString(stringa){
         stringa = stringa.slice(1, stringa.length - 1)
         return stringa
     }
 
 }
-cutString("ciao mondo");
+console.log(cutString("ciao mondo"));
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
@@ -237,3 +237,12 @@ cutString("ciao mondo");
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+{
+    function giveMeRandom (num){
+    
+
+    }
+
+console.log(giveMeRandom(8));
+
+}
