@@ -260,30 +260,46 @@ const movies = [
   Scrivi una funzione per trovare il film più vecchio nell'array fornito.
 */
 console.log("----- ESERCIZIO 10 -----");
+{
+  let annoVecchio = movies.reduce(function (a,b){
 
+    if( a.Year > b.Year){
+         return b;
+    }else{
+              return a;
+          }
 
+  })
+
+  console.log(annoVecchio);
+   
+}
 
 
 /* ESERCIZIO 11
   Scrivi una funzione per ottenere il numero di film contenuti nell'array fornito.
 */console.log("----- ESERCIZIO 11 -----");
 
+{
+
+  function numMovie(){
+    return movies.length;
+  }
+  
+  console.log(numMovie());
+}
 
 /* ESERCIZIO 12
   Scrivi una funzione per creare un array con solamente i titoli dei film contenuti nell'array fornito.
 */
 console.log("----- ESERCIZIO 12 -----");
 
-/* ESERCIZIO 13
-  Scrivi una funzione per ottenere dall'array fornito solamente i film usciti nel millennio corrente.
-*/
-console.log("----- ESERCIZIO 13 -----");
+{
+  let nomiM = [];
+  for( let i=0 ; i <movies.length; i++)
+     nomiM.push(movies[i].Title);
 
-/* ESERCIZIO 14
-  Scrivi una funzione per ottenere dall'array fornito uno specifico film (la funzione riceve un imdbID come parametro).
-*/
-console.log("----- ESERCIZIO 14 -----");
+     console.log(nomiM);
+}
 
-/* ESERCIZIO 15
-  Scrivi una funzione per calcolare la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array fornito.
-*/
+
