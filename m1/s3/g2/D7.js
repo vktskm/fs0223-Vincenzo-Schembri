@@ -70,40 +70,80 @@ console.log("----- ESERCIZIO 04 -----");
 
   function somma( n )
   {
-       let sum = 0;
-       for( let i=0 ; i < n.length , i++ )
-       {
-         sum += n[i];
-       }
-       
-       console.log(sum);
+     let sum = 0;
+     for( let i=0; i < n.length ; i++) 
+          sum += n[i];
+
+     console.log(sum);    
   }
-
   somma(arrayC);
-
 }
-
 
 /* ESERCIZIO 5
   Scrivi una funzione per sommare i numeri contenuti in un array (usare REDUCE)
 */
 console.log("----- ESERCIZIO 05 -----");
 
+{
+  let arrayVuoto = [3,5, 7,8,5];
+
+
+  let sommaCausali = arrayVuoto.reduce((a,b) => a+b)
+  console.log(sommaCausali);
+
+  
+}
 /* ESERCIZIO 6
-  Scrivi una funzione che, dato un array di soli numeri e un numero n come parametri, ritorni un secondo array con tutti i valori del precedente incrementati di n
+  Scrivi una funzione che, dato un array di soli numeri e un numero n come parametri, 
+  ritorni un secondo array con tutti i valori del precedente incrementati di n
 */
 console.log("----- ESERCIZIO 06 -----");
+{
+  let num = [8,9,8,7];
+  let  n = 3 ;
+
+  let increase = num.map( x => x + n)
+  console.log(increase);
+}
 
 /* ESERCIZIO 8
-  Scrivi una funzione che, dato un array di stringhe, ritorni un nuovo array contenente le lunghezze delle rispettive stringhe dell'array di partenza
+  Scrivi una funzione che, dato un array di stringhe, ritorni un nuovo array contenente 
+  le lunghezze delle rispettive stringhe dell'array di partenza
   es.: ["EPICODE", "is", "great"] => [7, 2, 5]
 */
 console.log("----- ESERCIZIO 08 -----");
+{
+  let arrayS = ["EPICODE", "is", "great"] ;
+
+  let arrayN = arrayS.map(x => x.length);
+  console.log(arrayN);
+
+}
 
 /* ESERCIZIO 9
   Scrivi una funzione per creare un array contenente tutti i valori DISPARI da 1 a 99.
 */
 console.log("----- ESERCIZIO 09 -----");
+{
+
+
+        let numD = [];
+       function dispari()
+       {
+          for( let i=0 ; i <100 ; i++)
+          {
+              if( i % 2 == 1)
+              {
+                 numD.push(i);
+              }
+          }
+           
+          return numD ;
+          
+       }
+
+console.log(dispari());
+}
 
 /* Questo array di film verrà usato negli esercizi a seguire. Non modificarlo e scorri oltre per riprendere gli esercizi :) */
 const movies = [
@@ -221,6 +261,9 @@ const movies = [
 */
 console.log("----- ESERCIZIO 10 -----");
 
+
+
+
 /* ESERCIZIO 11
   Scrivi una funzione per ottenere il numero di film contenuti nell'array fornito.
 */console.log("----- ESERCIZIO 11 -----");
@@ -244,4 +287,3 @@ console.log("----- ESERCIZIO 14 -----");
 /* ESERCIZIO 15
   Scrivi una funzione per calcolare la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array fornito.
 */
-console.log("----- ESERCIZIO 15 -----");
