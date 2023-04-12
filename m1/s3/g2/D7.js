@@ -302,4 +302,45 @@ console.log("----- ESERCIZIO 12 -----");
      console.log(nomiM);
 }
 
+/* ESERCIZIO 13
+  Scrivi una funzione per ottenere dall'array fornito solamente i film usciti nel millennio corrente.
+*/
+console.log("----- ESERCIZIO 13 -----");
 
+function filmNuovi(array) {
+  let arrayFilms = [];
+  for (let i = 0; i < array.length; i++) {
+    if (Number(array[i].Year) >= 2000) {
+      arrayFilms.push(array[i]);
+    }
+  }
+  return arrayFilms;
+}
+
+console.log(filmNuovi(movies));
+
+/* ESERCIZIO 14
+  Scrivi una funzione per ottenere dall'array fornito uno specifico film (la funzione riceve un imdbID come parametro).
+*/
+console.log("----- ESERCIZIO 14 -----");
+function getFilmById(imdbID) {
+  const film = movies.find((film) => film.imdbID === imdbID);
+  return film;
+}
+
+console.log(getFilmById("tt0077869"));
+
+/* ESERCIZIO 15
+  Scrivi una funzione per calcolare la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array fornito.
+*/
+console.log("----- ESERCIZIO 15 -----");
+
+function sommaAnni(array) {
+  let sum = 0;
+  for (let i = 0; i < array.length; i++) {
+    sum += Number(array[i].Year);
+  }
+  return sum;
+}
+
+console.log(sommaAnni(movies));

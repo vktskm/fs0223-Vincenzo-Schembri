@@ -2,101 +2,87 @@
 REGOLE
 - Tutte le risposte devono essere scritte in JavaScript
 - Se sei in difficoltà puoi chiedere aiuto a un Teaching Assistant
-- Puoi usare Google / StackOverflow ma solo quanto ritieni di aver bisogno di qualcosa che non è stato spiegato a lezione
+- Puoi usare Google / StackOverflow ma solo quanto ritieni di aver bisogno di qualcosa 
+che non è stato spiegato a lezione
 - Puoi testare il tuo codice in un file separato, o de-commentando un esercizio alla volta
-- Per farlo puoi utilizzare il terminale Bash, quello di VSCode o quello del tuo sistema operativo (se utilizzi macOS o Linux)
+- Per farlo puoi utilizzare il terminale Bash, quello di VSCode o quello del tuo sistema 
+operativo (se utilizzi macOS o Linux)
 */
 
 /* ESERCIZIO 1
  Scrivi una funzione di nome "area", che riceve due parametri (l1, l2) e 
- calcola l'area del rettangolo associato..
-*/
-{
-   
+ calcola l'area del rettangolo associato..  */
+console.log("----- Esercizio 01 -----");
+{ 
    function area(l1,l2){
          return l1 * l2;
    }
-
-   let risultato = area(4,8);
-   console.log(risultato);
-
+   
+   let risultato = area(8,7);
+   console.log("Area1 è uguale a " + risultato);
+   risultato = area("4","3");//mi converte le stringe in numner
+   //risultato = area("df","7");NaN
+   console.log("Area2 è uguale a " + risultato);
 }
-
-
-/* SCRIVI QUI LA TUA RISPOSTA */
 
 /* ESERCIZIO 2
 Scrivi una funzione di nome "crazySum", che riceve due numeri interi come parametri.
 La funzione deve ritornare la somma dei due parametri, ma se il valore dei due
-parametri è il medesimo deve invece tornare la loro somma moltiplicata per tre.
-*/
+parametri è il medesimo deve invece tornare la loro somma moltiplicata per tre.*/
+console.log("----- Esercizio 02 -----");
 {
     function crazySum(a,b){
         if(a===b)
         {
-            return (a+a)*3;
+            return (a+b)*3;
         }else{
                  return a+b;
               }
-
-    }
+    }//end function
+/*console.log(crazySum("10","10"));prima concatena 1010 in stringa, la converte 
+in number e la molriplica per 3 , il risultato finale è 3030 
+console.log(crazySum("19","10"));//ritorna una concatazione stringhe 1910*/
+console.log("Il risultato1 è " + crazySum(10,10));
+console.log("Il risultato2 è " + crazySum(12,10));
 }
 
-console.log(crazySum(10,10));
-
-
-
-/* SCRIVI QUI LA TUA RISPOSTA */
-
-/* ESERCIZIO 3
+/* ESERCIZIO 3 
  Scrivi una funzione di nome "crazyDiff" che calcola la differenza assoluta tra un 
- numero fornito come parametro e 19.
- Deve inoltre tornare la differenza assoluta moltiplicata per tre 
- qualora il numero fornito sia maggiore di 19.
-*/
-
+ numero fornito come parametro e 19. Deve inoltre tornare la differenza assoluta 
+ moltiplicata per tre qualora il numero fornito sia maggiore di 19.*/
+console.log("----- Esercizio 03 -----");
 {
-    function crazyDiff(a){
-        if(a>19)
+    function crazyDiff(num){
+        if(num > 19)
         {
-            return  Math.abs((a-19)*3);
+            return  Math.abs( ( num - 19 ) * 3);
         }else{
-                 return Math.abs(a-19);
+                 return Math.abs( num - 19 );
               }
 
     }
+console.log("Il risultato1 è "+crazyDiff(20));
+console.log("Il risultato2 è "+crazyDiff(8));
 }
-
-console.log(crazyDiff(20));
-
-
-/* SCRIVI QUI LA TUA RISPOSTA */
-
 /* ESERCIZIO 4
  Scrivi una funzione di nome "boundary" che accetta un numero intero n 
- come parametro, e ritorna true se n è compreso tra 20 e 100 (incluso) oppure
- se n è uguale a 400.
-*/
-
+ come parametro, e ritorna true se n è compreso tra 20 e 100 (incluso) 
+ oppure se n è uguale a 400.*/
+ console.log("----- Esercizio 04 -----");
 {
-    {
-        function boundary(n){
-            if(n >= 20 && n <= 100)
-            {
-                return true;
-            }else if (n=== 400){
-                     return true;
-                  }else{
-                    return false;
-                  }
-    
-        }
+    function boundary(n){
+        if ((n > 20 && n <= 100) || n === 400) {
+            return true
+          } else {
+            return false
+          }
+
     }
     
-    console.log(boundary(200));
+console.log("Il risultato1 è " + boundary(200));
+console.log("Il risultato2 è " + boundary(400));
+console.log("Il risultato3 è " + boundary(100));
 }
-
-/* SCRIVI QUI LA TUA RISPOSTA */
 
 /* ESERCIZIO 5
  Scrivi una funzione di nome "epify" che accetta una stringa come parametro.
@@ -104,51 +90,43 @@ console.log(crazyDiff(20));
  ma se la stringa fornita comincia già con "EPICODE" allora deve
  ritornare la stringa originale senza alterarla.
 */
-
+console.log("----- Esercizio 05 -----");
 {
       function epify(str)
-      {
-        if(str.startsWith(`Epicode`))
+      { /*Il metodo startsWith() determina se una stringa inizia con i caratteri 
+         di una stringa specificata,restituendo vero o falso a seconda dei casi.
+         Syntax      startsWith(searchString)
+         startsWith(searchString, position)*/
+        if(str.startsWith("EPICODE"))
         {
             return str;
         }else{
-                 return "Epicode"+ str;
+                 return "EPICODE"+ str;
              }
-    }
+      }
 
+    console.log("Il risultato1 è "+ epify("Epicode"));
+    console.log("Il risultato2 è "+ epify("EPICODERS"));
+    console.log("Il risultato3 è "+ epify("Hello"));
 }
 
-console.log(epify("ghujj Epicode"));
-
-
-
-/* SCRIVI QUI LA TUA RISPOSTA */
-
 /* ESERCIZIO 6
- Scrivi una funzione di nome "check3and7" che accetta un numero positivo come parametro. 
- La funzione deve controllare che il parametro sia un multiplo
- di 3 o di 7. (Suggerimento: usa l'operatore modulo)
-*/
-
+ Scrivi una funzione di nome "check3and7" che accetta un numero positivo 
+ come parametro. La funzione deve controllare che il parametro sia un multiplo
+ di 3 o di 7. (Suggerimento: usa l'operatore modulo)*/
+ console.log("----- Esercizio 06 -----");
 {
 function check3and7(n){
-    if(n>0)
-    {
-        if( ( n%3 == 0) || (n%7 ==0))
-        {
-           return true;
-        }else{
-                return false;
-                   }          
-    }               
-    else{
-            console.log("Errore");
-            return false;
-         }
-
+    if (n >= 0 && (n % 3 === 0 || n % 7 === 0)) {
+        return true
+      } else {
+        return false
+      }
     }
-
-console.log(check3and7(-9))
+console.log("Il risultato1 è " + check3and7(-9));
+console.log("Il risultato2 è " + check3and7(5));
+console.log("Il risultato3 è " + check3and7(6));
+console.log("Il risultato4 è " + check3and7(14));
 }
 
 /* SCRIVI QUI LA TUA RISPOSTA */
