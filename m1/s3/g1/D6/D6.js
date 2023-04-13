@@ -20,7 +20,7 @@ console.log("----- Esercizio 01 -----");
    
    let risultato = area(8,7);
    console.log("Area1 è uguale a " + risultato);
-   risultato = area("4","3");//mi converte le stringe in numner
+   risultato = area("4","3");//mi converte le stringe in number
    //risultato = area("df","7");NaN
    console.log("Area2 è uguale a " + risultato);
 }
@@ -129,33 +129,44 @@ console.log("Il risultato3 è " + check3and7(6));
 console.log("Il risultato4 è " + check3and7(14));
 }
 
-/* SCRIVI QUI LA TUA RISPOSTA */
-
 /* ESERCIZIO 7
  Scrivi una funzione di nome "reverseString", il cui scopo è invertire una stringa 
- fornita come parametro (es. "EPICODE" --> "EDOCIPE")
-*/
-{
+ fornita come parametro (es. "EPICODE" --> "EDOCIPE")*/
+ console.log("----- Esercizio 07 -----");
+ /*Il metodo split() prende un modello e divide una stringa in un elenco ordinato 
+ di sottostringhe cercando il modello, inserisce queste sottostringhe in un array 
+ e restituisce l'array. Syntax  split(separator) ,split(separator, limit)
+ Il metodo reverse() inverte un array in posizione e restituisce il riferimento 
+ allo stesso array, il primo elemento dell'array ora diventa l'ultimo e l'ultimo 
+ elemento dell'array diventa il primo. In altre parole, l'ordine degli elementi 
+ nell'array sarà rivolto verso la direzione opposta a quella precedentemente 
+ indicata.  Syntax reverse() 
+ Il metodo join() crea e restituisce una nuova stringa concatenando tutti gli 
+ elementi in un array (o un oggetto simile ad un array), separati da virgole o 
+ da una stringa di separazione specificata. Se l'array ha un solo elemento, 
+ quell'elemento verrà restituito senza utilizzare il separatore.
+ Syntax  join() , join(separator) */
 
-    function reverseString(stringa) {
-        let agnirts = ""
-        for (let i = stringa.length - 1; i >= 0; i--) {
-            agnirts += stringa[i]
+ {
+        const reverseString = function (str) {
+        
+        let splitString = str.split('')//dividi la stringa in lettere
+        console.log("La stringa divisa in caratteri è " + splitString);
+        let reverseString = splitString.reverse();//inverte la stringa
+        console.log("La stringa invertita è " + reverseString);
+        let finalString = reverseString.join('');//Unisce i caratteri senza spazio
+        return finalString;
         }
-        return agnirts
-    }
-}
-
-console.log(reverseString("EPICODE"));
-
-/* SCRIVI QUI LA TUA RISPOSTA */
+      
+      console.log("La frase invertita è "+reverseString('EPICODE FULL STACK'))
+ }
 
 /* ESERCIZIO 8
  Scrivi una funzione di nome "upperFirst", che riceve come parametro una stringa formata 
  da diverse parole.La funzione deve rendere maiuscola la prima lettera di ogni parola 
  contenuta nella stringa.
 */
-
+console.log("----- Esercizio 08 -----");
 {
       function upperFirst(str)
       {
@@ -174,13 +185,11 @@ console.log(reverseString("EPICODE"));
 upperFirst("ciao mondo");
 }
 
-/* SCRIVI QUI LA TUA RISPOSTA */
-
 /* ESERCIZIO 9
  Scrivi una funzione di nome "cutString", che riceve come parametro una stringa. 
  La funzione deve creare una nuova stringa senza il primo e l'ultimo carattere
- della stringa originale.
-*/
+ della stringa originale.*/
+ console.log("----- Esercizio 09 -----");
 {
    /* function cutString( str){
         
@@ -213,7 +222,7 @@ console.log(cutString("ciao mondo"));
  Scrivi una funzione di nome "giveMeRandom", che accetta come parametro 
  un numero n e ritorna un'array contenente n numeri casuali inclusi tra 0 e 10.
 */
-
+console.log("----- Esercizio 10 -----");
 /* SCRIVI QUI LA TUA RISPOSTA */
 {
     function giveMeRandom (num){
