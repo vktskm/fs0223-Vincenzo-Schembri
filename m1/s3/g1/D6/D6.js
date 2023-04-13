@@ -165,25 +165,43 @@ console.log("Il risultato4 è " + check3and7(14));
  Scrivi una funzione di nome "upperFirst", che riceve come parametro una stringa formata 
  da diverse parole.La funzione deve rendere maiuscola la prima lettera di ogni parola 
  contenuta nella stringa.
+ Il metodo charAt() di un'istanza String restituisce una nuova stringa costituita dalla 
+ singola unità di codice UTF-16 situata all'offset specificato nella stringa.
+ Syntax charAt(index)
+ Il metodo toUpperCase() restituisce il valore della stringa chiamante convertito in maiuscolo 
+ (il valore verrà convertito in una stringa se non lo è).
+ Il metodo slice() restituisce una copia superficiale di una porzione di un array in un nuovo 
+ oggetto array selezionato dall'inizio alla fine (fine non inclusa) dove inizio e fine 
+ rappresentano l'indice degli elementi in quell'array. L'array originale non verrà modificato.
+
 */
 console.log("----- Esercizio 08 -----");
 {
-      function upperFirst(str)
-      {
-        let parole = str.split(" ");
-        console.log(parole);
-
-        for(i=0 ; i < parole.length; i++)
-        {
-            parole[i]=parole[i].charAt(0).toUpperCase()+parole[i].slice(1);
+    const upperFirstPhrase = function (str) {
+        let words = str.split(' ')//divide la frase
+        console.log("La frase divisa è " + words);
+        let finalString = []
+        
+        for (let i = 0; i < words.length; i++) {
+          let firstChar = words[i].charAt(0);//prende il primo carattere della parola
+          console.log("La prima lettera della parola è " + firstChar);
+          let uppercaseChar = firstChar.toUpperCase();//converte in maiuscolo la prima lettera
+          console.log("La prima lettera della parola in Maiuscolo " + uppercaseChar);
+          let cutString = words[i].slice(1);//taglio la parola eliminado la prima lettera
+          console.log("Il resto della parola è " + cutString);
+          let finalWord = uppercaseChar + cutString;//unisco la nuova stringa
+          console.log("La nuova parola è " + finalWord);
+          finalString.push(finalWord)
         }
-
-        console.log(parole);
+        
+        console.log("Array finale è "+finalString);
+        let fraseFinale = finalString.join(' ');//join mi unisce array finalString in una frase
+        console.log("La nuova frase finale è "+fraseFinale);
       }
-
-
-upperFirst("ciao mondo");
+      
+      upperFirstPhrase('hello world today')
 }
+
 
 /* ESERCIZIO 9
  Scrivi una funzione di nome "cutString", che riceve come parametro una stringa. 
@@ -191,45 +209,35 @@ upperFirst("ciao mondo");
  della stringa originale.*/
  console.log("----- Esercizio 09 -----");
 {
-   /* function cutString( str){
-        
-        let arrayNuovo=[];
-        for( i=1 ; i < (str.length-1) ; i++)
-        {
-           arrayNuovo.push(str[i]);
-        }
-
-        console.log(arrayNuovo);
-
-        
-        for( i=0 ; i < arrayNuovo.length ; i++)
-        {
-           frase += arrayNuovo[i];
-        }
-    }*/
-
+  
     function cutString(stringa){
         stringa = stringa.slice(1, stringa.length - 1)
         return stringa
     }
+    console.log(cutString("Ciao Mondo"));
 
 }
-console.log(cutString("ciao mondo"));
-
-/* SCRIVI QUI LA TUA RISPOSTA */
 
 /* ESERCIZIO 10
  Scrivi una funzione di nome "giveMeRandom", che accetta come parametro 
- un numero n e ritorna un'array contenente n numeri casuali inclusi tra 0 e 10.
-*/
+ un numero n e ritorna un'array contenente n numeri casuali inclusi tra 0 e 10.*/
 console.log("----- Esercizio 10 -----");
-/* SCRIVI QUI LA TUA RISPOSTA */
+/*Il metodo statico Math.floor() arrotonda sempre per difetto e restituisce 
+il numero intero più grande minore o uguale a un dato numero.
+Syntax    Math.floor(x) 
+Il metodo statico Math.random() restituisce un numero pseudo-casuale a virgola 
+mobile maggiore o uguale a 0 e minore di 1, con una distribuzione approssimativamente 
+uniforme su tale intervallo, che è quindi possibile ridimensionare all'intervallo 
+desiderato. L'implementazione seleziona il seme iniziale per l'algoritmo di generazione 
+di numeri casuali; non può essere scelto o resettato dall'utente.  
+ Syntax    Math.random()           */
 {
-    function giveMeRandom (num){
-    
-
-    }
-
-console.log(giveMeRandom(8));
-
+  const giveMeRandom = function (n) {
+    const arr = []
+      for (let i = 0; i < n; i++) {
+         arr.push(Math.floor( Math.random() * 10))
+      }
+    return arr
+  }
+  console.log(giveMeRandom(10))
 }
