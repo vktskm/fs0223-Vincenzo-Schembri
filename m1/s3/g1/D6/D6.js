@@ -241,3 +241,39 @@ di numeri casuali; non può essere scelto o resettato dall'utente.
   }
   console.log(giveMeRandom(10))
 }
+
+/*L'istruzione for...in itera su tutte le proprietà stringa enumerabili di un 
+oggetto (ignorando le proprietà codificate dai simboli), incluse le proprietà 
+enumerabili ereditate.
+for (variable in object)
+  statement                       */ 
+console.log("----- For...in -----");
+const object = { a: 1, b: 2, c: 3 , gusto : "Diavola" };
+console.log("L'oggetto originale è " + object);
+for (const property in object) {
+  console.log(`${property}: ${object[property]}`);
+}
+
+/*L'istruzione for...of esegue un ciclo che opera su una sequenza di valori 
+provenienti da un oggetto iterabile. Gli oggetti iterabili includono istanze 
+di built-in come Array, String, TypedArray, Map, Set, NodeList (e altre 
+raccolte DOM), nonché l'oggetto arguments, i generatori prodotti dalle funzioni 
+del generatore e gli iterabili definiti dall'utente. 
+Syntax
+for (variable of iterable)
+  statement                  */
+console.log("----- For...of -----");
+const array1 = ['a', 'b', 'c' , 3 , 4];
+console.log("L'array originale è " + array1);
+
+for (const element of array1) {
+  console.log(element);
+}
+/* Il metodo forEach() esegue una funzione fornita una volta per ogni elemento 
+Syntax
+forEach(callbackFn)
+forEach(callbackFn, thisArg)dell'array. */
+console.log("----- ForEach -----");
+const array2 = ['a', 'b', 'c', 6 , 9];
+
+array2.forEach(element => console.log(element));

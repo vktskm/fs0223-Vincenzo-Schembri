@@ -1,44 +1,36 @@
 /* ESERCIZIO 1
   Scrivi una funzione per concatenare due stringhe ricevute come parametri, 
   selezionando solamente i primi 2 caratteri della prima e gli ultimi 3 della seconda. 
-  Converti la stringa risultante in maiuscolo e mostrala con un console.log().
-*/
+  Converti la stringa risultante in maiuscolo e mostrala con un console.log(). */
 console.log("----- ESERCIZIO 01 -----");
 
 {
-  function unisciStringa(p1 , p2)
+  function unisciStringa(str1 , str2)
   {
-    p1 = p1.slice(0,2)
-    console.log(p1); 
-    p2 = p2.slice( p2.length - 3 ) 
-    console.log(p2); 
-
-    let frase = p1+p2;
-    frase=frase.toUpperCase()
-
-    console.log(frase)
-
+    console.log("La prima stringa1 è " + str1 + " la seconda stringa2 è " + str2 );
+    str1 = str1.slice( 0 , 2 )
+    str2 = str2.slice( str2.length - 3 ) 
+    let frase = str1+str2;
+    frase = frase.toUpperCase()
+    return frase;
   }
-    
-
-unisciStringa("ciao","mondo");
+  console.log(unisciStringa("ciao","mondo") ) ;
 }
 
 /* ESERCIZIO 2
-  Scrivi una funzione che torni un array di 10 elementi; ognuno di essi deve essere un valore 
-  random compreso tra 0 e 100 (incluso).
-*/
+  Scrivi una funzione che torni un array di 10 elementi; ognuno di essi deve essere 
+  un valore random compreso tra 0 e 100 (incluso). */
 console.log("----- ESERCIZIO 02 -----");
 {
-function giveRandom( n){
+  function giveRandom(n){
   let arrayVuoto = [];
   for( let i=0; i<n; i++)
     arrayVuoto.push(Math.floor(Math.random()*100));
 
-    console.log(arrayVuoto);
+  return arrayVuoto;
 }
 
-giveRandom(10)
+console.log(giveRandom(10));
 }
 /* ESERCIZIO 3
   Scrivi una funzione per ricavare solamente i valori PARI da un array composto 
@@ -48,15 +40,15 @@ console.log("----- ESERCIZIO 03 -----");
 
 {
 
-  const arrayC = [-3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
+  const arrayC = [-4, -2, 0, 5, 6, 7, 8, 9, 10, 11, 12];
+  console.log("L'array originale è " + arrayC);
 
 
-  let evenAr = arrayC.filter( function(n){
+  let numeroPari = arrayC.filter( function(n){
           return n % 2 === 0;
   });
   
-
-console.log(evenAr);
+console.log("I numeri pari sono " + numeroPari);
 
 }
 
@@ -66,17 +58,22 @@ console.log(evenAr);
 console.log("----- ESERCIZIO 04 -----");
 {
    
-  let arrayC = [-3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
-
-  function somma( n )
+  let arrayD = [-3, 5, 6, 13];
+  console.log("L'array originale è " + arrayD);
+  
+  function somma( )
   {
      let sum = 0;
-     for( let i=0; i < n.length ; i++) 
-          sum += n[i];
-
-     console.log(sum);    
+        for( let el in arrayD)
+            console.log(el);
+    //  for( let i=0; i < n.length ; i++) 
+    //       sum += n[i];
+     console.log("sum")
+     return sum;    
   }
-  somma(arrayC);
+
+//console.log("La somma è " + somma(arrayD));
+
 }
 
 /* ESERCIZIO 5

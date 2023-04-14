@@ -97,22 +97,20 @@
         paintItGreen();
         
    
-       /* ESERCIZIO 9
-          Scrivi una funzione che rimuova l'ultima lettera dall'h1 ogni volta 
-          che l'utente lo clicca
-         */
+/* ESERCIZIO 9
+Scrivi una funzione che rimuova l'ultima lettera dall'h1 ogni volta che l'utente 
+lo clicca */
 
-          let myH1 = document.querySelector('h1');
+const makeItClickable = function () {
+      let titolo = document.querySelector("h1");
+      let text = titolo.textContent;
+      text = text.slice(0, -1);
+      titolo.textContent = text;
+  };
+  let title = document.querySelector("h1");
+  title.addEventListener("click", makeItClickable);
 
-          const makeItClickable = function () {
-              let textTitle = myH1.textContent;
-              myH1.textContent = textTitle.textContent.slice(0,-1);
-          }
-          
-          myH1.addEventListener('click', function(){
-            return makeItClickable();
-                  });
-          
+        
          
       
    
