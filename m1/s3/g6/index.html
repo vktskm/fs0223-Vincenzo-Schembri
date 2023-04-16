@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<!-- Prova Esercizio 20 -->
+<div id="container">
+    <div class="slide">Id container</div>
+</div>
+<!-- Prova Esercizio 21 - 22 -->
+<table>
+       <tr><td>2000</td> <td>20%</td> <td>17%</td></tr>
+       <tr><td>2002</td> <td>35%</td> <td>22%</td></tr>
+       <tr><td>2004</td> <td>45%</td> <td>42%</td></tr>
+       <tr><td>2008</td> <td>80%</td> <td>51%</td></tr>
+       <tr><td>2012</td> <td>100%</td> <td>76%</td></tr>
+</table>
+
+<!-- Prova Esercizio 23 -->
+<a href="#">Esercizio 23 Prova</a>
+<a href="#">linkhtml</a>
+<a href="#">linkcss</a>
+
+
+
+    <script>
+    /* ESERCIZIO 20
+    Scrivi una funzione per selezionare l'elemento dotato di id "container" 
+    all'interno della pagina.
+    Il metodo getElementById() dell'interfaccia Document restituisce un oggetto 
+    Element che rappresenta l'elemento la cui proprietà id corrisponde alla stringa 
+    specificata. Poiché gli ID elemento devono essere univoci se specificati, sono 
+    un modo utile per ottenere rapidamente l'accesso a un elemento specifico.
+    La proprietà Element innerHTML ottiene o imposta il markup HTML o XML contenuto 
+    nell'elemento.
+    Se hai bisogno di accedere a un elemento che non ha un ID, puoi usare querySelector() 
+    per trovare l'elemento usando qualsiasi selettore.*/
+    
+    function seleziona(str) {
+    let container = document.getElementById("container");  
+    container.innerHTML += str;//Aggiungo le stringhe passate al Html
+    //Si può usare anche textContent al posto di innerHTML ma scrive TAG 
+    //e non va capo
+    }
+    seleziona("----- ESERCIZIO  20 -----<br>");
+    seleziona("Seleziona id e aggiunge test<br><br>");
+    
+    /* ESERCIZIO 21
+    Scrivi una funzione per selezionare ogni tag <td> all'interno della pagina.
+    
+    Il metodo Document querySelectorAll() restituisce un NodeList statico 
+    (non attivo) che rappresenta un elenco degli elementi del documento che 
+    corrispondono al gruppo di selettori specificato. 
+    La proprietà textContent dell'interfaccia Node rappresenta il contenuto 
+    testuale del nodo e dei suoi discendenti.   */
+    console.log("----- ESERCIZIO  21 -----");
+    function selezionaTutto(str) {
+    let tabella = document.querySelectorAll("td");
+    
+    for(let i=0; i < tabella.length ; i++)
+          tabella[i].textContent += str;
+    }
+    
+    selezionaTutto("----- ESERCIZIO  21 -----<br>");
+    
+/* ESERCIZIO 22
+   Scrivi una funzione che, tramite un ciclo, stampa in console
+   il testo contenuto in ogni tag  <td> all'interno della pagina.*/
+console.log("----- ESERCIZIO  22 -----");
+function stampa(){
+  let tabella = document.querySelectorAll("td");
+  for (let td of tabella) {
+    console.log(td.textContent);
+  }
+}
+
+stampa();//mostra il contenuto estratto da td in console
+
+/* ESERCIZIO 23
+  Scrivi una funzione per aggiungere un background di colore rosso a 
+  ogni link all'interno della pagina.
+*/
+console.log("----- ESERCIZIO  23 -----");
+function aggiungiBackground() {
+  let collegamenti = document.querySelectorAll("a");
+  for (let link of collegamenti) {
+    link.style.background = "red";
+  }
+}
+    </script>
+</body>
+</html>

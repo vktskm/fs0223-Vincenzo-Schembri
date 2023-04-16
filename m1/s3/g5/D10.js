@@ -532,18 +532,20 @@ console.log(removeIndex(14));
 // DOM (nota: gli elementi che selezionerai non si trovano realmente nella pagina)
 
 /* ESERCIZIO 20
-  Scrivi una funzione per selezionare l'elemento dotato di id "container" all'interno della pagina.
+  Scrivi una funzione per selezionare l'elemento dotato di id "container" 
+  all'interno della pagina.
 */
 console.log("----- ESERCIZIO  20 -----");
-function select() {
-  let container = document.getElementById("container");
+function seleziona() {
+  let container = document.getElementById("container");  
 }
+
 
 /* ESERCIZIO 21
   Scrivi una funzione per selezionare ogni tag <td> all'interno della pagina.
 */
 console.log("----- ESERCIZIO  21 -----");
-function selectAll() {
+function selezionaTutto() {
   let tabella = document.querySelectorAll("td");
 }
 
@@ -553,12 +555,14 @@ function selectAll() {
   <td> all'interno della pagina.
 */
 console.log("----- ESERCIZIO  22 -----");
-/*function stampa() {
+function stampa() {
   let tabella = document.querySelectorAll("td");
   for (let td of tabella) {
     console.log(td.textContent);
   }
-}*/
+}
+stampa();
+
 
 /* ESERCIZIO 23
   Scrivi una funzione per aggiungere un background di colore rosso a 
@@ -568,7 +572,7 @@ console.log("----- ESERCIZIO  23 -----");
 function aggiungiBackground() {
   let collegamenti = document.querySelectorAll("a");
   for (let link of collegamenti) {
-    link.style.backgroundColor = "red";
+    link.style.background = "red";
   }
 }
 
@@ -608,10 +612,6 @@ function aggiungiClass() {
     tr.classList.add("test");
   }
 }
-
-
-
-
 
 // [EXTRA] JS Avanzato
 
@@ -720,42 +720,33 @@ tree(9);
   e ritorna true se il numero fornito è un numero primo.
 */
 console.log("----- ESERCIZIO  29 -----");
+
 function isItPrime(num){
   
-
   let tipo = typeof(num);
   
   if(num > 0 && tipo == "number")
   {
-    
-    let divisore = 0;
-
-    for(let i=2; i<num; i++)
-    {
-      if( num % i == 0 )
-         divisore++;  
-    }
-
-    if (divisore == 0)
-    {
+       let divisore = 0;
+       for(let i=2; i<num; i++)
+       {   
+           if( num % i == 0 )
+           divisore++;  
+       }
+      if (divisore == 0)
+      {
         console.log("Il numero è primo " + num) 
         return true;
-    } else
-           {
-            console.log("Il numero non è primo " + num) 
-            return false;  
-          }
-
-
-  }else{
+      } else{
+               console.log("Il numero non è primo " + num) 
+               return false;  
+             }
+   }else{
          console.log("Errore hai inserito un numero negativo o una stringa");
          return false;
-       }  
+        }  
 }
-
 console.log(isItPrime(-4));//Errore
 console.log(isItPrime("gh"));//Errore
 console.log(isItPrime(17));
 console.log(isItPrime(33));
-
-
