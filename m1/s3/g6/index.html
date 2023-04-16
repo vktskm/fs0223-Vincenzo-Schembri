@@ -25,6 +25,12 @@
 <a href="#">linkhtml</a>
 <a href="#">linkcss</a>
 
+<!-- Prova Esercizio 24 - 25 -->
+<ul id="myList">
+    <li>Esercizio 24 </li>
+    <li>Prova Esercizio</li>
+    <li>Contenuti</li>
+</ul>
 
 
     <script>
@@ -91,6 +97,75 @@ function aggiungiBackground() {
     link.style.background = "red";
   }
 }
+
+/* ESERCIZIO 24
+  Scrivi una funzione per aggiungere un nuovo elemento alla lista non ordinata con id "myList".
+  Il metodo Document querySelector() restituisce il primo elemento all'interno del documento 
+  che corrisponde al selettore specificato o al gruppo di selettori. Se non vengono trovate 
+  corrispondenze, viene restituito null. Per selezionare gli Id devi mettere il # e il puntino 
+  . per le classe.
+  In un documento HTML, il metodo document.createElement() crea l'elemento HTML specificato da 
+  tagName o un HTMLUnknownElement se tagName non è riconosciuto.
+  Il metodo appendChild() dell'interfaccia Node aggiunge un nodo alla fine dell'elenco dei figli 
+  di un nodo padre specificato.   
+  Il metodo Element.append() inserisce un insieme di oggetti Node o oggetti stringa dopo l'ultimo 
+  figlio dell'elemento. Gli oggetti stringa vengono inseriti come nodi di testo equivalenti.
+
+  Differenze da Node.appendChild():
+  Element.append() ti consente anche di aggiungere oggetti stringa, mentre Node.appendChild() 
+  accetta solo oggetti Node.
+  Element.append() non ha alcun valore restituito, mentre Node.appendChild() restituisce 
+  l'oggetto Node aggiunto.
+  Element.append() può aggiungere diversi nodi e stringhe, mentre Node.appendChild() può 
+  aggiungere solo un nodo.
+  
+  */
+
+  console.log("----- ESERCIZIO  24 -----");
+
+ function addList() {
+    let list = document.querySelector('#myList');
+    let nuovaLista = document.createElement('li');
+    nuovaLista.textContent = 'Nuovo elemento';
+    list.appendChild(nuovaLista);
+}
+addList();//Aggiungo un nuovo tag li con scritto Nuovo Elemento dentro <ul></ul>
+
+
+
+/* ESERCIZIO 25
+  Scrivi una funzione per svuotare la lista non ordinata con id "myList".
+  Il metodo Element.remove() rimuove l'elemento dal DOM.
+*/
+console.log("----- ESERCIZIO  25 -----");
+function removeElement() {
+  let myList = document.querySelectorAll("#myList li");
+  for (let li of myList) {
+    li.remove();
+  }
+}
+removeElement();//Elimino tutti i tag <li></li> ma mantego<ul></ul>
+addList();//Aggiungo un nuovo tag li con scritto Nuovo Elemento dentro <ul></ul>
+
+
+
+/* ESERCIZIO 26
+  Scrivi una funzione per aggiungere ad ogni tag <tr> 
+  la classe CSS "test"
+*/
+console.log("----- ESERCIZIO  26 -----");
+function aggiungiClass() {
+  let tabella = document.querySelectorAll("tr");
+  for (let tr of tabella) {
+    tr.classList.add("test");
+  }
+}
+
+aggiungiClass();
+
+
+
+
     </script>
 </body>
 </html>

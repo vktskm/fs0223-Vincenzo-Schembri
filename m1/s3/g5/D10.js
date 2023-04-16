@@ -89,7 +89,7 @@ console.log("----- ESERCIZIO 1 -----");
 function dice(){
     return  Math.floor((Math.random()*6)+1);
 }
-console.log( "Numero cayusale da 1 a 6  = " + dice());
+console.log( "Numero causale da 1 a 6  = " + dice());
 
 /* ESERCIZIO 2
   Crea una funzione chiamata "whoIsBigger" che riceve due numeri come parametri e ritorna il maggiore dei due.
@@ -563,7 +563,6 @@ function stampa() {
 }
 stampa();
 
-
 /* ESERCIZIO 23
   Scrivi una funzione per aggiungere un background di colore rosso a 
   ogni link all'interno della pagina.
@@ -576,19 +575,18 @@ function aggiungiBackground() {
   }
 }
 
-
 /* ESERCIZIO 24
   Scrivi una funzione per aggiungere un nuovo elemento alla 
   lista non ordinata con id "myList".
 */
 console.log("----- ESERCIZIO  24 -----");
-function addElement() {
-  let myList = document.getElementById("myList");
-  let newEl = document.createElement("li");
-  newEl.textContent = "New element";
-  myList.appendChild(newElement);
+function addList() {
+  let list = document.querySelector('#myList');
+  let nuovaLista = document.createElement('li');
+  nuovaLista.textContent = 'Nuovo elemento';
+  list.appendChild(nuovaLista);
 }
-
+addList();//Aggiungo un nuovo tag li con scritto Nuovo Elemento dentro <ul></ul>
 
 /* ESERCIZIO 25
   Scrivi una funzione per svuotare la lista non ordinata con id "myList".
@@ -596,10 +594,13 @@ function addElement() {
 console.log("----- ESERCIZIO  25 -----");
 function removeElement() {
   let myList = document.querySelectorAll("#myList li");
-  for (let li of myList) {
-    li.remove();
+    for (let li of myList) {
+         li.remove();
   }
 }
+removeElement();//Elimino tutti i tag <li></li> ma mantego<ul></ul>
+addList();//Aggiungo un nuovo tag li con scritto Nuovo Elemento dentro <ul></ul>
+
 
 /* ESERCIZIO 26
   Scrivi una funzione per aggiungere ad ogni tag <tr> 
@@ -612,6 +613,8 @@ function aggiungiClass() {
     tr.classList.add("test");
   }
 }
+
+aggiungiClass();
 
 // [EXTRA] JS Avanzato
 
