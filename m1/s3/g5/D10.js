@@ -378,8 +378,6 @@ const movies = [
       'https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_SX300.jpg',
   },
 ]
-
-
 /* ESERCIZIO 12
   Scrivi una funzione chiamata "newestMovie" che trova il film più recente nell'array "movies" fornito.
 */
@@ -487,46 +485,139 @@ console.log(searchByTitle("Avengers"));
   stringa fornita all'interno del proprio titolo, mentre "unmatch" deve includere tutti 
   i rimanenti.
 */
+console.log("----- ESERCIZIO  18 -----");
+function searchAndDivide(strC) {
+  let ris = { match: [], unmatch: [] };
+  for (let movie of movies) {
+    if (movie.Title.includes(strC)) {
+             ris.match.push(movie);
+    } else {
+             ris.unmatch.push(movie);
+    }
+  }
+  return ris;
+}
+
+console.log(searchAndDivide("Avengers"));
+
 
 /* ESERCIZIO 19
-  Scrivi una funzione chiamata "removeIndex" che riceve un numero come parametro e ritorna l'array "movies" fornito privo dell'elemento nella posizione ricevuta come parametro.
+  Scrivi una funzione chiamata "removeIndex" che riceve un numero come
+  parametro e ritorna l'array "movies" fornito privo dell'elemento nella 
+  posizione ricevuta come parametro.
 */
+console.log("----- ESERCIZIO  19 -----");
+function removeIndex(indice) {
+  let ris = [];
+  //codice in più controllo indice
+  if( indice >= 0 &&  indice < movies.length )
+  {
+        console.log("L'indice immesso appartiene all'array");
+  }else{
+              console.log("L'indice immesso è sbagliato");
+       }
+
+  for (let i = 0; i < movies.length; i++) {
+    if (i !== indice) {
+      ris.push(movies[i]);
+    }
+  }
+  return ris;
+}
+
+console.log(removeIndex(13));
+console.log(removeIndex(-2));
+console.log(removeIndex(14));
 
 // DOM (nota: gli elementi che selezionerai non si trovano realmente nella pagina)
 
 /* ESERCIZIO 20
   Scrivi una funzione per selezionare l'elemento dotato di id "container" all'interno della pagina.
 */
+console.log("----- ESERCIZIO  20 -----");
+function select() {
+  let container = document.getElementById("container");
+}
 
 /* ESERCIZIO 21
   Scrivi una funzione per selezionare ogni tag <td> all'interno della pagina.
 */
+console.log("----- ESERCIZIO  21 -----");
+function selectAll() {
+  let tabella = document.querySelectorAll("td");
+}
 
 /* ESERCIZIO 22
-  Scrivi una funzione che, tramite un ciclo, stampa in console il testo contenuto in ogni tag 
+  Scrivi una funzione che, tramite un ciclo, stampa in console
+   il testo contenuto in ogni tag 
   <td> all'interno della pagina.
 */
+console.log("----- ESERCIZIO  22 -----");
+/*function stampa() {
+  let tabella = document.querySelectorAll("td");
+  for (let td of tabella) {
+    console.log(td.textContent);
+  }
+}*/
 
 /* ESERCIZIO 23
-  Scrivi una funzione per aggiungere un background di colore rosso a ogni link all'interno della pagina.
+  Scrivi una funzione per aggiungere un background di colore rosso a 
+  ogni link all'interno della pagina.
 */
+console.log("----- ESERCIZIO  23 -----");
+function aggiungiBackground() {
+  let collegamenti = document.querySelectorAll("a");
+  for (let link of collegamenti) {
+    link.style.backgroundColor = "red";
+  }
+}
+
 
 /* ESERCIZIO 24
-  Scrivi una funzione per aggiungere un nuovo elemento alla lista non ordinata con id "myList".
+  Scrivi una funzione per aggiungere un nuovo elemento alla 
+  lista non ordinata con id "myList".
 */
+console.log("----- ESERCIZIO  24 -----");
+function addElement() {
+  let myList = document.getElementById("myList");
+  let newEl = document.createElement("li");
+  newEl.textContent = "New element";
+  myList.appendChild(newElement);
+}
+
 
 /* ESERCIZIO 25
   Scrivi una funzione per svuotare la lista non ordinata con id "myList".
 */
+console.log("----- ESERCIZIO  25 -----");
+function removeElement() {
+  let myList = document.querySelectorAll("#myList li");
+  for (let li of myList) {
+    li.remove();
+  }
+}
 
 /* ESERCIZIO 26
-  Scrivi una funzione per aggiungere ad ogni tag <tr> la classe CSS "test"
+  Scrivi una funzione per aggiungere ad ogni tag <tr> 
+  la classe CSS "test"
 */
+console.log("----- ESERCIZIO  26 -----");
+function aggiungiClass() {
+  let tabella = document.querySelectorAll("tr");
+  for (let tr of tabella) {
+    tr.classList.add("test");
+  }
+}
+
+
+
+
 
 // [EXTRA] JS Avanzato
 
 /* ESERCIZIO 27
-  Crea una funzione chiamata "halfTree" che riceve un numero come parametro e costruisce un mezzo albero di "*" (asterischi) dell'altezza fornita.
+  Crea una funzione chiamata "halfTree" che riceve un numero come parametro e costruisce un mezzo 
+  albero di "*" (asterischi) dell'altezza fornita.
 
   Esempio:
   halfTree(3)
@@ -536,6 +627,38 @@ console.log(searchByTitle("Avengers"));
   ***
 
 */
+console.log("----- ESERCIZIO  27 -----");
+
+function stampaAsterischi(n){
+   let str="";
+   for(let a=0; a<n; a++){
+      str +="*";
+   }
+      return str;
+}
+
+
+function halfTree( num){
+  
+  let strA="";
+  let tipo = typeof(num);
+
+  if(num > 0 && tipo == "number")
+  {
+    for ( let i=0; i<num; i++)
+    {  
+       strA = stampaAsterischi(i+1);
+       console.log(strA);  
+    } 
+  }else{
+          console.log("Errore hai inserito un numero negativo o una stringa")
+       }  
+}
+
+halfTree("jj");//Errore
+halfTree(-3);//Errore
+halfTree(10);//Errore
+
 
 /* ESERCIZIO 28
   Crea una funzione chiamata "tree" che riceve un numero come parametro e costruisce un albero di "*" (asterischi) dell'altezza fornita.
@@ -548,9 +671,91 @@ console.log(searchByTitle("Avengers"));
   *****
 
 */
+console.log("----- ESERCIZIO  28 -----");
+
+function stampaSpazioVuoto(n){
+  let str="";
+
+  for(let a=0; a<n; a++){
+      str +=" ";
+     }
+    return str;
+}
+
+function tree( num){
+  let strV="";
+  let strA="";
+  let tipo = typeof(num);
+  
+  if(num%2 == 0 && num>0)
+  {
+     num++;
+     console.log("Il numero è pari non posso costruire la piramide" + 
+       " resetto il numero in dispari aggiungendo un asterisco");
+  }
+  
+  let c = num;
+
+  if(num > 0 && tipo == "number")
+  {
+    for ( let i=0; i<num; i += 2)
+    {  
+       strV = stampaSpazioVuoto((c/2));
+       strA = stampaAsterischi(i+1);
+       console.log(strV+strA);  
+       c -= 2;
+    } 
+  }else{
+          console.log("Errore hai inserito un numero negativo o una stringa")
+       }  
+}
+
+tree("gf")//Errore
+tree(-7)//Errore
+tree(6)//aggiunge un asterisco
+tree(9);
 
 /* ESERCIZIO 29
-  Crea una funzione chiamata "isItPrime" che riceve un numero come parametro e ritorna true se il numero fornito è un numero primo.
+  Crea una funzione chiamata "isItPrime" che riceve un numero come parametro 
+  e ritorna true se il numero fornito è un numero primo.
 */
+console.log("----- ESERCIZIO  29 -----");
+function isItPrime(num){
+  
 
-/* Questo array viene usato per gli esercizi. Non modificarlo. */
+  let tipo = typeof(num);
+  
+  if(num > 0 && tipo == "number")
+  {
+    
+    let divisore = 0;
+
+    for(let i=2; i<num; i++)
+    {
+      if( num % i == 0 )
+         divisore++;  
+    }
+
+    if (divisore == 0)
+    {
+        console.log("Il numero è primo " + num) 
+        return true;
+    } else
+           {
+            console.log("Il numero non è primo " + num) 
+            return false;  
+          }
+
+
+  }else{
+         console.log("Errore hai inserito un numero negativo o una stringa");
+         return false;
+       }  
+}
+
+console.log(isItPrime(-4));//Errore
+console.log(isItPrime("gh"));//Errore
+console.log(isItPrime(17));
+console.log(isItPrime(33));
+
+
