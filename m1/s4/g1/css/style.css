@@ -1,0 +1,74 @@
+.grp2_PaginaBenv{
+    background-image:url(../assest/bg.jpg);
+    color: white;
+    width: 1024;
+    height: 728px;
+    padding: 50px;
+    background-size: cover;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    margin-top: 50px;
+    font-size: 80px;
+}
+span{
+    font-weight: bold;
+}
+h3 {
+    color: #c2148d;
+    font-weight: bold;
+    margin: 30px 0 20px 0;
+    font-size: 30px;
+}
+
+#listaPrimaPagina{
+    margin-top: 50px;
+    margin-left: 20px;
+}
+
+#listaPrimaPagina li {
+    padding: 5px;
+}
+
+#button{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+#coloreBottone {
+    padding: 20px 50px;
+    background-color: #43ffff;
+    font-weight: bold;
+    font-size: 20px;
+    box-shadow: 0 0 25px #43ffff;
+    border: none;
+}
+/*Finire di definire il bottone, perchè non funziona la spunta*/
+#checkBox{
+    width: 15px;
+    height: 15px;
+    margin: 0px;
+    background: rgba(40,40,40,0.2);
+    border: solid 1px white;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none; 
+}
+#checkBox:checked {
+    background: rgba(40,40,40,0.7);
+}
+
+.checkBox-container {
+    position: absolute;
+    display: inline-block;
+    margin: 20px;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+}
+    
+
+
+

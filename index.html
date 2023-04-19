@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style2.css">
+    <link rel="stylesheet" href="../css/style3.css">
+    <link rel="stylesheet" href="../css/style4.css">
+    <link rel="stylesheet" href="../css/stella.css">
+    <link rel="stylesheet" href="../css/styletimer.css">
+    
+</head>
+
+<body>
+            
+            <div class="grp2_PaginaBenv">
+                <img id="logo" src="../assest/epicode_logo.png" alt="logo epicode" width="160px" height="35">
+                <h1>Welcome to<br><span>your exam</span> </h1>
+
+                <h3>Instructions</h3>
+                <p>We don't expect most engineers to know the answers to all of these<br>
+                 questions, so don't worry if you're unsure of a few of them.   
+                </p>
+                <div>
+                <ul id="listaPrimaPagina">
+                    <li>Each question is <b>timed</b> and can only be<b>answered once</b></li>
+                    <li>Changing browser tab or opening other windows will <b>invalidate the queswtion</b></li>
+                    <li>This exam will take approx <b>0-5 minutes.</b></li>
+                </ul>
+                </div>
+                
+                <div id="button">
+                
+                <div><input id="checkBox" type="checkbox"> 
+                <label>I promise to answer myself without help from anyone</label></div>
+                <div><button id="coloreBottone" type="button">PROCEED</button></div>
+
+                </div> 
+    
+            </div>
+             
+        
+            <!--Seconda pagina  -->
+            <div class="grp2_PaginaBench">
+
+                <div class="header">
+                      <img id="logo" src="../assest/epicode_logo.png" alt="logo epicode" width="160px" height="35">   
+                
+                
+                
+     <div id="time">    
+        <div class="circle">   
+            <svg width='200', height="200"> 
+                <circle id="circle_background" cx="100" cy="100" r="70"/>
+                <circle id="circle" cx="100" cy="100" r="70"/>  
+                <text id="timer" x="50%" y="50%" text-anchor="middle" stroke-width="1px" dy=".3em"></text> 
+                <text class="svg_text_circle" x="50%" y="30%" text-anchor="middle">SECONDS</text> 
+                <text class="svg_text_circle" x="50%" y="70%" text-anchor="middle">REMAINING</text> 
+            </svg>      
+        </div>    
+    </div> 
+                </div>
+              
+
+
+                <!-- Domanda da inserire -->
+                <h3 class="stringaDomanda"> Domanda </h3>
+                
+                    <div id="risposte">
+                        <button class="stringaRisposte">box 1</button>
+                        <button class="stringaRisposte">box 2</button>
+                        <button class="stringaRisposte">box 3</button>
+                        <button class="stringaRisposte">box 4</button>
+                     </div>
+              
+                <div class="question">
+                    <p>
+                        Question <span>/10</span>
+                    </p>
+                </div>
+            </div>
+            
+          <!--Terza pagina  -->
+          <div class="grp2_PaginaResult">
+            <img id="logo" src="../assest/epicode_logo.png" alt="logo epicode" width="160px" height="35">
+            
+          <div class="titoloRisultato">
+              <h2>Result</h2>
+              <h4>The summary of your answers:</h4>          
+          </div>
+
+          
+
+          <div class="bloccoRisultato">
+              <div>
+                  <h2 class="percCorrette">Correct <br></h2>
+                  <h4 class="risCorrette"> /10 questions</h4>    
+              </div>
+
+              
+            <div class="paginaCircle">
+                <h3>Titolo</h3>
+                <p>testo</p>
+            </div>
+ 
+            <div>
+                <h2 class="percSbagliate"> Wrong <br></h2>
+                <h4 class="risSbagliate"> /10 questions</h4>    
+            </div>
+          </div>
+
+          <div class="button">
+            <button type="button">RATE US</button>
+          </div>
+
+          </div>
+
+          <!-- Quarta pagina -->
+          <div class="grp2_paginaFeedback">
+
+            <img id="logo" src="../assest/epicode_logo.png" alt="logo epicode" width="160px" height="35">   
+
+            <div class="feedback">
+                <h2>Tell us how it's going</h2>
+                <p>From 0 to 10, how likely are you to recommend EPICODE<br>to a friend or a colleague?<p>
+            
+            <div id="stelleValut">
+                <div id="full-stars-example-two">
+                    <div class="rating-group">
+                        <div id="container">
+                        <input disabled checked class="rating__input rating__input__none" name="rating" id="rating-none" value="0" type="radio">
+                        </div>
+                    </div>
+               </div> 
+            </div>
+
+            <div>
+                <p>Leave us an open feedback about your experience so far</p>
+            </div>
+
+            <div class="comment">
+                <input type="text" placeholder="Write your comment here">
+            </div>
+
+            <div><button id="coloreBottone" type="button">MORE INFO</button></div>
+            </div>
+        
+          </div>
+    
+    <script src="js timer/timer.js"></script>
+    <script src="../stella/stella.js"></script>
+
+</body>
+
+</html>
