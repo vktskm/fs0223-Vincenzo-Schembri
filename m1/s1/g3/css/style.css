@@ -1,10 +1,9 @@
-#main-header{
-    text-align: center;
-}
-#subtitle-area{
-    background-color: yellow;
-    border-top: 3px solid orange;
-    height: 50px;
-    line-height: 50px;
-
+body {
+/* La proprietà CSS text-align imposta l'allineamento orizzontale del contenuto a livello 
+inline all'interno di un elemento di blocco o di una casella di cella di tabella. Ciò 
+significa che funziona come l'allineamento verticale ma nella direzione orizzontale. */
+text-align: center;
+margin:0;
+color:black;
+font-family: Georgia, Times, serif;
 }
