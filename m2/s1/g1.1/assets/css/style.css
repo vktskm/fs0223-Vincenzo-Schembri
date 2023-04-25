@@ -1,5 +1,4 @@
 /* IMPOSTAZIONI GENERALI */
-
 body {
   font-family: Poppins, "Helvetica Neue", sans-serif;
   line-height: 1.6;
@@ -35,6 +34,10 @@ header {
   box-shadow: 0 3px 3px #444;
   margin-bottom: 1.5em;
   padding: 2em 1.5em;
+  /* 3. Far bloccare l'Header quando raggiungerà il top della pagina,restando così sempre visibile */
+  position:sticky;
+  top:0px;
+  z-index:10;
 }
 
 @media screen and (min-width: 800px) {
@@ -105,6 +108,9 @@ main {
   }
 }
 
+/* 4.Disporre il titolo "Novità", presente nel box novità a fine articolo (vedi immagini) posizione assoluta in modo che
+  esca leggermente dal contenitore in alto.
+  Devo avere position relative in section per applicare absolute nella classe   */
 section {
   background-color: #e3e3e3;
   padding: 1.5em 1em;
@@ -122,6 +128,18 @@ section h2 {
   padding: 0px 1em;
 }
 
+.moveTitle {
+  font-size: 2rem;
+  text-transform: uppercase;
+  position: absolute;
+  top: -30px;
+  left: 5%;
+  box-shadow: 1px 1px 1px #333;
+}
+
+
+/* Fine  punto 4 */
+
 /* ELEMENTI NEL MAIN - ARTICLE */
 
 h1 {
@@ -131,6 +149,21 @@ h1 {
   letter-spacing: -0.03em;
   margin-bottom: 0.7em;
 }
+
+/* 2. Aggiungere l'immagine "underline.svg" sotto le parole "template per i post" così da sottolinearla */
+h1 span{
+  position: relative;
+}
+
+h1 img {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 60px;
+  width: 100%;
+  opacity: 0.9;
+}
+/* Fine sottolineatura */
 
 p,
 address,
