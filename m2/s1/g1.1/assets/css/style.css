@@ -2,7 +2,7 @@
 body {
   font-family: Poppins, "Helvetica Neue", sans-serif;
   line-height: 1.6;
-  padding: 15px;
+  padding: 30px;
   background-image: url("../img/sfondo.png");
   background-position: center center;
   /* modifica codice  overflow-x: hidden;
@@ -12,7 +12,7 @@ body {
   proprietà stenografica overflow. 
   Il contenuto di overflow di hiddwn viene ritagliato, se necessario, per adattarsi orizzontalmente 
   alla casella di riempimento degli elementi. Non sono disponibili barre di scorrimento.*/
-  overflow-x: hidden;
+  overflow-x: hidden; 
 }
 
 * {
@@ -22,6 +22,69 @@ body {
 hr {
   display: none;
 } /* rimuove l'elemento */
+
+/* BUTTON FIXED */
+
+
+.social,
+.toTop {
+  line-height: 1;
+  position: fixed;
+  right: -5px;
+  z-index: 100;
+}
+
+.social {
+  top: 16px;
+}
+
+.toTop {
+  bottom: 16px;
+}
+
+
+.toTop a,
+.social a {
+  color: #f7575e;
+  font-size: 2rem;
+  display: block;
+}
+
+.social a {
+  color: rgb(45, 101, 185);
+}
+
+.social a:first-child {
+  margin-bottom: 1rem;
+}
+
+
+
+
+/* 7. Questi pulsanti dovranno avere del padding attorno, in modo da mostrare un background bianco 
+in trasparenza con sfocatura dello sfondo, con un bordo di 2px bianco e un'ombreggiatura leggera. */
+.toTop .far,
+.social .far {
+  background: #ffffffa1;
+  backdrop-filter: blur(2px);
+  line-height: 0.8;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgb(0 0 0 / 10%);
+  padding: 16px;
+  border: 3px solid white;
+} 
+
+
+
+/* 8. I pulsanti  si posizioneranno rispettavamente nella parte alta quelli blu e bassa quello violetto, a
+risoluzioni superiori a 700px, mentre saranno raggruppati in basso a risoluzione mobile per una migliore UX*/
+@media screen and (max-width: 700px) {
+  .social {
+    top: unset;
+    bottom: 96px;
+  }
+} 
+
 
 /* HEADER */
 header {
@@ -136,14 +199,12 @@ section h2 {
   left: 5%;
   box-shadow: 1px 1px 1px #333;
 }
-
-
-/* Fine  punto 4 */
+/* Fine del punto 4 fatto tutto nella classe moveTitle tranne la dichiarazione position: relative fatta in section*/
 
 /* ELEMENTI NEL MAIN - ARTICLE */
 
 h1 {
-  font-size: 2.6rem;
+  font-size: 2.0rem;
   line-height: 1.2;
   font-weight: bold;
   letter-spacing: -0.03em;
@@ -159,7 +220,7 @@ h1 img {
   position: absolute;
   left: 0;
   right: 0;
-  top: 60px;
+  top: 80%;
   width: 100%;
   opacity: 0.9;
 }
@@ -234,11 +295,19 @@ h1 + p {
   agli elementi di testo e inline di avvolgerlo. L'elemento viene rimosso dal normale flusso della pagina, 
   pur rimanendo una parte del flusso (in contrasto con il posizionamento assoluto). */
 
-  /* Se float non si mette all'interno di un blocco prende la prossima porzione di HTML successivo allora 
+}
+
+.clearfix::after{
+  content: "";
+  clear: both;
+  display: table;
+    /* Se float non si mette all'interno di un blocco prende la prossima porzione di HTML successivo allora 
   dobbiamo dichiarare l'istruzione clear:left; del CSS riferito alla parte di sHTML successivo.
   La proprietà clear CSS stabilisce se un elemento deve essere spostato al di sotto degli elementi 
   mobili (cancellati) che lo precedono. La proprietà si applica agli elementi mobili e non mobili. */
 }
+/* Fine punto 1*/
+
 ul,
 ol {
   margin-left: 2em;
@@ -270,7 +339,13 @@ iframe {
     width: 50%;
     margin-inline: -2px;
     vertical-align: middle;
+    /* L'istruzione margin-block-start: 4rem; mi unisce i blocchi iframe e section in uno. 
+    La proprietà CSS margin-block-start definisce il margine di inizio blocco logico di un 
+    elemento, che viene mappato a un margine fisico in base alla modalità di scrittura, alla 
+    direzionalità e all'orientamento del testo dell'elemento.*/
+    margin-block-start: 4rem;
   }
+  /* Mi risolve il problema dei blocchi quando sono minimo 1200px*/
 
   iframe {
     height: 267px;
@@ -362,7 +437,18 @@ aside div {
   border: 1px solid #c3c3c3;
   margin-bottom: 1em;
   padding: 1em;
+  /* 9. Si posizioni infine l'icona "fas fa-tag" in modo assoluto in alto a destra relativamente alla sua card */
+  position: relative;
 }
+
+aside div .fa-tag{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 4rem;
+  opacity: 0.15;
+}
+/* Fine del punto 9 ho dichiarato position: relative in aside div e fatto il resto in aside div .fa-tag*/
 
 @media screen and (min-width: 1200px) {
   aside div {
