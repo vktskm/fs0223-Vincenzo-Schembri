@@ -1,0 +1,38 @@
+nav {
+       background-color: rgb(240, 229, 229);
+       border-radius: 60px;
+       padding: 10px 30px;
+}
+
+nav ul {
+           list-style-type: none;
+           margin: 0;
+           padding: 0;
+           display: flex;
+  }
+
+.shop {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            /* La proprietà CSS flex-basis imposta la dimensione principale iniziale 
+            di un elemento flex. Imposta le dimensioni della casella del contenuto, 
+            se non diversamente impostato con il ridimensionamento della casella. */
+           flex-basis: 60%;
+           border-radius: 60px;
+           background-color: rgb(250, 229, 115);
+           padding: 20px 20px;
+} 
+
+.shop img {
+    width: 40px;
+}
+
+ .nav-li {
+    background-color: rgb(250, 229, 115);
+    padding: 15px 0;
+    margin: 10px 5px;
+    border-radius: 90px;
+    width: 40%;
+    text-align: center;
+} 
