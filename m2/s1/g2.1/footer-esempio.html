@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Footer in flex</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      footer {
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+      }
+
+      #top {
+        background-color: #04a2b0;
+        color: white;
+        flex-grow: 2.5;
+        display: flex;
+        flex-direction: column;
+        /* centro gli elementi su entrambi gli assi */
+        align-items: center;
+        justify-content: center;
+      }
+
+      #top p:first-child {
+        margin-bottom: 0;
+      }
+
+      #middle {
+        background-color: #015d5f;
+        color: white;
+        flex-grow: 0.5;
+        /* allinea verticalmente la ul */
+        display: flex;
+        align-items: center;
+      }
+
+      #middle ul {
+        display: flex;
+        justify-content: space-around;
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        padding: 1rem;
+        /* impostando il padre come flex, l'elemento ha cominciato a occupare solamente lo spazio strettamente necessario */
+        /* quindi per sfruttare tutta la larghezza setto la width al 100% del padre (#middle) */
+        width: 100%;
+      }
+
+      #bottom {
+        background-color: #9ed3ca;
+        flex-grow: 1.5;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      #bottom p {
+        margin: 0;
+      }
+
+      #icons-container {
+        font-size: 2em;
+      }
+
+      #icons-container i {
+        margin: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <footer>
+      <div id="top">
+        <p>Questions?</p>
+        <p>
+          Write us at
+          <a href="mailto:example@example.com">example@example.com</a>
+        </p>
+        <div id="icons-container">
+          <i class="fab fa-facebook-square"></i>
+          <i class="fab fa-twitter-square"></i>
+          <i class="fab fa-youtube"></i>
+          <i class="fab fa-instagram"></i>
+        </div>
+      </div>
+      <div id="middle">
+        <ul>
+          <li>Privacy Policy</li>
+          <li>Terms of Use</li>
+          <li>Copyright</li>
+        </ul>
+      </div>
+      <div id="bottom">
+        <p><span id="current-year"></span>, all right reserved.</p>
+        <p>Created with ❤️ at EPICODE</p>
+      </div>
+    </footer>
+    <script>
+      // window.onload è una funzione che verrà automaticamente eseguita all'avvio della pagina
+      window.onload = function () {
+        // impartisco il mio comportamento
+        // ogni volta che manipolate un elemento del DOM i passaggi da fare sono 2!
+        // 1) selezionare l'elemento dal DOM (querySelector, getElementById, ...)
+        let currentYearSpan = document.getElementById('current-year')
+        // 2) una volta ottenuto il suo riferimento, possiamo lavorarci (cambiarne il contenuto, le classi, l'id, ...)
+        currentYearSpan.innerText = new Date().getFullYear()
+        // getFullYear è un metodo invocabile su un oggetto Date che tornerà l'anno in corso
+      }
+    </script>
+  </body>
+</html>
