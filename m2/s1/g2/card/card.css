@@ -1,0 +1,122 @@
+/* .productCard {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    background-color: white; 
+    padding: 30px 30px; 
+}
+
+.productCard img{
+ border-radius: 50px 50px 0 0;
+ 
+}
+
+.secBlock {
+ background-color: #fef7e2;;
+ padding-bottom: 10px;
+ border-radius: 0 0 50px 50px;
+ display: flex;
+ flex-direction: column;
+}
+
+.secBlockTop{
+display: flex;
+flex-direction: row; 
+justify-content: space-around;        
+}
+
+.secBlock button {
+margin-bottom: 10px;
+padding: 5px 5px;
+background-color: #ffdf7f;
+color: black;
+border-radius: 20px;
+align-items: center;
+margin-left: 80px;
+margin-right: 80px;
+} */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 60px;
+    color: #742305
+}
+
+.prod-card {
+  width: 15vw;
+  min-width: 250px;
+  min-height: 40vh;
+  background-color: #fef7e2;
+  /* border-radius viene applicato solamente nella
+  parte inferiore */
+  border-radius: 60px;
+  display : flex;
+  flex-direction: column;
+  /* overflow: applica border-radius */
+  overflow: hidden;
+}
+
+.prod-card .prod-img {
+    flex: 3 0 240px;
+    object-fit:cover;
+}
+
+.prod-card .prod-info {
+    flex: 1 0 120%;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.prod-card div {
+     width: 100%; 
+}
+
+/* Mi mette in orizzontale le due frasi e il prezzo  */
+
+.prod-info .prod-data {
+    flex: 2 0 66%;
+    display: flex;
+    align-items: center;
+}
+
+.prod-data .prod-name {
+    flex: 2 0 66%;
+    text-align: center;
+}
+
+.prod-name .main {
+  font-weight: bold;
+}
+
+.prod-data .prod-price{
+    flex: 1 0 33%;
+    text-align: center; 
+}
+
+.prod-cta {
+    flex: 1 0 33%;
+    text-align: center;
+}
+
+button {
+    width: 60%;
+    height: 90%;
+    background-color: #ffdf7e;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    color: #742305;
+}
+
+
+
+
+
+
+
+

@@ -1,0 +1,118 @@
+body {
+    font-family: 'Indie Flower', cursive;
+    margin:0;
+    box-sizing: border-box;
+}
+
+.container{
+
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    background-color: grey;
+    padding: 10px;
+}
+
+.postit{
+    width: 150px;
+    height: 140px;
+    padding: 30px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 4px 4px 4px black;
+    transition: 2s;
+}
+
+.postit:hover {
+    transform: scale(1.5, 1.5);
+    rotate: 0deg;
+    transition: 2s;
+    z-index: 1;
+}
+
+
+.num{
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 0.8rem;    
+}
+
+
+.yellow {
+    background-image: radial-gradient(circle at 60.19% 21.99%, #ffffbd 0, #ffffb3 16.67%, #ffeda8 33.33%, #f2d59d 50%, #dbbe92 66.67%, #c4a989 83.33%, #b09780 100%);
+}
+
+.green {
+    background-image: radial-gradient(circle at 60.9% 20.05%, #ffffc9 0, #fbffc9 10%, #eaffc7 20%, #dafcc5 30%, #caf0c2 40%, #bae2bd 50%, #acd4b7 60%, #a1c8b2 70%, #99bdad 80%, #92b3a8 90%, #8daca4 100%);
+}
+
+.purple {
+    background-image: radial-gradient(circle at 60.19% 21.99%, #ff8dff 0, #f883f4 16.67%, #d477e2 33.33%, #af6acd 50%, #8c5cb6 66.67%, #6d50a1 83.33%, #52458d 100%);
+}
+
+
+
+
+@keyframes aniPost {
+    0% {
+        transform: scale(2, 2);
+        opacity: 0;
+        z-index: 1;
+    }
+
+    1% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1, 1);
+        z-index: 1;
+    }
+}
+
+
+
+.anim1 {
+    rotate: -15deg;
+    animation: aniPost 2s linear 1 backwards;
+}
+
+
+.anim2 {
+    rotate: 8deg;
+    animation: aniPost 2s linear 1s 1 backwards;
+}
+
+.anim3 {
+    rotate: 6deg;
+    animation: aniPost 2s linear 2s 1 backwards;
+}
+
+.anim4 {
+    rotate: -13deg;
+    animation: aniPost 2s linear 3s 1 backwards;
+}
+
+.anim5 {
+    rotate: 23deg;
+    animation: aniPost 2s linear 4s 1 backwards;
+}
+
+.anim6 {
+    rotate: 3deg;
+    animation: aniPost 2s linear 5s 1 backwards;
+}
+
+.anim7 {
+    rotate: 13deg;
+    animation: aniPost 2s linear 6s 1 backwards;
+}
+
+.anim8 {
+    rotate: -15deg;
+    animation: aniPost 2s linear 7s 1 backwards;
+}
+
