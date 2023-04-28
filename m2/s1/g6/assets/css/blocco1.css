@@ -1,29 +1,39 @@
 .blocco1 {
     display: flex;
     flex-direction: column;
+    margin-left: 100px;
 }
 
-.blocco1 .contBlocco1 {
+.contBlocco1 {
 
     display: flex;
     flex-wrap: wrap;
     border-bottom: 1px solid #191919;
     justify-content: space-between;
     align-items: baseline;
-
 }
 
 .titoloBlocco1{
     display: flex;
     justify-content: flex-start;
     padding: 10px;
+    align-items: center;
+
+}
+.titoloBlocco1 h3{
+    padding: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1.2rem;
 }
 
+
+
 .itemsBlocco{
-    width: 30%;
+    width: 25%;
     padding:10px; 
     display: flex;
-    
+    margin: 30px;
 }
 
 .numBlocco1{
@@ -42,10 +52,15 @@
     margin-right: 10px;
 }
 
-.testoBlocco1 p:nth-of-type(1)
-{
+.testoBlocco1 p:nth-of-type(1){
     display: flex;
-    align-items: center;;
+    align-items: center;
+    font-weight: bold;
+}
+
+.testoBlocco1 h3{
+    font-size: 1.4rem;
+    font-weight: bold;
 }
 
 
@@ -57,26 +72,72 @@
 .blocco2 {
     display: flex;
     flex-direction: column;
+    flex: 1 0 65%;
     padding: 20px;
     margin-top: 20px; 
+    width: 80%;
 }
 
 .itemsBlocco2 {
     display: flex;
     justify-content: space-around;
     justify-content: flex-start;
-    align-content:flex-start ;
+    align-content:flex-start;
+    margin-top: 80px;
 }
 
 .testoBlocco2 {
     display: flex;
     flex-direction: column;
+    margin-left: 80px;
     padding: 20px;   
 }
 
 
+.testoBlocco2 p:nth-of-type(1)
+{
+   font-weight: bold; 
+}
+
+.testoBlocco2 h3{
+
+    font-weight: bold;
+    font-size: 2rem; 
+}
+
+.rigaBassa {
+    display: flex;
+    justify-content: space-between;
+}
 
 
+.blocco3 {
+    margin-top: 40px;
+    padding: 30px;
+    flex-wrap: wrap;
+}
+
+.bot {
+    background-color: white;
+    font-size: 1rem;
+    padding: 15px;
+    color: gray;
+    border-color: aliceblue;
+    margin: 4px;
+}
+
+.titoloBlocco3 {
+    font-size:1.2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+
+.testoBlocco2 p:nth-of-type(2)
+{
+    font-size:1.6rem;
+}
 
 
 
