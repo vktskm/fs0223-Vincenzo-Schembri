@@ -8,6 +8,9 @@ header {
     background-color: #ffc017;
     padding: 20px 300px 15px 300px;
     border-bottom: 1px solid #191919;
+    position:sticky;
+    top:0;
+    z-index: 3;
 }
 nav {
     display: flex;
@@ -75,6 +78,21 @@ header a::before {
     letter-spacing: -7px;
     padding-block: 80px 25px;
 }
+
+#hero {
+    display:flex;
+    justify-content:space-between;
+}
+
+.mGrande {
+  
+  display: flex;
+  
+}
+
+
+
+
 
 #hero h3 {
     font-family: 'Roboto', sans-serif;
