@@ -1,0 +1,72 @@
+/*
+1 creazione del testo e formattazione di 1 parola da far ruotare
+2 inserimento delle altre 2 parole
+3 sovrapporre le 3 parole
+4 mostrare 1 parola e nascondere le altre 2
+5 animare 1 parola (fadein - fadeout)
+6 animare le altre 2 parole
+7 ritardare progressivamente l'animazione delle altre 2 parole 
+*/
+body {
+	font-family: 'Bree Serif', sans-serif;
+	font-size: 3rem;
+	color: #333;
+	line-height: 1.5;
+}
+main {
+	height: 100vh;
+	display: flex;
+	align-items: center;
+}
+
+div#testoAlternato {
+	width: 80%;
+	position: relative;
+	margin: 0 auto;
+	padding: 1em;
+	border: 5px solid #666;
+}
+p {
+	text-shadow: 1px 1px 1px rgba(146, 146, 146, 0.8);
+}
+.parole{
+	text-indent: 10px; 
+}
+.parole i{
+	position: absolute;
+	opacity: 0;
+	overflow: hidden;
+	color: #6b969d;
+	-webkit-animation: AlternateText 6s linear infinite 0s;
+	-ms-animation: AlternateText 6s linear infinite 0s;
+	animation: AlternateText 6s linear infinite 0s;
+}
+.parole i:nth-child(2) { 
+    -webkit-animation-delay: 2s; 
+	-ms-animation-delay: 2s; 
+	animation-delay: 2s; 
+	color: #6b889d;
+}
+.parole i:nth-child(3) { 
+    -webkit-animation-delay: 4s; 
+	-ms-animation-delay: 4s; 
+	animation-delay: 4s; 
+	color: #6b739d;	
+}
+@-webkit-keyframes AlternateText {
+    0% { opacity: 0; }
+    2% { opacity: 0; -webkit-transform: translateY(-30px); transform: translateY(-30px); }
+	5% { opacity: 1; -webkit-transform: translateY(0px); transform: translateY(0px);}
+    17% { opacity: 1; -webkit-transform: translateY(0px); transform: translateY(0px); }
+	20% { opacity: 0; -webkit-transform: translateY(30px); transform: translateY(30px); }
+    100% { opacity: 0; }
+}
+@keyframes AlternateText {
+    0% { opacity: 0; }
+    2% { opacity: 0; -webkit-transform: translateY(-30px); transform: translateY(-30px); }
+	5% { opacity: 1; -webkit-transform: translateY(0px); transform: translateY(0px);}
+    17% { opacity: 1; -webkit-transform: translateY(0px); transform: translateY(0px); }
+	20% { opacity: 0; -webkit-transform: translateY(30px); transform: translateY(30px); }
+    100% { opacity: 0; }
+}
+

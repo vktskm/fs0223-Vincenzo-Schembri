@@ -1,0 +1,110 @@
+body {
+    background-color: white;
+    box-sizing: border-box;
+}
+
+/* HEADER E NAVBAR */
+header {
+    background-color: #ffc017;
+    padding: 20px 300px 15px 300px;
+    border-bottom: 1px solid #191919;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #191919;
+}
+nav img {
+    justify-content: flex-start;
+}
+
+.menu {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.menu .get-started {
+    background-color: #191919;
+    color: white;
+    height: 35px;
+    width: fit-content;
+    padding-inline: 20px;
+    border-radius: 17.5px;
+    border: none;
+    font-size: 0.9rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    margin-inline: 5px;
+}
+
+.menu button {
+    background-color: #ffc017;
+    color: #191919;
+    border: none;
+    height: 30px;
+    width: fit-content;
+    font-size: 0.9rem;
+    color: #191919;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    margin-inline: 5px;
+    padding-inline: 10px;
+}
+
+header a {
+    text-decoration: none;
+}
+
+header a::after {
+    color: #191919;
+    text-decoration: none;
+}
+
+header a::before {
+    color: #191919;
+    text-decoration: none;
+}
+
+/* HERO SECTION */
+#hero h1 {
+    font-family: 'Spectral', serif;
+    font-weight: 500;
+    font-size: 7rem;
+    letter-spacing: -7px;
+    padding-block: 80px 25px;
+}
+
+#hero h3 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    font-size: 1.5rem;
+}
+.text {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.title {
+    width: 700px;
+}
+
+.start-reading {
+    width: 700px;
+    padding-block: 45px 90px;
+}
+
+.start-reading button {
+    background-color: #191919;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    font-size: 1.2rem;
+    height: 40px;
+    width: fit-content;
+    padding-inline: 60px;
+    border: none;
+    border-radius: 20px;
+}

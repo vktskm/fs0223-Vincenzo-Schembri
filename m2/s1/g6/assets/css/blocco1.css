@@ -1,0 +1,65 @@
+.blocco1 {
+    display: flex;
+    flex-direction: column;
+}
+
+.blocco1 .contBlocco1 {
+
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #191919;
+    justify-content: space-between;
+    align-items: baseline;
+
+}
+
+.titoloBlocco1{
+    display: flex;
+    justify-content: flex-start;
+    padding: 10px;
+}
+
+.itemsBlocco{
+    width: 30%;
+    padding:10px; 
+    display: flex;
+    
+}
+
+.numBlocco1{
+    padding: 10px;
+    color: gray;
+    font-size: 2rem;
+    font-weight: bold;
+    opacity: 0.7;
+    padding-top: 0px;
+}
+
+.imgBlocco1{
+    border-radius:100%;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.testoBlocco1 p:nth-of-type(1)
+{
+    display: flex;
+    align-items: center;;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+
+
