@@ -10,6 +10,7 @@ body {
     justify-content: space-evenly;
     flex-wrap: wrap;
     background-color: grey;
+    width: 1000px;
     padding: 10px;
 }
 
