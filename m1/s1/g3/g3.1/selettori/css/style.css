@@ -1,0 +1,42 @@
+a{/*tutti gli elementi html a*/
+    color: #000;
+}
+
+/*
+tag => peso 1
+class => peso 10
+id => peso 100
+inline style => peso 1000
+*/
+
+#colore-blu{/*peso 100*/
+    color: blue;
+}
+.colore-rosso{/*peso 10*/
+    /*tutti gli elementi con la classe colore rosso*/
+    color: red !important;
+}
+
+.sfondo-verde{
+    background-color: green;
+}
+
+/*selezione di figli*/
+
+.paragrafo-speciale b, /*peso 10 + 1 = 11*/
+.paragrafo-speciale em{/*peso 10 + 1 = 11*/
+    color: blue;
+}
+em{/*peso 1*/
+    color: red;
+}
+
+
+.area-speciale > span{
+    font-weight: bold;
+}
+
+.area-speciale ul li span{
+    font-style: italic;
+}
+

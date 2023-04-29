@@ -1,0 +1,37 @@
+div + p {
+    color: red
+}
+
+div ~ p {
+    font-weight: bold;
+}
+
+table{
+    width: 100%;
+    text-align: center
+}
+td{
+    border: 1px solid #000;
+}
+table tr:first-child{
+    background-color: #ccc
+}
+table tr:last-child{
+    background-color: #ccc
+}
+
+table tr:nth-of-type(odd){
+    font-weight: bold;
+}
+
+table td:hover{
+    transition: all 1s;
+    background-color: #000;
+}
+
+table td::after{
+    content: ">";
+}
+table td::before{
+    content: "<";
+}

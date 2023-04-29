@@ -1,0 +1,39 @@
+/*modifiche generali*/
+img, video{
+    max-width: 100%;
+}
+figure{
+    margin: 0;
+}
+
+.container{
+    margin: 0 auto;
+    width: 600px;
+}
+/*fine modifiche generali*/
+
+
+#main-header{
+    text-align: center;
+}
+#logo-area img{
+    width: 180px;
+}
+
+#subtitle-area{
+    background-color: yellow;
+    border-top: 1px solid orange;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+#subtitle-area b{
+    text-transform: uppercase;
+}
+
+.ul-speciale li{
+    margin-bottom: 10px;
+}
+
+.rounded-img{
+    border-radius: 10px
+}

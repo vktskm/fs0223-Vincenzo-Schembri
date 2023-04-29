@@ -1,0 +1,25 @@
+/*
+posso selezionare per attributo facendo così
+input[type="checkbox"]{ => peso 1 + 10
+    width: 100px;
+    height: 100px;
+}
+*/
+
+#menu{
+    list-style: none;
+    height: 0;
+    overflow: hidden;
+}
+
+#check{
+    display: none;
+}
+
+#check:checked + #menu{
+   height: 200px;
+}
+
+#menu li:not(:first-child) a{
+    color: red;
+}

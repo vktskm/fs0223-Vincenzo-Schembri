@@ -1,0 +1,36 @@
+.quadrato{
+    width: 100px;
+    height: 100px;
+    border: 1px dotted #000;
+    hyphens: auto;
+}
+
+#q1{
+    word-break: break-all;
+}
+
+#q2{
+    margin-top:200px;
+    white-space: nowrap;
+}
+
+.blocco{
+    display: block;
+}
+
+
+.griglia{
+    width: 90%;
+    margin: 0 auto;
+}
+.col{
+    width: calc(100% / 4 - 0.2rem);
+    height: 200px;
+    background-color: bisque;
+    display: inline-block;
+    margin-bottom:10px
+}
+
+.col:target{
+    background-color: red
+}
