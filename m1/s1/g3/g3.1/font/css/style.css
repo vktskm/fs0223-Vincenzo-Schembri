@@ -1,5 +1,6 @@
 :root{
     font-size:20px;
+    display:block;
 }
 
 
@@ -31,7 +32,6 @@ h1{
 
 h2{
     font-family: 'Delicious Handrawn', cursive;
-}
 
 h3{
     font-family: 'Roboto', sans-serif;

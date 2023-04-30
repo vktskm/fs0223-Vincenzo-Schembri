@@ -1,7 +1,11 @@
+/* seleziono solamente il primo 
+p che si trova dopo div  */
 div + p {
     color: red
 }
 
+/*  seleziono tutti p che 
+si trovano dentro il  div */
 div ~ p {
     font-weight: bold;
 }
@@ -25,7 +29,7 @@ table tr:nth-of-type(odd){
 }
 
 table td:hover{
-    transition: all 1s;
+    transition: all 5s;
     background-color: #000;
 }
 

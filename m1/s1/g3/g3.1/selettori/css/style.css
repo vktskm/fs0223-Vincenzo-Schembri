@@ -15,6 +15,7 @@ inline style => peso 1000
 .colore-rosso{/*peso 10*/
     /*tutti gli elementi con la classe colore rosso*/
     color: red !important;
+    /* !important vale 10000 */
 }
 
 .sfondo-verde{
@@ -27,11 +28,13 @@ inline style => peso 1000
 .paragrafo-speciale em{/*peso 10 + 1 = 11*/
     color: blue;
 }
+
 em{/*peso 1*/
     color: red;
 }
 
-
+/* seleziona solamente solo i <span> figli diretti 
+o figli di primo livello della classe .area-speciale*/
 .area-speciale > span{
     font-weight: bold;
 }

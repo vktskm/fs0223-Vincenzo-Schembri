@@ -2,6 +2,7 @@
 img, video{
     max-width: 100%;
 }
+
 figure{
     margin: 0;
 }
@@ -11,7 +12,6 @@ figure{
     width: 600px;
 }
 /*fine modifiche generali*/
-
 
 #main-header{
     text-align: center;
