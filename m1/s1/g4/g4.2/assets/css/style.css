@@ -9,6 +9,10 @@ body {
     padding: 20px;
 }
 
+*{
+    box-sizing: border-box;
+}
+
 /* HEADER */
 header{  
     background: rgb(0, 160, 198);  
@@ -32,40 +36,56 @@ header div h1 {
     padding-bottom: 20px;
 }
 
-
-
-header nav ul {
-  list-style: none;
+.listUnordered {
+   list-style: none; 
 }
 
-header nav li a {
+.list {
     color: white;
     text-decoration: none;
 }
 
-header nav li a:hover {
+.list:hover {
     color: red;
 }
-
 
 
 /* MAIN */
 main{
     background-color: white;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
+    box-shadow: 0 3px 3px #445;
     padding: 20px 15px;
     line-height: 1.5em;
 }
-main section h2{
+
+section {
+    background-color: #e3e3e3;
+    padding: 1em;
+    margin-bottom: 2em;;
+}
+
+section h2{
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: 2.0rem;
     line-height: 1.5em;
     margin-bottom: 20px;
+    text-align: center;
 }
+
+/* ELEMENTI NEL MAIN - ARTICLE */
+h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    line-height: 32px;
+}
+
 #text-autore{
     color: grey;
     margin-bottom: 15px;
 }
+
 .blocco-paragraph span{
     color:rgb(170, 32, 114);
     font-weight: bold;
@@ -73,81 +93,124 @@ main section h2{
 .blocco-paragraph{
     margin-bottom: 20px;
 }
-main section ul{
+ul , ol{
     padding-left: 35px;
     margin-bottom: 20px;
     line-height: 2.0em;
 }
-main section ol{
-    
-    padding-left: 35px;
-    margin-bottom: 20px;
-    line-height: 2.0em;
-}
+
 code {
     background-color:rgb(232 233 233);
     border-radius: 8px;
     border: 1px solid grey;
 }
-table, th, tr, td {
-    border: 1px solid white;
-    text-align: center;
-    padding: 10px;
-    
-}
-table {
-    margin: 25px auto;
-}
-caption {font-weight: bold;}
-.br {
-    display: block;
-}
-th {
-    background-color: rgb(51, 102, 204);
-    color: white;
-    box-sizing: border-box;
-    padding: 10px 20px;
-}
-.opaci-row{
-    background-color:  rgb(221 217 217);
-}
-#last-row { 
-    border-bottom:  solid rgb(51, 102, 204);   
-}
+
 #linktool{
     font-weight: bold;
     color: rgb(0, 119, 153);
 }
-#paragraph-before-video{
-    margin: 45px 0 ;
-}
-#video-section{
-    margin-bottom: 15px;
-}
-#last-part{
-    background-color: white;
-    box-sizing: border-box;
-    padding: 20px 15px;
-    line-height: 1.5em;
+
+iframe {
+  width: 100%;
+  height:auto;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  border-radius: 30px;
 }
 
-
-
-/* ELEMENTI NEL MAIN - ARTICLE */
 
 /* TABELLE */
+table {
+     margin-bottom: 25px; 
+}
+caption {
+    font-weight: bold;
+    font-style: italic;
+}
+
+
+thead tr {
+    background-color: rgb(51, 102, 204);
+    color: white;
+    box-sizing: border-box; 
+    padding: 10px 20px;
+}
+
+th , td {
+    padding: 15px 30px;
+    text-align: center;
+    vertical-align: bottom;
+}
+
+tbody tr {
+    border-bottom: 2px solid #dddddd;
+}
+
+tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+tbody tr:last-of-type {
+    border-bottom: 3px solid #3f6bca;
+}
 
 /* FORM */
-form h3 {
-    font-size: 1.3rem;
-    text-align: center;
-   padding: 15px 0px;
+
+
+section p {
+    margin-bottom: 20px;
 }
-form{
-    background-color: gray;
-    
+input {
+    border: 0px;
+    border-bottom: 2px dashed #333;
+    padding: 5px ;
+}
+
+button{
+    padding: 5px;
+    background-color: #3e74e7;
+    border: 0px;
+    color: white;
+    font-weight: bold;
 }
 
 /* ELEMENTI NELL' ASIDE */
+aside h2 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+aside div {
+    background-color: #e3e3e3;
+    border: 2px solid #c3c3c3;
+    margin-bottom: 15px;
+    padding: 15px;
+}
+
+aside div a {
+    color: blue;
+    font-weight: bold;
+}
+
+aside div p:last-child {
+    text-align: right;
+}
 
 /* FOOTER */
+footer{
+    background: rgb(53,53,53);
+    background: linear-gradient( 0deg , rgba(53,53,53,1) 0%,
+      rgba(5,85,103,1) 68%);
+    padding: 1rem;
+    box-shadow: 0 3px 3px #444;
+    color: white;
+    text-align: center;
+    font-size: 1.4rems;
+}
+
+footer a {
+    color: fuchsia;
+}
