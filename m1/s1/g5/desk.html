@@ -1,100 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <title>Corso Web Developer - Epicode school</title>
-    <meta name="description"
-        conten="Da zero a Epicode con i corsi completi per diventare uno sviluppatore professionista in 3 mesi.">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Da zero a Epicode con i corsi completi per diventare uno sviluppatore professionista in 3 mesi.">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/font-awesome.css">
     <link rel="stylesheet" href="css/desk.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
-
+    <title>Corso Web Developer - Epicode school</title>
 </head>
-
 <body>
     <header>
-        <div>
-            <img src="images/logo.png" alt="logo epicode" width="180" height="55%">
+        <div id="div-img">
+            <img id="logo-epicode" src="images/logo.png" alt="logo di Epicode">
         </div>
+        <div id="block-header" class="generali">    
+            <h1 class="titoli" id="main-title">Corso Web Developer</h1>
+            <p>Smetti di inseguire i titoli, inizia a lavorare. Mentre tutti vogliono arricchire il CV, tu pensa ad arricchire le tue competenze.</p>
+            <button>PARTIAMO!</button> 
+        </div> 
     </header>
-    <main >
-        <article class="bottom">
-            <section id="primissima">
-                <h1 id="titolone">Corso Web Developer</h1>
-                <p id="finalmente">Smetti di inseguire i titoli, inizia a lavorare. Mentre tutti vogliono arricchire il CV, tu<br> pensa ad
-                    arricchire le tue competenze.</p>
-                <a id="partiamo" href="https://join.epicode.com" title="pagina iscrizione epicode" target="_blank">PARTIAMO!</a>
-            </section>
-            <section class="flex-container" class="bottom">
-                <img id="pcimg" src="images/notebook.jpg" alt="immagine computer arrotondata">
-                <div class="sectiondiv">
-                    <h3>Tutti ti cercheranno</h3>
-                    <p>Sono 30.000 in italia le posizioni di developer scoperte, scegli quella che ti stimola di più</p>
-             
-                    <h3>Lavora dove vuoi</h3>
-                    <p>Lavora da casa, in riva al maro o in montagna.</p>
-               
-                    <h3>Scegli il tuo ruolo</h3>
-                    <p>Potra scegliere se essere Azienda, Freelance o Startup</p>
-                
-                
-                    <h3>Lavoro in libertà</h3>
+
+    <main>
+        <div id="parte-a-2">
+
+            <div id="img-circle-w">
+                <img id="img-circle" src="images/notebook.jpg" alt="notebook">
+            </div>
+            <div id="colonne">    
+                <div class="generali">
+                    <h3 class="titoli" >Tutti ti cercheranno</h3>
+                    <p>Sono 30.00 in Italia le posizioni di developer scoperte, scegli quella che ti stimola di più</p>
+                </div>
+
+                <div class="generali">
+                    <h3 class="titoli">Lavora dove vuoi</h3>
+                    <p>Lavora da casa, in riva al mare o in montagna.</p>
+                </div>
+
+            
+                <div class="generali">
+                    <h3 class="titoli">Scegli il tuo ruolo</h3>
+                    <p>Potrai scegliere se essere Azienda, Freelance o Startup</p>
+                </div>
+
+                <div class="generali" id="last-main-div">
+                    <h3 class="titoli">Lavoro in libertà</h3>
                     <p>Non serve lavorare in ufficio per essere creatori di prodotti digitali</p>
                 </div>
-            </section>
-            <section>
-                <div id="pop">
-                    <h2>Epicode Garantisce</h2>
-                    <p id="italic">"3 mesi intensivi di corso che cambieranno radicalmente la tua vita"</p>
-                    <p id="minmargin">Mario Rossi</p>
-                    <p id="tag">CEO, Epicode</p>
-                </div>
-            </section>
-        </article>
+            </div>    
+        </div>
+        <div id="last-main-block" class="generali">
+            <h2>Epicode garantisce</h2>
+            <p id="paragraph-italic">"3 mesi intensivi di corso che cambieranno radicalmente la tua vita"</p>
+            <p>Mario Rossi</p>
+            <p id="ceo">CEO, Epicode</p>
+        </div>    
     </main>
+
     <aside>
-        <div class="space">
-        <div class="box">
-            <img class="asideimg" src="images/foto1.jpg" alt="foto di un computer portatile">
-            <h3>Il tuo PC</h3>
-            <p>Se vuoi diventare developer è l'unico strumento di cui hai bisogno</p>
-        </div>
-        <div class="box">
-            <img class="asideimg" src="images/foto2.jpg" alt="foto di un computer chiuso">
-            <h3>Impara ora</h3>
-            <p>Impara da chi diventerai tra qualche anno, e diventa una rockstar come loro.</p>
-        </div>
-        <div class="box">
-            <img class="asideimg" src="images/foto3.jpg" alt="foto di un meeting">
-            <h3>Lavora subito</h3>
-            <p>Sappiamo cosa vogliono le aziende perché lavoriamo con loro.</p>
-        </div>
-    </div>
+        <article class="generali">
+            <div class="articoli">
+                <div>
+                    <img class="articles-img"  src="images/foto1.jpg" alt="foto di un laptop">
+                </div>
+                <div >
+                    <h3 class="titoli">Il tuo PC</h3>
+                    <p class="article-paragraph">Se vuoi diventare developer è l'unico strumento di cui hai bisogno.</p>
+                </div>
+            </div>
+        </article>
+
+        <article class="generali">
+            <div class="articoli">
+                <div>
+                    <img class="articles-img" src="images/foto2.jpg" alt="foto di un laptop">
+                </div>
+                <div>
+                    <h3 class="titoli">Impara ora</h3>
+                    <p class="article-paragraph">Impara da chi diventerai tra qualche anno, e diventa una rockstar come loro.</p>
+                </div>
+            </div>
+        </article>
+
+        <article class="generali">
+            <div class="articoli">
+                <div>
+                    <img class="articles-img" src="images/foto3.jpg" alt="lavoro di gruppo">
+                </div>
+                <div>
+                    <h3 class="titoli">Lavora subito</h3>
+                    <p class="article-paragraph">Sappiamo cosa vogliono le aziende, perchè lavoriamo con loro.</p>
+                </div>
+            </div>
+        </article>
     </aside>
-    <footer>
-        <h2>Contattateci</h2>
-        <p><i class="fas fa-phone-square-alt"></i> <a href="tel:+3911223459"
-                title="numero di telefono">(+39)11223459</a></p>
-        <p><i class="fas fa-envelope-square"></i> <a href="mailto:info@epicode.school"
-                title="info mail">info@epicode.school</a></p>
-        <p><i class="fas fa-external-link-square-alt"></i> Via Appia 1-00100 Roma (RM)</p>
-        <hr>
-        <p>&copy; 2021. Immagini di <a href="https://pixabay.com/it/" title="sito della pixabay"
-                target="_blank">Pixabay</a></p>
+
+    <footer class="generali">
+        <h2>Contattaci</h2>
+        <div id="rubrica">
+            <a href="#"><i class="fas fa-phone-square-alt"></i> (+39)11223456</a>
+            <a href="mailto:"><i class="fas fa-envelope-square"></i> info@epicode.school</a>
+            <p><i class="fas fa-external-link-square-alt"></i> Via Appia 1 - 00100 Roma (RM)</p>
+        </div>
+         <hr>
+        <p id="copyright">&copy; 2021. Immagini di <u>Pixabay</u>.</p>
     </footer>
-
-
-
-
+    
 </body>
-
 </html>
+
+    

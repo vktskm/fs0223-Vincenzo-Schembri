@@ -1,140 +1,150 @@
-/* General */
-* {
-    box-sizing: border-box;
-}
-.flex-container{
-    display: flex;
-    padding-top: 150px;
-    padding-bottom: 100px;
-    padding-left: 200px;
-    padding-right: 150px;
-    text-align: left;
-}
-body{
-    color: #393d41;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 1.2rem;
-    line-height: 1.65;
-    text-align: center;
-}
-h1, h2, h3, h4, h5, h6 {
+/* Your styles here */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+.titoli {
     color: #25a2c3;
     font-family: 'Montserrat', sans-serif;
     line-height: 1.5;
+    margin: 15px 0px;
+    
 }
-h1{
-    font-size: 2rem;
-    line-height: 1;
-    font-weight: bold;
+.generali{
+    padding: 30px 70px 10px 70px;
+    
 }
-h2{
-    color: white;
-    font-size: 1.8rem;
-    font-weight: bold;
+i{
+    color: #c8e7f0;
 }
-/*HEADER*/
-header{
-    background-color: black;
+body{
+    box-sizing: border-box;
+    color: #393d41;
+    font-size: 1.2rem;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.65;
 }
-header div{
+/* RELATIVE TO HEADER */
+img{
+    width: 100%;
+}
+
+header {
     text-align: center;
-    padding: 40px;
 }
-/*MAIN*/
-.bottom {
-    margin-bottom: 150px;
+#div-img{
+    background-color: black;
+    padding: 25px 20px;
+    text-align: left;
+
 }
-#primissima {
-    background-image:url(../images/banner.jpg);
+#logo-epicode{
+    width: 140px;
+    
+}
+#block-header{
+    background-image: url(../images/banner.jpg);
     background-size: cover;
-    padding-top: 150px;
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-bottom: 150px;
+    padding: 200px;
 }
-#titolone {
-    margin-bottom: 20px;
-}
-#finalmente {
+main{
     margin-bottom: 40px;
 }
-#partiamo{
+#main-title{
+    font-size: 1.9rem;
+    padding: 9px 8px;
+    line-height: 1.1;
+    margin: 0;
+}
+button{
     background-color: #f04c2f;
-    border-radius: 4px;
-    padding: 10px;
-    color: white;
-    text-decoration: none;
     font-family: 'Montserrat', sans-serif;
-    font-weight: bold;
+    color: white;
+    border: 1px;
+    padding: 15px 30px;
+    margin-top: 30px;
+    border-radius: 5px;
+    margin-bottom: 18px;
 }
-.section {
-    flex-direction: row-reverse;
+/* RELATIVE TO MAIN */
+#parte-a-2{
+    display: flex;
+    justify-content: center;
+    margin: 100px 0px;
 }
-.sectiondiv h3 {
-    margin-bottom: 10px;
+#colonne{text-align:center;}
+#img-circle-w{
+    padding: 35px;
 }
-.sectiondiv p {
-    margin-bottom: 30px;
-}
-#pcimg {
-    object-fit: cover;
+#img-circle{
     border-radius: 100%;
 }
-#pop {
-    color: white;
+#last-main-block{
     background-color: #e22d0e;
-    padding-top: 60px;
-    padding-bottom: 40px;
+    color: white;
+    text-align: center;
+    padding: 110px;
 }
-#pop h2{
-    padding-bottom: 30px;
+#last-main-block h2{
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    margin-top: 20px;
 }
-#italic {
+#paragraph-italic {
     font-style: italic;
+    margin-bottom: 27px;
 }
-#minmargin {
-    margin-bottom: 0;
-}
-#tag{
+#ceo{
     font-size: 0.9rem;
-    margin-bottom: 0;
+    margin-bottom: 20px;
 }
-/* ASIDE */
-.box {
-    width: 500px;
+/* RELATIVE TO ASIDE/ARTICLES */
+article{
+    text-align: center;
+}
+.articoli{
     border: 1px solid #dee1e3;
-    margin: 15px;
+    height: 50vh;
+    
 }
-.box h3{
-    padding-bottom: 5px;
+.articles-img{
+    height: 30vh;
 }
-.asideimg { 
-    width: 100%;
-    height: 350px;
-}
-.space {
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 150px;
+.article-paragraph{
+    padding: 0px 5px 20px 5px;
 }
 
-/* FOOTER */
-footer{
-    color: #c8e7f0;
-    background-color: #25a3c3;
-    padding-top: 50px;
-    padding-bottom: 100px;
+aside {
+    margin: 80px 0px 120px 0px;
+    display: flex;
+    align-items: center;
 }
-footer a{
-    color:#c8e7f0;
+/* RELATIVE TO FOOTER */
+footer{
+    background-color: #25a2c3;
+    color: #c8e7f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 footer h2 {
-    padding-bottom: 20px;
+    color: white;
+    font-weight: bold;
+    font-size: 1.5em;
+    margin-bottom: 15px
+}
+a{
+    display: block;
+    color: #c8e7f0;
 }
 hr{
-    color: white;
-    width: 200px;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    width: 210px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
+#copyright {
+    font-size: 0.8rem;
+    padding-bottom: 40px
+}
+#colonne {text-align: left;}
 
+    

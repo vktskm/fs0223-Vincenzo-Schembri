@@ -5,21 +5,39 @@ input[type="checkbox"]{ => peso 1 + 10
     height: 100px;
 }
 */
-
 #menu{
+    /* La proprietà abbreviata CSS list-style consente di 
+    impostare tutte le proprietà dello stile list contemporaneamente.
+    none Non viene utilizzato alcuno stile elenco.
+    In questo caso elimino i pallini dalla lista */
     list-style: none;
     height: 0;
     overflow: hidden;
 }
 
 #check{
-    display: none;
+    height: 50px;
+    width: 50px;
+    /* display: none;  */
 }
 
+/* checked si usa con radio e checkbox 
+quando seleziono una delle due.
+In questo caso quando seliziono la checkbox
+si porta ad una dimensione di 20px 20 px*/
+#check:checked{
+    height: 20px;
+    width: 20px;
+ }
+ 
+ /* In questo caso quando seliziono la checkbox
+ l'altezza del menu diventa 200px*/ 
 #check:checked + #menu{
    height: 200px;
 }
 
+/* not(:first-child) lascia di colore blu la 
+prima ancora ed dà il colre rosso altre ancore */
 #menu li:not(:first-child) a{
     color: red;
 }

@@ -1,46 +1,77 @@
 .quadrato{
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 300px;
     border: 1px solid #000;
     margin-bottom: 20px;
 }
 
 .fascia{
     width: 100%;
-    height: 600px;
+    height: 500px;
+    margin-bottom: 20px;
+    border: 2px solid red;
 }
 
 #q1{
+    /* La proprietà stenografica CSS overflow imposta il comportamento desiderato 
+    quando il contenuto non rientra nella casella dell'elemento padre (overflow)
+    nella direzione orizzontale e/o verticale.
+    hidden
+    Il contenuto di overflow viene ritagliato nella casella di riempimento 
+    dell'elemento. Non ci sono barre di scorrimento e il contenuto ritagliato 
+    non è visibile (ad esempio, il contenuto ritagliato è nascosto), ma il 
+    contenuto esiste ancora. */
     overflow: hidden;
 }
 
 #q1 img{
-    width: 200%;
+    width: 150%;
     margin-left: -100px;
     margin-top: -100px;
 }
 
 #q2{
-    background-image: url(../img/css3.png), url(../img/css3.png), url(../img/css3.png);
-    background-size: 100px, 50px, 30px;
-    background-position: top, bottom, center;
-    background-repeat: repeat-x, repeat-x, no-repeat;
+    background-image: url(../img/css3.png), url(../img/css3.png);
+    /* I primi 100px 80px sono riferiti alla prima immagine,
+    i secondi 50px 40px sono riferiti alla seconda immagine .*/
+    background-size: 100px 80px, 50px 40px;
+    /* Il primo valore top è riferito alla prima immagine,
+    il secondo valore bottom è riferito alla seconda immagine .*/
+    background-position: top, bottom;
+    /* Il primo valore repeat-x è riferito alla prima immagine,
+    il secondo valore no-repeat è riferito alla seconda immagine .*/
+    background-repeat: repeat-x, no-repeat;
 }
+
 #q3{
     background-image: url(../img/css3.png);
-    background-size: 100px;
+    background-size: 200px 160px;
     background-position: center;
     background-repeat: no-repeat;
 }
 
 #q4{
     background-image: url(https://picsum.photos/id/237/600/1920);
+    /* cover
+    Ridimensiona l'immagine (preservandone il rapporto) alla dimensione 
+    più piccola possibile per riempire il contenitore (ovvero: sia la sua 
+    altezza che la larghezza coprono completamente il contenitore), senza 
+    lasciare spazio vuoto. Se le proporzioni dello sfondo differiscono 
+    dall'elemento, l'immagine viene ritagliata verticalmente o orizzontalmente. */
     background-size: cover;
+    /* La proprietà CSS background-attachment imposta se la posizione di 
+    un'immagine di sfondo è fissa all'interno del riquadro di visualizzazione 
+    o scorre con il relativo blocco che lo contiene.*/
     background-attachment: fixed;
 }
 
 #q5{
     background-image: url(https://picsum.photos/id/237/200/300);
+    /* contain
+    Ridimensiona l'immagine il più possibile all'interno del contenitore 
+    senza ritagliare o allungare l'immagine. Se il contenitore è più grande 
+    dell'immagine, verrà visualizzata la suddivisione dell'immagine, a meno 
+    che la proprietà background-repeat non sia impostata su no-repeat */
     background-size: contain;
 }
 

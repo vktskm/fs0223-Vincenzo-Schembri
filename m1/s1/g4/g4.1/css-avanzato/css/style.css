@@ -1,20 +1,49 @@
 .quadrato{
     width: 100px;
     height: 100px;
-    border: 1px dotted #000;
+    margin: 50px;
+    border: 3px dotted #000;
+    /* La proprietà CSS hyphens specifica come le parole devono 
+    essere sillabate quando il testo va a capo su più righe. Può 
+    impedire completamente la sillabazione, sillabare in punti 
+    specificati manualmente all'interno del testo o consentire 
+    al browser di inserire automaticamente i trattini dove 
+    appropriato. */
     hyphens: auto;
 }
 
 #q1{
+    /* La proprietà CSS interruzione di parola imposta se le 
+    interruzioni di riga vengono visualizzate ovunque il testo 
+    altrimenti sovraccaricherebbe la casella del contenuto. 
+    normal
+    Utilizzare la regola di interruzione di riga predefinita.
+    break-all
+    Per evitare l'overflow, è necessario inserire interruzioni 
+    di parola tra due caratteri qualsiasi (escluso il testo 
+    cinese/giapponese/coreano).*/
     word-break: break-all;
 }
 
 #q2{
-    margin-top:200px;
+    margin-top:100px;
+    /* La proprietà CSS degli spazi vuoti imposta la modalità di 
+    gestione dello spazio vuoto all'interno di un elemento. 
+    normal
+    Le sequenze di spazi vuoti vengono compresse. I caratteri di 
+    nuova riga nell'origine vengono gestiti allo stesso modo degli 
+    altri spazi vuoti. Le linee vengono interrotte se necessario per 
+    riempire le caselle di linea.
+    nowrap
+    Comprime lo spazio vuoto come per normal ma sopprime le interruzioni 
+    di riga (ritorno a capo del testo) all'interno dell'origine.*/
     white-space: nowrap;
 }
 
 .blocco{
+    /* span è inline devo trasformarlo in blocco 
+    per visualissare il quadrato 100px di larghezza 
+    e 100px di altezza */
     display: block;
 }
 
@@ -23,14 +52,24 @@
     width: 90%;
     margin: 0 auto;
 }
+
 .col{
-    width: calc(100% / 4 - 0.2rem);
+    width: calc(100% / 4 - 0.4rem);
     height: 200px;
     background-color: bisque;
+    /* inline-block
+    L'elemento genera una casella dell'elemento di blocco 
+    che verrà fatta scorrere con il contenuto circostante 
+    come se fosse una singola casella in linea(comportandosi 
+    in modo molto simile a un elemento sostituito). */
     display: inline-block;
     margin-bottom:10px
 }
 
+/* target è usato con i link quando clicco
+sul link mi porta dove punta ed applica tutte
+le proprietà che sono contenuti in .col:target.
+In questo caso cambia il quadrato in rosso.*/
 .col:target{
     background-color: red
 }

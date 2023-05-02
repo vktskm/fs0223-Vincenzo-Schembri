@@ -3,157 +3,159 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=Tes, initial-scale=1.0">
-    <title>Sviluppo di una pagina Web - Blog Epicode</title>
-    <meta name="description" content="Primi passi operativi per creare un modello di pagina 
-    HTML per un post. Scopri come iniziare in modo facile.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Primi passi operativi per creare un 
+    modello di pagina HTML per un post. Scopri come iniziare in modo facile ">
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/font-awesome.css">
     <link rel="stylesheet" href="assets/css/style.css">
-    
+    <title>Sviluppo di una pagina web - Blog Epicode</title> 
 </head>
-  
+
 <body>
 
-    <header id="main-header">
-        
-        <div class="colore-testo" > 
-            <img src = "assets/img/logo.svg" alt = "Logo Epicode"  width="200" height="100"> 
-            <p><b>EPICODE - IL BLOG DEI DEVELOPERS</b></p>
+<header>
+        <div>
+            <img src="assets/img/logo.svg" alt="logo di Epicode">
+            <h1>Epicode - Il blog dei developers</h1>   
         </div>
-
-        <br>
-        
-        
-        <div id class="colore-testo" >
+        <nav>
             <ul>
-                <li class="freccia-avanti freccia-dietro"> <b>HOME</b></li>
-                <li class="freccia-avanti freccia-dietro " > <b>ARTICOLI</b></li>
-                <li class="freccia-avanti freccia-dietro" > <b>LAVORA CON NOI</b></li>
-             </ul>
-        </div>
-           
-        
-        
-    </header>
-     
-    <hr>
+                <li><a href="#"> &#8658; Home &#8656; </a></li>
+                <li><a href="#">&#8658; Articoli &#8656;</a></li>
+                <li><a href="#">&#8658; Lavora con noi &#8656;</a></li>
+            </ul>
+        </nav>
+</header>
 
-    <main>
-
+<main>
         <article>
-                
-                <!-- <span> Definisce una sezione in un documento -->
-               <h1>Come creare un template per i post</h1>
-               <p>di Mario Rossi - <span>pubblicato il 25-10-2020</span></p>
-               
-               <h2> Contenuto pagina Html</h2>
 
-               <p> La prima cosa da fare è suddividire in blocchi logici la pagina , 
-                identificando le<strong>parti comuni</strong> da applicare a tutte le pagine
-               </p>
-               
-               <p>Le varie aree saranno quindi suddivise in:</p>
-               
-                <ul>
-                    
-                    <li>Contenuti di intestazione del tag <code>&lt; header &gt;</code> </li>
-                    <li>Contenuti centrali variabili del tag <code>&lt; main &gt;</code> (corpo principale) </li>
-                    <li>Contenuti di fine pagina comuni, da inserire nel tag <code>&lt; footer &gt;</code></li>
-               </ul>
+        <section>
+            <h2>Come creare un template per i post</h2>
+            <p id="text-autore"><i class="fas fa-pen-square"></i> di Mario Rossi - 
+            <i class="fas fa-clock"style="color: #888a88;"></i> pubblicato il 25-10-2020</p>
+        
+        
+            <p class="blocco-paragraph">La prima cosa da fare è suddividere in blocchi logici la 
+            pagina, identificando le <span>parti comuni</span> da applicare a tutte le pagine.</p>
+        
+            <p class="blocco-paragraph">Le varie aree saranno quindi suddivise in :</p>
 
-               <h2>Formattazione del codice </h2>
-               
-               <p>Il testo dell'articolo dovrà essere formattato per identificare tutte
-                le parti da <strong>selezionare con i CSS</strong>. Perciò i passi saranno:</p>
+            <ul>
+                <li>Contenuti di intestazione del tag  <code>&lt header &gt</code> </li>
+                <li>Contenuti centrali variabili del tag <code>&lt main &gt</code></li>
+                <li>Contenuti di fine pagina comuni, da inserire nel tag <code>&lt footer &gt</code></li>
+            </ul>   
+            
+            
+            <h2>Formattazione del codice</h2>
+            <p class="blocco-paragraph">Il testo dell'articolo dovrà essere formattato per identificare 
+            tutte le parti da <span>selezionare con i CSS</span>. Perciò i passi saranno:</p>
+            
+            <ol>
+                <li>Progettare il markup assegnando ad ogni specifico testo il tag appropriato</li>
+                <li>Scrivere l'HTML dai tag esterni a quelli interni e dall'alto verso il basso</li>
+                <li>Applicare gli stili CSS</li>
+            </ol>
 
-               <ul>
-                    <li>Progettare il markup assegnando ad ogni specifico testo il tag appropriato  </li>
-                    <li>Scrivere l'HTML dai tag esterni a quelli interni e dall'alto verso il basso</li>
-                    <li>Applicare gli stili CSS </li>
-                    <li>L'applicazione di stili CSS è cresciuta negli anni fino a raggiungere la 
-                        diffusione pressochè totale </li>
-                </ul>
+            <p class="blocco-paragraph">L'applicazione di stili CSS è cresciuta negli anni 
+            fino a raggiungere la diffusione pressochè totale.</p>
+        </section>           
 
-             <table>
-                   <caption>Diffusione del CSS</caption>
-                   <thead>
-                      <tr>
-                         <th >Anno </th><th> %di utilizzo  </th><th> Supporto browsers</th>
-                      </tr>
-                   </thead>
-                   <tbody>
-                      <tr><td>2000</td> <td>20%</td> <td>17%</td></tr>
-                      <tr><td>2002</td> <td>35%</td> <td>22%</td></tr>
-                      <tr><td>2004</td> <td>45%</td> <td>42%</td></tr>
-                      <tr><td>2008</td> <td>80%</td> <td>51%</td></tr>
-                      <tr><td>2012</td> <td>100%</td> <td>76%</td></tr>
+        <table>
+            <caption>
+               Diffusione dei CSS
+            </caption>
+            <thead>
+                <tr>
+                    <th>Anno</th>
+                    <th><span class="br">&percnt;</span> di utilizzo</th>
+                    <th><span class="br">Supporto</span> Browsers</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2000</td>
+                    <td>20 &percnt;</td>
+                    <td>17 &percnt;</td>
+                </tr>
+                <tr class="opaci-row">
+                    <td>2002</td>
+                    <td>35 &percnt;</td>
+                    <td>22 &percnt;</td>
+                </tr>
+                <tr>
+                    <td>2004</td>
+                    <td>45 &percnt;</td>
+                    <td>42 &percnt;</td>
+                </tr>
+                <tr class="opaci-row">
+                    <td>2008</td>
+                    <td>80 &percnt;</td>
+                    <td>51 &percnt;</td>
+                </tr>
+                <tr id="last-row">
+                    <td>2012</td>
+                    <td>100 &percnt;</td>
+                    <td>76 &percnt;</td>
+                </tr>
+            </tbody>
+        </table>
 
-                   </tbody>
+        <p id="paragraph-before-video">Un test di validazione potrà essere fatto tramite 
+                il tool online <a id="linktool" href="#">tool online</a> dedicato allo scopo. 
+                Una volta ottimizzato il tutto, avremo raggiunto il nostro obiettivo ed essere 
+            stati dei veri developers come loro:</p>
+            
+        <iframe width="100%" src="https://www.youtube.com/embed/NqWPuzpSKPY" 
+            title="YouTube video player" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            allowfullscreen></iframe>    
+        
+        <section>
+            <h2>NOVITÀ</h2>
+            <p>Vuoi rimanere aggiornato su altre novità del blog? iscriviti alla nostra newsletter:</p>
+            
+            <form method="POST">
+                <fieldset>
+                    <!-- required è un attributo booleano che, se presente, indica che l'utente deve specificare 
+                    un valore per l'input prima che il modulo proprietario possa essere inviato.  -->
+                    <input type="email" id="user_email" placeholder="inserisci l'email" name="campoemail" required>
+                    <button type="submit">Iscriviti!</button>
+                </fieldset>
+            </form>         
+        </section>
+    </article>
 
-             </table>
-         
-                <p> Un test di validazione potrà essere fatto tramite il 
-                    <a href="https://jigsaw.w3.org/css-validator/" target="blank" 
-                    title="Validatore CSS online del W3C">tool online</a> dedicato allo scopo. 
-                    Una volta ottimizzato il tutto, avremo raggiunto il nostro obiettivo
-                     ed essere stati dei veri developers come loro:
-                </p>
+    <aside>
+        <h2>Articoli correlati</h2>
+        <div>
+            <a>Validare codice HTML</a>
+            <p><i class="fas fa-tag"></i> Categoria: develop</p>
+            <p><i class="fas fa-calendar-alt"></i> Data: 10-9-2020</p>
+        </div>
 
-            <iframe width="300" height="300" src="https://www.youtube.com/embed/dvOvHXruEDM" 
-                title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; 
-                encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-            </iframe>
-    
-            <section>
-                <h2>Novità</h2>
-                <p>Vuoi rimanere aggiornato su altre novità del blog? Iscriviti alla nostra newsletter:</p>
-                
-                <form method="POST" action="elabora_form.php">
-                    <fieldset>
-                        <input type="email" name="user_email" id="user_email" placeholder="inserisci l'email" required> 
-                        <button type="submit">Iscriviti!</button>
-                    </fieldset>
-                </form>
-            </section>
+        <div>
+            <a>Correggere la sintassi</a>
+            <p><i class="fas fa-tag"></i> Categoria: develop</p>
+            <p><i class="fas fa-calendar-alt"></i> Data: 16-9-2020</p>
+        </div>
 
-
-
-        </article>       
-   
-
-        <aside>
-            <h2>Articoli correlati</h2>
-            <div>
-                <a href="post2.html" title="Passaggi guidati per validare correttamente tutto il codice sviluppato">Validare il codice HTML</a>
-                <p>Categoria: develop</p>
-                <p>Data: 18-9-2020</p>
-            </div>
-
-            <div>
-                <a href="post3.html" title="Passaggi guidati per controllare e correggere tutto il codice sviluppato">Correggere la sintassi</a>
-                <p>Categoria: develop</p>
-                <p>Data: 16-9-2020</p>
-            </div>
-
-            <div>
-                <a href="post4.html" title="Consigli ed approcci per ridurre il peso della pagina">Meno Kb nella pagina</a>
-                <p>Categoria: ottimizzazione</p>
-                <p>Data: 30-9-2020</p>
-            </div>
-        </aside>
-
-
-   </main>
-    
-   
-   <footer>
+        <div>
+            <a>Meno Kb nella pagina</a>
+            <p><i class="fas fa-tag"></i> Categoria: ottimizzazione</p>
+            <p><i class="fas fa-calendar-alt"></i> Data: 30-9-2020</p>
+        </div>
+    </aside>
+</main>
+        
+<footer>
     <p>Blog Epicode &copy;2021</p>
-    <address>Testata online di Mario Rossi, registrata con prot. n.213/2018 - 
-        via Luigi Einaudi 2 - Milano. P.IVA 00112233. <a href="mailto:info@epicode.school" 
-        title="contattami per informazioni/lavoro/privacy">info@epicode.school</a></address>
-  </footer>
-
-    
+    <adress> Testata online di Mario Rossi, registrata con prot. 
+    n.213/2018 - via Luigi Einaudi 2 - Milano. P.IVA00112233.
+    <a href= "mailto:info@epicode.school">info@epicode.school</a>
+</footer>
+   
 </body>
 </html>

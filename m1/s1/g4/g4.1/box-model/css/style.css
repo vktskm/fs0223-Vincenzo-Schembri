@@ -1,3 +1,5 @@
+/* Le variabili in CSS si possono definire dentro
+:root e --main-color è la variabile dichiarata */
 :root{
     --main-color: #970000;
 }
@@ -21,16 +23,17 @@ h1, h2, h3, h4, h5, h6{
     color: var(--main-color);
 }
 
-
-
-
 .quadrato{
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
     background-color: var(--main-color);
 }
 
 #q2{
+    /* auto
+    Il contenuto di overflow viene ritagliato nella casella di riempimento 
+    dell'elemento e il contenuto di overflow può essere fatto scorrere nella 
+    visualizzazione.  */
     overflow: auto;
 }
 
@@ -40,9 +43,34 @@ h1, h2, h3, h4, h5, h6{
     height: 50px;
 }
 
-#q4{
+#q4 {
     padding: 15px;
-    box-sizing: border-box;
+    /* La proprietà CSS box-sizing imposta la modalità di calcolo 
+    della larghezza e dell'altezza totali di un elemento. 
+    border-box indica al browser di tenere conto di eventuali bordi 
+    e spaziatura interna nei valori specificati per la larghezza e 
+    l'altezza di un elemento. Se imposti la larghezza di un elemento 
+    su 100 pixel, quei 100 pixel includeranno qualsiasi bordo o 
+    spaziatura interna che hai aggiunto e la casella del contenuto si 
+    ridurrà per assorbire tale larghezza aggiuntiva.
+    Ma se il contentuto del testo è maggiore del box il testo viene 
+    collocato all'esterno del box
+    */
+    box-sizing: border-box; 
+}
+
+#q4-1 {
+    padding: 15px;
+    margin-top: 100px;
+    /* content-box fornisce il comportamento predefinito di ridimensionamento 
+    delle caselle CSS. Se imposti la larghezza di un elemento su 100 pixel, la 
+    casella del contenuto dell'elemento sarà larga 100 pixel e la larghezza di 
+    qualsiasi bordo o spaziatura interna verrà aggiunta alla larghezza finale 
+    di rendering, rendendo l'elemento più largo di 100 px. 
+    Allarga il box di 15px del padding e tiene intatto la 
+    dimensione originaria della scatola nel contenuto e non 
+    restringe la scatola di 15px del padding nel contenuto originario*/
+    box-sizing: content-box;
 }
 /*
 {
@@ -52,12 +80,13 @@ h1, h2, h3, h4, h5, h6{
 #q5{
     background-color: #ccc;
     border:10px outset #999;
+    margin-top: 50px;
 }
+/* active mi crea una specie di bottone quando clicco su q5*/
 #q5:active{
     background-color: #5c5c5c;
     border:10px inset #999;
 }
-
 
 #q6{
     border-radius: 100%;
@@ -65,7 +94,7 @@ h1, h2, h3, h4, h5, h6{
     border: 20px solid #000;
     border-top: none;
 
-    margin-left: auto;
+    margin-left: 250px;
     margin-top: -100px;
 
     /*
