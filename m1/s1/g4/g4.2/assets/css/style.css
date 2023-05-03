@@ -121,7 +121,8 @@ iframe {
 
 /* TABELLE */
 table {
-     margin-bottom: 25px; 
+     margin-bottom: 25px;
+     width: 100%; 
 }
 caption {
     font-weight: bold;
