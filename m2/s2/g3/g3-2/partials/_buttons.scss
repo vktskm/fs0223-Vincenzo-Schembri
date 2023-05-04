@@ -1,0 +1,20 @@
+$colors: (
+	blue: #0e6cff,
+	orange: #ff8700,
+	green: #4caf50,
+);
+
+@each $key, $value in $colors {
+	.btn-#{$key} {
+		background-color: $value;
+		border-radius: 20px;
+		color: white;
+		box-shadow: 0 2px 2px;
+		&:hover {
+			box-shadow: 0 3px 3px;
+			transform: perspective(200px) translateZ(10px);
+			position: relative;
+			z-index: 1;
+		}
+	}
+} ;

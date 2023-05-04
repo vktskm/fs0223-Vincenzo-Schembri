@@ -1,0 +1,63 @@
+.grid {
+	@include grid(33%);
+}
+
+body {
+	font-family: $font-family;
+	font-size: $medium-size;
+}
+
+header {
+	nav {
+		display: flex;
+		justify-content: space-between;
+		div {
+			img {
+				width: 100px;
+			}
+		}
+		ul {
+			li {
+				list-style: none;
+				font-family: $font-family;
+				font-size: $medium-size;
+			}
+		}
+	}
+}
+
+.animation {
+ 	@include animation(fadeIn, 5s, 0, 0, 2s);
+}
+
+.hero {
+	background-color: $bg-hero;
+	color: $text-color;
+	div {
+		display: flex;
+		align-items: center;
+		img {
+			@include floating;
+			width: 600px;
+		}
+		div {
+			display: flex;
+			flex-direction: column;
+			h2 {
+				@include titleBig;
+			}
+		}
+	}
+}
+
+.container {
+	display: flex;
+	justify-content: space-around;
+	div {
+		img {
+			@include floating;
+			width: 250px;
+			height: 200px;
+		}
+	}
+}

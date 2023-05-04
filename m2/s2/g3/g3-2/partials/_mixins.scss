@@ -1,0 +1,16 @@
+@mixin titleBig {
+	font-size: $xx-large-size;
+	padding: $small-size;
+}
+
+@mixin floating {
+	border-radius: 20px;
+	box-shadow: 0 10px 30px gray;
+	border: 1px solid white;
+}
+
+@mixin grid($percentage) {
+	display: flex;
+	flex-basis: $percentage;
+	flex-wrap: wrap;
+}
