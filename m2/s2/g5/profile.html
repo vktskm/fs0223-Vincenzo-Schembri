@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix</title>
+    <link rel="stylesheet" href="profile.css"> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar bg-dark px-1">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="home.html"> <!-- Quando clicco sul Logo Netflix  ritorna alla pagina hone-->
+                    <img src="assets/netflix_logo.png" alt="Netflix" height="50px">
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="bg-dark my-auto">
+       
+        <div class="row">
+            <div class="col-4 col-sm-5 col-md-6 text-start mx-auto">
+                <h2 class="text-light fs-1 fw-bold">Edit profile</h2>
+                <hr class="border border-1"> 
+
+            <div class="container container-fluid">
+                
+                <div class="row "> 
+                    <div class="col-2 col-sm-3  col-md-4 text-center">
+                        <button type="button" class="btn btn-dark buttone">
+                            <img src="assets/avatar.png" class="img-fluid" alt="avatar" width="200">
+                            <span class="dentroBut">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="dentroSvg " width="20" height="20" fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
+                                    <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"/>
+                                  </svg>
+                            </span>
+                        </button>                           
+                    </div>
+                    <!-- fine foto  -->
+                   <div class="col-4 col-sm-6 col-md-8">
+            
+                    
+                    <div class="py-1 d-flex align-items-center">
+                            <p class="text-light p-2 fs-5 bg-secondary col-10 ">  Strive Student</p>
+                        </div>
+                        <div class="pt-3">
+                            <p class="text-secondary fs-5 pe-3">Language:</p>
+                            <div class="dropdown">
+                                <button class="btn btn-dark dropdown-toggle border border-1 rounded-0" type="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    English
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-dark">
+                                    <li><a class="dropdown-item" href="#">Italian</a></li>
+                                    <li><a class="dropdown-item" href="#">French</a></li>
+                                    <li><a class="dropdown-item" href="#">Espanol</a></li>
+                                    <li><a class="dropdown-item" href="#">Deutsche</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <hr class="border border-1">
+                        <div>
+                            <div class="py-1 d-flex align-items-center">
+                                <p class="text-secondary fs-5">Maturity Settings:</p>
+                            </div>
+                            <div class="py-1 d-flex align-items-center">
+                                <p class="bg-secondary text-light px-3 fs-5">ALL MATURITY RATINGS</p>
+                            </div>
+                            <div class="py-1 d-flex align-items-center">
+                                <p class="text-info text-light fs-6">Show titles of <span class="fw-bold">
+                                    all maturity ratings</span> for this profile.
+                                </p>
+                            </div>
+                            <div>
+                                <button
+                                    class="btn btn-dark border border-1 border-secondary text-secondary rounded-0">EDIT</button>
+                            </div>
+                            <hr class="border border-1">
+                            <div>
+                                <div>
+                                    <p class="text-secondary fs-5">Autoplay controls</p>
+                                </div>
+                                <div class="input-group mb-3">
+                                    <div class="input-group d-flex align-items-center">
+                                        <input class="form-check-input mt-0 bg-dark border border-1 rounded-0 p-3"
+                                            type="checkbox" value="" aria-label="Checkbox for following text input"
+                                            id="profile-checkbox-1">
+                                        <label for="profile-checkbox-1" class="text-secondary px-1 fs-7"> 
+                                            Autoplay next episode in a series on all devices.</label>
+                                    </div>
+                                </div>
+                                <div class="input-group mb-3">
+                                    <div class="input-group d-flex align-items-center">
+                                        <input class="form-check-input mt-0 bg-dark border border-1 rounded-0 p-3"
+                                            type="checkbox" value="" aria-label="Checkbox for following text input"
+                                            id="profile-checkbox-2">
+                                        <label for="profile-checkbox-2" class="text-secondary px-1 fs-7"> 
+                                            Autoplay previews while browsing on all devices.</label>
+                                    </div>
+                                </div>
+            
+                            </div>
+            
+                        </div>
+                    </div>
+                    <!-- fine testo -->
+                
+                
+                </div>
+
+                <hr class="border border-1">
+                <div class="d-flex py-3 align-items-center justify-content-around text-center">
+                    <button class="btn btn-light border border-1 rounded-0 px-4 py-1 mx-4 fs-4"> SAVE </button>
+                    <button class="btn btn-dark border border-1 border-secondary rounded-0 px-4 py-1 mx-4 fs-4 text-secondary">CANCEL </button>
+                    <button class="btn btn-dark border border-1 border-secondary rounded-0 px-4 py-1 mx-4 fs-4 text-secondary">DELETE PROFILE</button>
+                </div>
+            </div>
+            <!-- fine del contenuto fluid -->
+    </main>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+
+
+</body>
+
+</html> 

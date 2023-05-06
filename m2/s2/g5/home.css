@@ -1,0 +1,20 @@
+.buttone {
+    position: relative;
+    /* background-color: black; */
+}
+
+.dentroBut {
+    color: white;
+    position:absolute;
+    left: 30px;
+    top: 20px;
+}
+
+
+.dentroSvg{
+    overflow: visible;
+    border: 2px solid white;
+    border-radius: 100%;
+    padding: 2px; 
+    background-color: black;
+}

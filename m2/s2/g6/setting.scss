@@ -1,0 +1,7 @@
+@import "./bootstrap-overrides";
+
+// qui possiamo mettere il nostro codice custom
+
+.container {
+  background-color: $primary;
+}
