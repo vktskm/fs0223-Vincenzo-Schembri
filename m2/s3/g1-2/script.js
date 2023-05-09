@@ -36,8 +36,8 @@ class Pet {
 		this.petBreed = petBreed;
 	}
 
-	static sameOwner(A, B) {
-		if ('A.ownerName' === 'B.ownerName') {
+	static sameOwner(A , B) {
+		if (A.ownerName === B.ownerName) {
 			return true;
 		} else {
 			return false;
@@ -57,9 +57,9 @@ const createList = function () {
 	  let newListItem = document.createElement('li')
 	  // <li></li>
 	  newListItem.innerText =
-	  'PetName ' +  user.petName + ' OwnerName' + user.OwnerName +
-	  ' PetSpecies ' +  user.petSpecies + ' OwnerBreed' + user.petBreed +
-	  ' ' +
+	  'PetName  ' +  user.petName + ' OwnerName  ' + user.ownerName +
+	  ' PetSpecies ' +  user.petSpecies + '  OwnerBreed' + user.petBreed +
+	  '  ' +
 	  Pet.sameOwner(user, pets[i - 1] ? pets[i - 1] : {}) // comparo l'utente corrente con l'utente precedente nell'array users
 	  // <li>Mario Bros</li>
 	  // ora devo aggiungerlo al tag <ul>
@@ -79,7 +79,7 @@ let formReference = document.querySelector('form')
 formReference.addEventListener('submit', (e) => {
   e.preventDefault() // così la pagina non si aggiorna
   // creo un oggetto di tipo User generando un'istanza della classe User
-  let userFromTheForm = new Pet(petInputName.value, ownerInputName.value , petInputSpecies.value , petInputBreed.value)
+  let userFromTheForm = new Pet(petInputName.value , ownerInputName.value , petInputSpecies.value , petInputBreed.value)
   console.log(userFromTheForm)
   console.log(pets)
   // inseriamo userFromTheForm dentro l'array users
