@@ -87,7 +87,7 @@ fetch('https://striveschool-api.herokuapp.com/books')
 		// quando clicco sul bottone cestino di dropdown scateno questo addEventListener
 		remove.addEventListener('click', () => {
 		vol.remove();
-		localStorage.removeItem( JSON.stringify(booksTitle));
+		//localStorage.removeItem( title,JSON.stringify(booksTitle));
             });
 
 			});// fine funzione addEventListener buyBtn
