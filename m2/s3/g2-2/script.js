@@ -57,7 +57,7 @@ window.onload = () => {
 };
 
 const incrementCounter = () => {
-	counterValue += 1;
+	counterValue++ ;
 	updateCounter();
 	sessionStorage.setItem('lastCounterValue', counterValue);
 };
