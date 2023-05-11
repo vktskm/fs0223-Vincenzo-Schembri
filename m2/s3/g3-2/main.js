@@ -13,7 +13,7 @@ fetch('https://striveschool-api.herokuapp.com/books')
 
 	.then((library) => {
 
-		//let container = document.querySelector('#container');
+		let container = document.querySelector('#container');
 		let row = document.createElement('div');
 		row.classList.add('row');
 		row.classList.add('row-cols-3');
@@ -25,7 +25,7 @@ fetch('https://striveschool-api.herokuapp.com/books')
 			col.classList.add('col');
 			col.className = 'col';
 			col.innerHTML = `
-			<div class="card " id="${book.asin}" style="height: 500px;">
+			<div class="card "  style="height: 500px;">
 				<img src="${book.img}" class="card-img-top img-fluid" alt="book" style="height: 300px">
 				<div class="card-body">
 					<h5 class="card-title fs-5">${book.title}</h5>
@@ -82,12 +82,10 @@ fetch('https://striveschool-api.herokuapp.com/books')
 		localStorage.setItem( title, JSON.stringify(booksTitle));
 		
 
-
-
 		// quando clicco sul bottone cestino di dropdown scateno questo addEventListener
 		remove.addEventListener('click', () => {
 		vol.remove();
-		//localStorage.removeItem( title,JSON.stringify(booksTitle));
+		localStorage.removeItem( title,JSON.stringify(booksTitle));
             });
 
 			});// fine funzione addEventListener buyBtn
