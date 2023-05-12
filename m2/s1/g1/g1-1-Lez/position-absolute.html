@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Position absolute</title>
+    <style>
+      .relative {
+        border: 2px solid black;
+        position: relative;
+        height: 300px;
+        width: 400px;
+        top: 100px;
+        left: 100px;
+      }
+
+      .absolute_1 {
+        position: absolute;
+        border: 3px solid lightblue;
+        width: 80px;
+        height: 40px;
+        bottom: 50px;
+        left: 20px;
+      }
+
+      .absolute_2 {
+        position: absolute;
+        border: 3px solid red;
+        width: 80px;
+        height: 40px;
+        top: 50px;
+        right: 30px;
+      }
+
+      .new_badge {
+        position: absolute;
+        text-align: center;
+        width: 50px;
+        height: 20px;
+        right: -30px;
+        top: -16px;
+        background-color: orange;
+        border: 1px solid orange;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>POSITION: ABSOLUTE</h2>
+    <div class="relative">
+      position: relative
+      <div class="new_badge">NEW!</div>
+      <div class="absolute_1">position: absolute 1</div>
+      <div class="absolute_2">position: absolute 2</div>
+    </div>
+  </body>
+</html>

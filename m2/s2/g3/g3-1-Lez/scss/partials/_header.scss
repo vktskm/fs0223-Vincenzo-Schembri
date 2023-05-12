@@ -1,0 +1,21 @@
+nav {
+  background-color: aquamarine;
+  ul {
+    display: flex;
+  }
+}
+
+p {
+  @include basicParagraphStyles;
+  //   border: 1px solid black;
+  //   font-size: 1.5em;
+  //   letter-spacing: 0.2em;
+}
+
+p.custom {
+  @include customParagraphStyles(2em);
+}
+
+p.veryCustom {
+  @include veryCustomParagraphStyles(2em, 0.1em);
+}

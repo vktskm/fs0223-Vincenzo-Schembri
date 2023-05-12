@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Card in flex</title>
+    <style>
+      .card {
+        width: 300px;
+        border: 1px solid lightgray;
+        box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+        display: flex;
+        flex-direction: column;
+        margin-right: 10px;
+      }
+
+      .card section {
+        padding: 0 20px;
+        /* impostiamo questa section come flex-container */
+        /* display: flex; */
+        /* settiamo la main-axis a y, verticale */
+        flex-direction: column;
+        /* imposto flex-grow a 1 in modo da dire a questo flex child di "mangiarsi" tutto lo spazio libero lasciato dal contenitore */
+        /* flex-grow: 1; */
+        flex: 1;
+        /* utilizziamo la proprietà che lavora sulla main-axis per gestire lo spazio libero */
+        justify-content: space-between;
+        /* centriamo il testo */
+        text-align: center;
+      }
+
+      #cards-container {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .card button {
+        margin-bottom: 10px;
+        padding: 5px 15px;
+        background-color: grey;
+        color: white;
+        border: none;
+      }
+    </style>
+  </head>
+  <body>
+    <main id="cards-container">
+      <div class="card">
+        <img src="https://placekitten.com/300" />
+        <section>
+          <h3>Lorem ipsum dolor sit amet consectetur</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
+            aliquid illo quisquam debitis corporis nihil odit recusandae
+            suscipit.
+          </p>
+          <button>Go to page</button>
+        </section>
+      </div>
+      <div class="card">
+        <img src="https://placekitten.com/300" />
+        <section>
+          <h3>Lorem ipsum dolor sit amet consectetur</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
+            aliquid illo quisquam debitis corporis nihil odit recusandae
+            suscipit.Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Sequi aliquid illo quisquam debitis corporis nihil odit recusandae
+            suscipit.Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Sequi aliquid illo quisquam debitis corporis nihil odit recusandae
+            suscipit.Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Sequi aliquid illo quisquam debitis corporis nihil odit recusandae
+            suscipit.
+          </p>
+          <button>Go to page</button>
+        </section>
+      </div>
+      <div class="card">
+        <img src="https://placekitten.com/300" />
+        <section>
+          <h3>Lorem ipsum dolor sit amet consectetur</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
+            aliquid illo quisquam debitis corporis nihil odit recusandae
+            suscipit.Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Sequi aliquid illo quisquam debitis corporis nihil odit recusandae
+            suscipit.Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Sequi aliquid illo quisquam debitis corporis nihil odit recusandae
+            suscipit.Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Sequi aliquid illo quisquam debitis corporis nihil odit recusandae
+            suscipit.
+          </p>
+          <button>Go to page</button>
+        </section>
+      </div>
+      <div class="card">
+        <img src="https://placekitten.com/300" />
+        <section>
+          <h3>Lorem ipsum dolor sit amet consectetur</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
+            aliquid illo quisquam debitis corporis nihil odit recusandae
+            suscipit.Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Sequi aliquid illo quisquam debitis corporis nihil odit recusandae
+            suscipit.Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Sequi aliquid illo quisquam debitis corporis nihil odit recusandae
+            suscipit.Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Sequi aliquid illo quisquam debitis corporis nihil odit recusandae
+            suscipit.
+          </p>
+          <button>Go to page</button>
+        </section>
+      </div>
+      <div class="card">
+        <img src="https://placekitten.com/300" />
+        <section>
+          <h3>Lorem ipsum dolor sit amet consectetur</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
+            aliquid illo quisquam debitis corporis nihil odit recusandae
+            suscipit.Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Sequi aliquid illo quisquam debitis corporis nihil odit recusandae
+            suscipit.Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Sequi aliquid illo quisquam debitis corporis nihil odit recusandae
+            suscipit.Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Sequi aliquid illo quisquam debitis corporis nihil odit recusandae
+            suscipit.
+          </p>
+          <button>Go to page</button>
+        </section>
+      </div>
+      <div class="card">
+        <img src="https://placekitten.com/300" />
+        <section>
+          <h3>Lorem ipsum dolor sit amet consectetur</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
+            aliquid illo quisquam debitis corporis nihil odit recusandae
+            suscipit.Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Sequi aliquid illo quisquam debitis corporis nihil odit recusandae
+            suscipit.Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Sequi aliquid illo quisquam debitis corporis nihil odit recusandae
+            suscipit.Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Sequi aliquid illo quisquam debitis corporis nihil odit recusandae
+            suscipit.
+          </p>
+          <button>Go to page</button>
+        </section>
+      </div>
+      <div class="card">
+        <img src="https://placekitten.com/300" />
+        <section>
+          <h3>Lorem ipsum dolor sit amet consectetur</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
+            aliquid illo quisquam debitis corporis nihil odit recusandae
+            suscipit.Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Sequi aliquid illo quisquam debitis corporis nihil odit recusandae
+            suscipit.Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Sequi aliquid illo quisquam debitis corporis nihil odit recusandae
+            suscipit.Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Sequi aliquid illo quisquam debitis corporis nihil odit recusandae
+            suscipit.
+          </p>
+          <button>Go to page</button>
+        </section>
+      </div>
+      <div class="card">
+        <img src="https://placekitten.com/300" />
+        <section>
+          <h3>Lorem ipsum dolor sit amet consectetur</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
+            aliquid illo quisquam debitis corporis nihil odit recusandae
+            suscipit.Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Sequi aliquid illo quisquam debitis corporis nihil odit recusandae
+            suscipit.Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Sequi aliquid illo quisquam debitis corporis nihil odit recusandae
+            suscipit.Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Sequi aliquid illo quisquam debitis corporis nihil odit recusandae
+            suscipit.
+          </p>
+          <button>Go to page</button>
+        </section>
+      </div>
+      <div class="card">
+        <img src="https://placekitten.com/300" />
+        <section>
+          <h3>Lorem ipsum dolor sit amet consectetur</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
+            aliquid illo quisquam debitis corporis nihil odit recusandae
+            suscipit.Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Sequi aliquid illo quisquam debitis corporis nihil odit recusandae
+            suscipit.Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Sequi aliquid illo quisquam debitis corporis nihil odit recusandae
+            suscipit.Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Sequi aliquid illo quisquam debitis corporis nihil odit recusandae
+            suscipit.
+          </p>
+          <button>Go to page</button>
+        </section>
+      </div>
+      <div class="card">
+        <img src="https://placekitten.com/300" />
+        <section>
+          <h3>Lorem ipsum dolor sit amet consectetur</h3>
+          <p>Lorem ipsum</p>
+          <button>Go to page</button>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>

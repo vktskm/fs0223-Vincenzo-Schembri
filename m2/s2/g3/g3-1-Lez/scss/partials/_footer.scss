@@ -1,0 +1,11 @@
+footer {
+  display: flex;
+  // $footer-margin è una variabile definita in _variables.scss
+  // se l'ordine di import in style.scss non è quello corretto, rischia di non essere definita
+  margin-top: $footer-margin;
+  margin-bottom: $footer-margin - 10px;
+  p {
+    font-size: 0.9em;
+    display: inline-block;
+  }
+}

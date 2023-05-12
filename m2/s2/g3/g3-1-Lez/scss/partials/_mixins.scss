@@ -1,0 +1,71 @@
+// Un mixin è un blocco di regole CSS riutilizzabile e richiamabile in un selettore.
+
+@mixin basicParagraphStyles {
+  border: 1px solid black;
+  font-size: 1.5em;
+  letter-spacing: 0.2em;
+}
+
+// but wait, there's more! si possono anche passare dei parametri al mixin in modo da personalizzarne i valori nell'utilizzo
+
+@mixin customParagraphStyles($custom-font-size) {
+  border: 1px solid black;
+  font-size: $custom-font-size;
+  letter-spacing: 0.2em;
+}
+
+// e si possono dare un numero illimitato di parametri
+
+@mixin veryCustomParagraphStyles($custom-font-size, $custom-letter-spacing) {
+  border: 1px solid black;
+  font-size: $custom-font-size;
+  letter-spacing: $custom-letter-spacing;
+}
+
+// esempio reaele con bottone + hover
+
+@mixin applicationButton($base-color) {
+  width: 150px;
+  padding: 20px;
+  color: white;
+  background-color: $base-color;
+}
+
+@mixin applicationButtonHover($hover-color, $text-color) {
+  background-color: $hover-color;
+  color: $text-color;
+}
+
+// ESEMPIO DI INTERPOLAZIONE STRINGHE IN SASS
+
+@mixin textElement($value) {
+  font-size: $value;
+}
+
+@mixin customTextElement($propertyType, $value) {
+  font-#{$propertyType}: $value;
+}
+
+// in un altro file...
+p.first {
+  @include textElement(12px);
+}
+
+p.second {
+  @include customTextElement('size', 12px);
+}
+
+p.third {
+  @include customTextElement('family', 'sans-serif');
+}
+
+// ESEMPIO DI CICLI IN SASS
+$sizes: 10px, 30px, 60px;
+// sizes è un "array" in SASS
+
+@each $size in $sizes {
+  // .image-30px, .image-10px, etc.
+  .image-#{$size} {
+    width: $size;
+  }
+}

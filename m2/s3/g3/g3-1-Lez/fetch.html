@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Esempi di fetch</title>
+  </head>
+  <body>
+    <p>
+      fetch() è un metodo integrato in tutti i browser moderni che permette ad
+      un browser di inviare una REQUEST ad un server. Questa REQUEST è
+      un'operazione asincrona, fetch() la gestisce ritornando una Promise.
+      Attenderemo la conclusione della fetch (positiva/negativa) con i blocchi
+      .then() e .catch(). A seconda dei parametri e dell'utilizzo che faremo del
+      metodo fetch(), la nostra REQUEST potrà essere indirizzata a URL diversi,
+      utilizzare metodi HTTP diversi (GET/POST/PUT/DELETE), potrà avere
+      un'autorizzazione, potrà inviare dei dati al server e via dicendo... Ad
+      una REQUEST, se l'operazione termina a buon fine, seguirà sempre una
+      RESPONSE (la risposta del server) che, presumibilmente, ci fornirà i dati
+      richiesti.
+    </p>
+    <ul id="users-list"></ul>
+    <script src="fetch.js"></script>
+  </body>
+</html>

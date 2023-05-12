@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="text-center mt-5 mb-4">
+        <h1 class="text-white">Pexels photos</h1>
+    </div>
+
+    <div class="container text-center">
+        <div id="img-content" class="d-flex flex-column">
+
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
+
+    <script>
+        const searchParams = new URLSearchParams(window.location.search)
+        const id = searchParams.get("picId")
+
+        window.onload = async () => {
+            const resp = await fetch("https://api.pexels.com/v1/photos/" + id, {
+                headers: {
+                    Authorization: "[LA TUA API KEY QUI]"
+                }
+            })
+            const picInfos = await resp.json()
+
+            console.log(picInfos)
+            const imgContent = document.querySelector("#img-content")
+
+            const img = document.createElement("img")
+            img.src = picInfos.src.original
+            img.classList.add("img-fluid", "rounded-lg", "shadow-lg")
+
+            imgContent.appendChild(img)
+
+            const h2 = document.createElement("h2")
+            const photographerLink = document.createElement("a")
+            photographerLink.classList.add("text-dark", "d-inline-block", "mt-4")
+            photographerLink.href = picInfos.photograper_url
+            photographerLink.innerText = picInfos.photographer
+            h2.appendChild(photographerLink)
+            imgContent.appendChild(h2)
+
+            const backLink = document.createElement("a")
+            backLink.href = "./index.html"
+            backLink.innerText = "⬅️ Go back Home"
+            backLink.className = "mb-5"
+            imgContent.appendChild(backLink)
+
+            const body = document.querySelector("body")
+            body.style.cssText = `min-height: 100vh; background-color: ${picInfos.avg_color}`
+
+        }
+
+    </script>
+
+</body>
+
+</html>

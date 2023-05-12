@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navbar in flex</title>
+    <style>
+      #main-nav {
+        background-color: orangered;
+        color: white;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+          'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        padding: 1em;
+        border-radius: 3px;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      #main-nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+      }
+
+      #main-nav ul li {
+        margin-right: 10px;
+      }
+
+      #main-nav form button {
+        background-color: white;
+        color: orangered;
+        border-radius: 1em;
+        border: none;
+        padding: 3px 10px;
+      }
+
+      @media screen and (max-width: 520px) {
+        #main-nav {
+          flex-direction: column;
+          /* dobbimo centrare gli elementi orizzontalmente */
+          /* sappiamo che la main-axis in questo caso è l'asse y, la verticale */
+          /* dobbiamo utilizzare la proprietà che allinea i figli sull'asse opposta, la cross-axis */
+          /* e questa proprietà è align-items */
+          align-items: center;
+        }
+
+        #main-nav ul {
+          margin-bottom: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav id="main-nav">
+      <ul>
+        <li>Logo</li>
+        <li>Home</li>
+        <li>Products</li>
+        <li>Service</li>
+      </ul>
+      <form>
+        <input type="search" placeholder="Search" />
+        <button>Go</button>
+      </form>
+    </nav>
+  </body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Float property example</title>
+    <style>
+      .container {
+        width: 100%;
+        border: 1px solid black;
+      }
+
+      header {
+        background-color: navy;
+        text-align: center;
+      }
+
+      header h1 {
+        color: white;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+          'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        margin: 0;
+      }
+
+      nav {
+        background-color: lightblue;
+      }
+
+      nav ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+      }
+
+      aside#f-left {
+        float: left;
+        /* float: left allinea l'elemento sul lato dx/sx del contenitore, scorporandolo tuttavia
+        dal regolare flow della pagina! tutti gli elementi successivi si posizioneranno nel "lato libero"... */
+        /* ...fino a che non "resettiamo" il regolare flow degli elementi settando ad un certo punto clear: left */
+      }
+
+      aside#f-right {
+        float: right;
+      }
+
+      footer {
+        background-color: blueviolet;
+        color: white;
+        text-align: center;
+        /* resetto il flow: */
+        clear: left;
+      }
+
+      footer p {
+        margin: 0;
+      }
+
+      @media screen and (min-width: 768px) {
+        /* schermi >= tablet */
+        .container {
+          width: 750px;
+          /* centro il container */
+          margin: 0 auto;
+          /* 2 valori in margin specificano:
+          1) top/bottom
+          2) left/right
+           */
+        }
+
+        nav ul li {
+          display: inline;
+          padding: 0 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>EPICODE</h1>
+        <nav>
+          <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JAVASCRIPT</li>
+            <li>ANGULAR</li>
+            <li>REACT</li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <aside id="f-left">
+          <!-- questa vorrei diventasse una "colonna" affiancata a sx  -->
+          <img src="https://placekitten.com/300" />
+        </aside>
+        <aside id="f-right">
+          <!-- questa vorrei diventasse una "colonna" affiancata a dx  -->
+          <img src="https://placekitten.com/300" />
+        </aside>
+        <section>
+          <!-- questo vorrei fosse il contenuto principale, su una colonna più larga, affiancata a dx -->
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid
+            consequatur libero sequi, fugit rerum ducimus quas debitis
+            reprehenderit optio eum ut omnis totam commodi eligendi fuga illo ex
+            nulla eos.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid
+            consequatur libero sequi, fugit rerum ducimus quas debitis
+            reprehenderit optio eum ut omnis totam commodi eligendi fuga illo ex
+            nulla eos.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid
+            consequatur libero sequi, fugit rerum ducimus quas debitis
+            reprehenderit optio eum ut omnis totam commodi eligendi fuga illo ex
+            nulla eos.
+          </p>
+        </section>
+        <footer>
+          <p>EPICODE</p>
+        </footer>
+      </main>
+    </div>
+  </body>
+</html>

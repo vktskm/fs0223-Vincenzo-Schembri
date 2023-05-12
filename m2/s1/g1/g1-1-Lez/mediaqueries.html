@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Esercizio sulle mediaqueries</title>
+    <style>
+      /* scriveremo il nostro CSS qui! */
+      /* di default, in un approccio mobile-first il CSS senza mediaqueries targhetterà */
+      /* schermi MOBILE. Tramite le mediqueries adatterò lo stile dei miei elementi 
+         su schermi via via più grandi! In modo INCREMENTALE */
+      h1 {
+        color: red;
+      }
+
+      body {
+        background-color: black;
+      }
+
+      #left,
+      #right {
+        font-size: 0.5em;
+      }
+
+      @media screen and (min-width: 400px) {
+        /* il CSS che scriverò qui dentro sarà applicato solamente a dispositivi con uno schermo
+        e con larghezza compresa tra 400 e 699 px */
+        h1 {
+          color: green;
+        }
+
+        body {
+          background-color: yellow;
+        }
+
+        #left {
+          font-size: 1em;
+        }
+      }
+
+      @media screen and (min-width: 700px) {
+        /* il CSS che scriverò qui dentro sarà applicato solamente a dispositivi con uno schermo
+        e con larghezza almeno di 700px */
+        h1 {
+          color: purple;
+        }
+
+        body {
+          background-color: red;
+        }
+
+        #right {
+          font-size: 1em;
+        }
+
+        #left {
+          font-size: 0.5em;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      LEZIONE SULLE <span id="left">MEDIA</span><span id="right">QUERIES</span>
+    </h1>
+    <h3>Vediamo come funzionano :)</h3>
+  </body>
+</html>

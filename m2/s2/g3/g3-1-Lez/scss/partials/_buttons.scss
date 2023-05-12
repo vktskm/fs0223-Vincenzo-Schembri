@@ -1,0 +1,14 @@
+// tutti gli stili per i bottoni
+.primary-btn {
+  @include applicationButton(darkorange);
+  &:hover {
+    @include applicationButtonHover(rgb(255, 174, 76), black);
+  }
+}
+
+.secondary-btn {
+  @include applicationButton(darkblue);
+  &:hover {
+    @include applicationButtonHover(rgb(63, 209, 249), black);
+  }
+}

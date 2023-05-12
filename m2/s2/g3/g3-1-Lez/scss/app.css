@@ -1,0 +1,62 @@
+body {
+  margin: 10px;
+}
+
+nav {
+  display: block;
+}
+nav ul {
+  display: flex;
+  flex-direction: column;
+}
+nav ul li {
+  font-size: 1.1em;
+}
+@media screen and (min-width: 768px) {
+  nav ul {
+    flex-direction: row;
+  }
+}
+
+#main {
+  background-color: lightcyan;
+}
+#main p {
+  letter-spacing: 0.5cm;
+}
+#main a {
+  text-decoration: none;
+}
+#main p.federico {
+  color: red;
+}
+
+button.primary {
+  display: none;
+}
+button.secondary {
+  padding: 10px;
+  background-color: lightsalmon;
+}
+button.secondary:hover {
+  background-color: aquamarine;
+  transform: scale(1.2);
+}
+
+p.andrea {
+  font-size: 1.2em;
+  font-weight: bold;
+  font-family: "sans-serif";
+}
+
+footer {
+  height: 80px;
+}
+
+article {
+  margin-top: 20px;
+  margin-bottom: 90px;
+}
+article p {
+  color: blue;
+}/*# sourceMappingURL=app.css.map */

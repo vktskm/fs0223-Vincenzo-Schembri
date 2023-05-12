@@ -1,0 +1,130 @@
+:root {
+  --home-bg-color: #000;
+  --account-bg-color: #f3f3f3;
+  --text-color: #fff;
+  --primary-color: #e40a13;
+  --secondary-color: #929292;
+}
+
+body {
+  background: var(--home-bg-color);
+}
+
+.btn {
+  border-radius: 0;
+}
+
+#logo {
+  height: 48px;
+}
+
+#avatar {
+  height: 36px;
+}
+
+#avatar-small {
+  height: 24px;
+  margin-right: 10px;
+}
+
+.dropdown-menu {
+  margin-left: -100px;
+  background-color: var(--home-bg-color);
+}
+
+.icon {
+  margin: 4px 10px;
+}
+
+.dropdown-menu a {
+  font-size: 12px;
+}
+
+.genre-details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.movie-cover {
+  transition: 0.3s;
+  opacity: 0.7;
+}
+
+.movie-cover:hover {
+  opacity: 1;
+  transition: 0.3s;
+  cursor: pointer;
+  transform: scale(1.025);
+  position: relative;
+  z-index: 1;
+}
+
+:is(.carousel-control-prev, .carousel-control-next) {
+  width: 40px;
+}
+
+.account-page {
+  min-height: 100vh;
+  background-color: var(--account-bg-color);
+}
+
+.account-page h6 {
+  font-size: 1.2rem;
+  opacity: 0.8;
+}
+
+.account-page .btn-membership {
+  background-image: linear-gradient(to bottom, rgb(236, 236, 236), rgb(211, 211, 211));
+  background-repeat: no-repeat;
+  border: none;
+  font-weight: 500;
+  font-size: 0.9rem;
+  padding-inline: 2rem;
+  box-shadow: 0 2px 1px -1px rgb(0 0 0 / 30%);
+}
+
+.profile-page {
+  /* padding: 5% 20%; */
+  color: #fff;
+}
+
+.profile-page .btn {
+  letter-spacing: 0.05rem;
+}
+
+.profile-page .action-buttons button {
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+}
+
+.profile-title {
+  font-size: 64px;
+}
+
+.edit-icon {
+  position: relative;
+  left: 10%;
+  top: -10%;
+  background: black;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+input[type="text"] {
+  padding: 10px;
+  background: var(--secondary-color);
+  width: 100%;
+  color: white;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+input[type="text"]:focus {
+  outline: none;
+}
+
+input[type="checkbox"] {
+  width: 36px;
+  height: 36px;
+}
