@@ -14,6 +14,8 @@ fetch('https://jsonplaceholder.typicode.com/photos')
       // proviamo ad estrarre i dati
       // possiamo utilizzare il metodo .json(), che ritorna i dati della risposta
       // PERO' in una Promise!
+      console.log("ritorna la promise")
+      console.log("res",res)
       return res.json()
     } else {
       // NON proviamo ad estrarre i dati, qualcosa è andato storto!

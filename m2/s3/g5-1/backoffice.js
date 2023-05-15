@@ -4,13 +4,16 @@ const authorization =
 
 //Cerco nella barra dellUrl
 const URLParams = new URLSearchParams(window.location.search);
+console.log("URLParams " , URLParams)
 const selectedId = URLParams.get('id');
+console.log("selectedId ", selectedId)
 
 const endpoint = selectedId ? link + selectedId : link;
+console.log( "endpoint" , endpoint);
 const method = selectedId ? 'PUT' : 'POST';
 //faccio questo console log per capire se il metodo è Put O Post
 //All'inizio selectedId è falso ed esegue Il metodo Post
-console.log(method);
+console.log( "method" , method);
 
 window.onload = () => {
 	if (selectedId) {
@@ -25,7 +28,7 @@ window.onload = () => {
 		})
 			.then((res) => res.json())
 			.then((prodotto) => {
-    
+                console.log("SelectedId è diversa da null ed eseguo PUT")
 				const { name, description, brand, imageUrl, price } = prodotto;
 				document.getElementById('name').value = name;
 				document.getElementById('description').value = description;
@@ -37,6 +40,7 @@ window.onload = () => {
 				console.log(err);
 			});
 	}
+	// fine del if
 };
 
 const getProducts = (event) => {
@@ -59,6 +63,7 @@ const getProducts = (event) => {
 		body: JSON.stringify(article),
 	})
 		.then(() => {
+			console.log("selectedId è null ed eseguo POST")
 			document.getElementById('name').value = '';
 			document.getElementById('description').value = '';
 			document.getElementById('brand').value = '';
@@ -72,6 +77,7 @@ const getProducts = (event) => {
 
 const deleteProduct = () => {
 	const hasAccepted = confirm("Stai eliminando il prodotto");
+	console.log("hasAccepted", hasAccepted)
 	if (hasAccepted) {
 		fetch(endpoint, {
 			method: 'DELETE',
