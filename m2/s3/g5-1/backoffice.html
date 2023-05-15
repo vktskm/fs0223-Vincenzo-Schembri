@@ -27,13 +27,14 @@
         <hr class="border border-2 border-secondary">
        
         <form onsubmit="getProducts(event)">
-            <div class="row justify-content-center">
+              <div class="row justify-content-center">
                 <div class="col-4">
                     <div class="mb-3 d-block">
-                        <label for="name" class="form-label">Product Image</label>
+                        <label for="imageUrl" class="form-label">Product Image</label>
                         <div class="input-group mb-3 text-primary">
                             <div class="mb-3m d-flex">
-                            <input type="text" class="form-control" id="imageUrl" aria-describedby="image" placeholder="Insert URL" >
+                            <input type="text" class="form-control" id="imageUrl" aria-describedby="image" 
+                            placeholder="Insert URL" required >
                             <button class="btn btn-success" type="button" id="button-addon2"
                                     onclick="preview()">Aggiungi</button>
                             </div>
@@ -42,6 +43,8 @@
                         <button onclick="clearImage()" class="btn btn-danger mt-3" id="clearPic">Cancella</button>
                     </div>
                 </div>
+
+
                 <div class="col-8">
                     <div class="mb-3">
                         <label for="name" class="form-label">Nome del prodotto</label>
@@ -65,11 +68,10 @@
                     </div>
 
                     <div class="d-flex justify-content-end">
-                        <div>
+                        
                             <button id="submit" type="submit" class="btn btn-success">Aggiungi Prodotto</button> 
                             <button id="editItem" type="submit" class="btn btn-warning d-none">Modifica</button>
-                        </div>
-                        <button id="deleteItem" onclick="deleteProduct()" type="button"
+                            <button id="deleteItem" onclick="deleteProduct()" type="button"
                             class="btn btn-danger d-none">Delete product</button>
                     </div>
                 </div>
