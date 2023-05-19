@@ -1,0 +1,42 @@
+.static-cards{
+    .col{
+        min-height: max-content;
+    }
+    .card{
+        padding: 10px;
+        background-color: #181818;
+        color: #ffffff;
+        height: max-content;
+        flex-direction: column;
+        overflow-x: hidden;
+        img{
+            margin-bottom: 1rem;
+        @media screen and (max-width:776px){
+            max-width: 150px;
+        }    
+        }
+        @media screen and (max-width:776px){
+            flex-direction: row;
+            align-items: center;
+        }    
+    }
+    .card-text{
+        height: 1.5rem;
+        
+        overflow: hidden;
+        @media screen and (max-width: 776px) {
+            white-space: wrap;
+            height: 100% !important;
+        }
+    }
+    .subtitle-card{
+        color: #727272;
+        height: 1.5rem;
+        overflow: hidden;
+        white-space: wrap;
+        @media screen and (max-width: 776px) {
+            white-space: wrap;
+            height: 100% !important;
+        }
+    }
+}

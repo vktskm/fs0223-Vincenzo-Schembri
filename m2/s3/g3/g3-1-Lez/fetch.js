@@ -11,7 +11,7 @@
 // non serve sempre specificare l'oggetto di inizializzazione, il secondo parametro, perchè fetch()
 // di default utilizzerà sempre GET
 
-fetch('https://jsonplaceholder.typicode.com/stefano')
+fetch('https://jsonplaceholder.typicode.com/')
   .then((res) => {
     console.log(res)
     // qui dentro effettuo tutte le operazioni che voglio fare con la response

@@ -1,0 +1,20 @@
+.cards-row{
+    .name-playlist{
+            margin: 0!important;
+        }
+    .card{
+        background-color: #2d2d2d;
+        padding: 0;
+        
+    }
+    a{
+        text-decoration: none !important;
+        color: #ffffff;
+    }
+    @media screen and (max-width:768px){
+        font-size: 12px;
+    }
+    @media screen and (max-width:576px){
+        font-size: 10px;
+    }
+}

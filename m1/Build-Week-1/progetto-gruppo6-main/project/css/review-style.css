@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+.review-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: rgb(234, 234, 234);
+    font-family: 'Outfit', sans-serif;
+    box-sizing: border-box;
+    letter-spacing: 0.5px;
+    background-image: url('../assets/bg.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 100vh;
+    padding: 50px 50px;
+    margin: 0 auto;
+}
+
+.review-container img {
+    width: 20%;
+    margin-bottom: 70px;
+    cursor: pointer;
+}
+
+.title {
+    font-size: 60px;
+    color: white;
+    font-weight: bold;
+}
+
+.p-class {
+    font-size: 24px;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+.mb-30 {
+    margin-bottom: 30px;
+}
+
+.mb-40 {
+    margin-bottom: 40px;
+}
+
+.stars-svg {
+    width: 47px;
+    height: 46px;
+}
+
+.stars-svg-with-color {
+    fill: #00FFFF;
+}
+
+.stars-svg:not(.stars-svg:last-child) {
+    margin-right: 5px;
+}
+
+.stars-container {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 50px;
+}
+
+.stars:hover {
+    fill: #00FFFF;
+}
+
+.user-review {
+    width: 90%;
+    height: 2rem;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #cb00b3;
+    padding: 0 30px;
+    color: white;
+    font-size: medium;
+    color: rgb(234, 234, 234);
+    margin-bottom: 50px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.user-review:focus {
+    outline: none;
+}
+
+.customBtn {
+    padding: 15px 50px;
+    background-color: #00FFFF;
+    font-size: large;
+    font-weight: bold;
+    box-shadow: 1px 1px 9px 3px #00FFFF;
+    border: none;
+    cursor: pointer;
+}
+
+.customBtn:hover {
+    color: rgb(62, 62, 62);
+    box-shadow: 1px 1px 9px 5px #00FFFF;
+}

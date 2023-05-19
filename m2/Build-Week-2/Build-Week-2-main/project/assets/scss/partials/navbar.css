@@ -1,0 +1,40 @@
+nav {
+  color: #e8e8e8;
+  background: rgba(1, 1, 1, 0.8745098039);
+}
+nav .container-fluid {
+  justify-content: space-around !important;
+}
+nav .container-fluid p {
+  margin: 0;
+}
+nav a {
+  text-decoration: none;
+  color: #e8e8e8;
+}
+nav a:hover {
+  color: white;
+}
+@media screen and (min-width: 991px) {
+  nav {
+    position: relative !important;
+    height: 100vh;
+    width: 20%;
+    display: block !important;
+    overflow: hidden !important;
+  }
+  nav .container {
+    overflow: scroll !important;
+    height: 100% !important;
+    position: relative !important;
+  }
+  nav .container-fluid {
+    display: block !important;
+  }
+  nav .container-fluid a {
+    flex-direction: row !important;
+  }
+  nav .container-fluid a p {
+    padding-left: 1em;
+  }
+}/*# sourceMappingURL=navbar.css.map */

@@ -55,3 +55,19 @@ formReference.addEventListener('submit', (e) => {
   // aggiornare la lista
   createList()
 })
+
+const student = {
+  nome: "angelo",
+  surname: "graci",
+  age: 18,
+}
+
+const student2 = {
+  nome: "enzo",
+}
+
+console.log( {...student} )
+
+array1 = [0,1,2]
+
+console.log(array1.pop())

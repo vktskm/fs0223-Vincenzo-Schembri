@@ -1,0 +1,28 @@
+@import 'partials/_reset';
+@import 'partials/_font';
+@import 'partials/_main';
+@import 'partials/_play-pause.scss';
+@import 'partials/_navbar.scss';
+@import 'partials/_searchCards';
+@import 'partials/_hero-section';
+@import 'partials/_card-playlist';
+@import 'partials/_album';
+@import 'partials/_artisti';
+@import 'partials/_aside';
+@import 'partials/_staticCards';
+/* Stile generale della scrollbar */
+::-webkit-scrollbar {
+    width: 10px; 
+  }
+  
+  /* Stile del thumb (il "manico" della scrollbar) */
+  ::-webkit-scrollbar-thumb {
+    background-color: #5d5d5daa; 
+    border-radius: 5px;
+  }
+  
+  /* Stile della traccia (l'area di sfondo della scrollbar) */
+  ::-webkit-scrollbar-track {
+    background-color: none; /* Colore della traccia */
+  }
+

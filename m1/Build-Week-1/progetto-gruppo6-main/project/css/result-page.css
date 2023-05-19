@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Outfit&display=swap');
+
+#mainContainer {
+    background-image: url(../assets/bg.jpg);
+    background-size: cover;
+    height: 100%;
+    color: rgb(234, 234, 234);
+}
+
+div img {
+    width: 20%;
+    margin: 30px 0px 0px 40px;
+}
+
+#imgContainer {
+    margin: 0px 0px 40px 0px;
+}
+
+#titlesContainer {
+    text-align: center;
+    font-family: 'Outfit', sans-serif;
+    margin-bottom: -50px;
+}
+
+#titlesContainer h3 {
+    font-weight: bolder;
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+#titlesContainer p {
+    font-size: 20px;
+}
+
+#resultsContainer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 35px 60px 70px 25px;
+    font-family: 'Inter', sans-serif;
+}
+
+#button {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    font-family: "Outfit", sans-serif;
+    font-size: 1.2rem;
+    letter-spacing: 0.25px;
+    padding: 10px 50px;
+    border: 1px solid rgb(234, 234, 234);
+    font-weight: bold;
+    background-color: transparent;
+    color: rgb(234, 234, 234);
+    box-shadow: 1px 1px 5px 5px #9039c058;
+    cursor: pointer;
+    margin-bottom: 30px;
+}
+
+button:hover {
+    box-shadow: 1px 1px 9px 5px #00FFFF;
+}
+
+.containerPercent {
+    display: flex;
+    flex-direction: column;
+}
+
+#percentualeCorrette {
+    font-weight: bolder;
+    font-size: 50px;
+    margin-bottom: 5px;
+
+}
+
+#percentualeSbagliate {
+    font-weight: bolder;
+    font-size: 50px;
+    margin-bottom: 5px;
+}
+
+.containerPercent :first-child {
+    font-size: 50px;
+}
+
+.comparazione {
+    font-size: 20px;
+    font-family: 'Inter', sans-serif;
+}
+
+#numeroCorrette {
+    font-size: 20px;
+}
+
+#numeroSbagliate {
+    font-size: 20px;
+}
+
+#sommario {
+    margin-bottom: 20px;
+}
+
+div #complimenti {
+    font-weight: bold;
+    font-size: 30px;
+    margin-bottom: 10px
+}
+.contenitoreDelChart {
+    width: 400px;
+    height: 400px;
+}
+
+div #descrizione {
+    font-size: 20px;
+}
+
+#complimenti,
+#descrizione {
+    position: relative;
+    top: 220px;
+}
+
+#titleContainer h3,
+#titleConteiner p {
+    position: relative;
+    top: 100px;
+}

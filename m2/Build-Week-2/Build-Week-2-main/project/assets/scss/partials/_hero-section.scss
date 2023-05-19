@@ -1,0 +1,42 @@
+.hero{
+    background: linear-gradient(0deg, black, #1d1d1d);
+    color: #ffffff;
+    .btn,i{
+        width: fit-content;
+    }
+    .title{
+        font-size: 50px;
+    }
+}
+.cards-row{
+
+    .playlist-card{
+        background-color: #2c2c2c ;
+        color: #ffffff;
+        border-radius: 5px;
+        overflow: hidden;
+        max-height: 100px;
+    img{
+        height: auto;
+        width: 40%;
+    }
+    }
+    .card{
+        background-color: #181818;
+        color: #ffffff;
+    }
+}
+.btn-topbar{
+    background-color: #121212;
+    color: #ffffff;
+    div{
+        width: fit-content;
+    }
+    .rounded-circle{
+        color: #a3a3a3;
+    }
+    .btn-profile{
+        background-color: #0a0a0a;
+        color: #ffffff;
+    }
+}

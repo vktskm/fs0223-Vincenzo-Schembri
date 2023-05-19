@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Static Template</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+    <style>
+        h1 {
+            font-size: 105px;
+            letter-spacing: -4px;
+            font-weight: 900;
+            margin-bottom: -42px;
+            text-align: center;
+            color: lightcoral
+        }
+
+        @media screen and (max-width: 400px) {
+            h1 {
+                font-size: 80px;
+                margin-bottom: -36px;
+            }
+        }
+
+        #shopping-cart {
+            position: fixed;
+            top: 50%;
+            left: 0px;
+            transform: translateY(-50%);
+            background-color: white;
+            z-index: 1;
+            transition: all .8s 1s;
+            box-shadow: -30px 0 60px -3px rgb(0 0 0 / 30%);
+            min-width: 66px;
+            min-height: 66px;
+            max-width: 66px;
+            max-height: 66px;
+            overflow-y: auto;
+            border-top-right-radius: 6px;
+            border-bottom-right-radius: 6px;
+        }
+
+        #shopping-cart {
+            padding: 1em;
+            overflow: hidden;
+        }
+
+        #shopping-cart::before {
+            content: url("data:image/svg+xml, <svg xmlns='http://www.w3.org/2000/svg' width='26' height='26' fill='red' class='bi bi-cart3' viewBox='0 0 16 16'> <path d='M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z'/></svg>");
+            position: sticky;
+            top: 12px;
+            left: 2px;
+            margin: auto;
+            transition: all .25s 1.5s;
+        }
+
+        #shopping-cart > div {
+            margin-block-end: 2em;
+        }
+
+        #shopping-cart>h3 {
+            margin-top: -24px;
+        }
+
+        #shopping-cart> :where(h3, div) {
+            opacity: 0;
+            transition: all .6s 1s;
+
+            pointer-events: none;
+        }
+
+        #shopping-cart:hover> :where(h3, div) {
+            opacity: 1;
+            pointer-events: initial;
+            transition: all 0.4s .2s;
+        }
+
+        #shopping-cart:hover {
+            max-width: 400px;
+            max-height: 70vh;
+            padding: 2em;
+            overflow-y: auto;
+            transition: all 0.4s;
+        }
+
+        #shopping-cart:hover::before {
+            opacity: 0;
+            transition: all 0.15s;
+        }
+
+        .card-body {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+        }
+
+        .card-body>*:nth-last-child(2) {
+            margin-top: auto;
+        }
+
+        .card-title {
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            overflow: hidden;
+        }
+
+        .selected {
+            border: 3px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid mb-5">
+        <h1>Libreria</h1>
+    </div>
+
+    <div id="shopping-cart"></div>
+
+    <div class="container">
+        <div id="books-wrapper" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5  row-cols-xxl-6 g-3"></div>
+    </div>
+
+    <script>
+        const booksWrapper = document.querySelector("#books-wrapper");
+        const shoppingCart = document.querySelector("#shopping-cart");
+
+        let outerBooks = [];
+        let shoppingCartList = JSON.parse(localStorage.getItem("shoppingCart")) || [];
+
+        window.onload = () => {
+            loadBooks();
+            loadShoppingCart()
+        };
+
+        const loadBooks = () => {
+            fetch("https://striveschool-api.herokuapp.com/books")
+                .then((resp) => {
+                    if(resp.ok)
+                    {
+                        console.log("resp e ", resp)
+                        return resp.json()
+                    }
+                    else{
+                        console.log('Errore!')
+                         throw new Error("Errore nell'esecuzione della chiamata")
+                    }
+                    
+                })
+                .then(books => {
+
+                    console.log("books array è ",books )
+                    // using books right away here
+                    displayBooks(books);
+                    // Saving a reference for later use, without needing to fetch again
+                    outerBooks = books;
+                })
+                .catch(err =>
+                    console.error(err.message)
+                )
+
+        }
+
+     
+
+        function displayBooks(books) {
+            booksWrapper.innerHTML = "";
+           
+            books.forEach((book) => {
+                const isBookInCart = shoppingCartList.findIndex(cartBook => cartBook.title === book.title) !== -1
+            
+                booksWrapper.innerHTML += `
+            <div class="col">
+              <div class="card shadow-sm h-100 ${isBookInCart ? 'selected' : ''}">
+                <img src="${book.img}" class="img-fluid card-img-top" alt="${book.title
+                    }">
+                <div class="card-body">
+                  <h5 class="card-title">${book.title}</h5>
+                  <p class="card-text badge rounded-pill bg-dark mb-2">${book.category}</p>
+                  <p class="fs-4">${book.price}€</p>
+                  <div>
+                      <button class="btn btn-danger" onclick="addToCart(event, '${book.asin}')">Compra ora</button>
+                      <button class="btn btn-outline-danger" onclick="skipMe(event)">
+                        Scarta
+                      </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          `;
+            });
+        }
+        
+        for(let i=0; i<outerBooks.length; i++)
+          console.log(outerBooks[i])
+
+
+        const skipMe = (event) => {
+            event.target.closest('.col').remove()
+        }
+
+        const addToCart = (event, asin) => {
+            console.log(asin);
+            // const book = outerBooks.filter( book => book.asin === asin)[0]
+            const book = outerBooks.find((book) => book.asin === asin);
+            shoppingCartList.push(book);
+            console.log(shoppingCartList);
+            localStorage.setItem("shoppingCart", JSON.stringify(shoppingCartList))
+
+            loadShoppingCart();
+
+            event.target.closest(".card").classList.add("selected");
+        }
+
+        const loadShoppingCart = () => {
+            shoppingCart.innerHTML = "<h3>Carrello</h3>";
+
+            shoppingCartList.forEach((book) => {
+                shoppingCart.innerHTML += `
+            <div class="shopping-item">
+              <div class="d-flex align-items-start gap-2">
+                    <img src=${book.img}  class="img-fluid" width="60" />
+                  <div class="flex-grow-1">
+                      <p class="mb-2">
+                        ${book.title}
+                      </p>
+                      <div class="d-flex justify-content-between">
+                          <p class="fw-bold">
+                            ${book.price}€
+                          </p>
+                          <div>
+                              <div>
+                                <button class="btn btn-danger" onclick="deleteItem('${book.asin}')">Elimina </button>
+                              </div>
+                          </div>
+                      </div >
+                  </div >
+              </div >
+            </div>
+          `;
+            });
+        }
+
+        function deleteItem(asin) {
+            const index = shoppingCartList.findIndex((book) => book.asin === asin);
+
+            if (index !== -1) {
+                shoppingCartList.splice(index, 1);
+                localStorage.setItem("shoppingCart", JSON.stringify(shoppingCartList))
+            }
+
+            loadShoppingCart();
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

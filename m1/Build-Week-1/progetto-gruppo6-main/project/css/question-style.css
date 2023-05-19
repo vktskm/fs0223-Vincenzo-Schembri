@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Outfit&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+
+#contenitoreDiTutto {
+  background-image: url(../assets/bg.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  font-family: 'Outfit', sans-serif;
+  height: 100vh;
+  margin: 0 auto;
+}
+
+img {
+  width: 20%;
+  margin: 40px 0px 0px 40px;
+}
+
+#timer {
+  color: white;
+  margin-bottom: 50px;
+  margin-top: 20px;
+  margin-right: 70px;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+#contenitoreDomanda {
+  color: white;
+  font-size: 36px;
+  margin-bottom: 50px;
+  text-align: center;
+  padding: 0 100px;
+}
+
+#contenitoreRisposte {
+  margin-bottom: 100px;
+}
+
+.risposte-1 {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.risposte-2 {
+  display: flex;
+  justify-content: center;
+}
+
+.risposte {
+  color: white;
+  font-size: 16px;
+  box-sizing: border-box;
+  padding: 15px 20px;
+  border: 1px solid white;
+  border-radius: 30px;
+  background-color: rgba(114, 112, 112, 0.301);
+  margin: 10px;
+  font-family: 'Inter', sans-serif;
+  cursor: pointer;
+  width: 30%;
+  text-align: center;
+}
+
+.risposte:hover {
+  background: linear-gradient(to bottom, #d20094, #900080);
+}
+
+#numeroDomande {
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  color: white;
+  font-size: 16px;
+  letter-spacing: 0.2em;
+  font-family: 'Inter', sans-serif;
+}
+
+#domandeRimaste {
+  color: #AD0186;
+  font-size: 16px;
+}
+
+/* Sets the containers height and width */
+.base-timer {
+  position: relative;
+  height: 150px;
+  width: 150px;
+}
+
+/* Removes SVG styling that would hide the time label */
+.base-timer__circle {
+  fill: none;
+  stroke: none;
+}
+
+/* The SVG path that displays the timer's progress */
+.base-timer__path-elapsed {
+  stroke-width: 10px;
+  stroke: rgb(159, 159, 159);
+}
+
+.base-timer__label {
+  position: absolute;
+
+  /* Size should match the parent container */
+  width: 150px;
+  height: 150px;
+
+  /* Keep the label aligned to the top */
+  top: 0;
+
+  /* Create a flexible box that centers content vertically and horizontally */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* Sort of an arbitrary number; adjust to your liking */
+  font-size: 48px;
+}
+
+.base-timer__path-remaining {
+  /* Just as thick as the original ring */
+  stroke-width: 10px;
+
+  /* Rounds the line endings to create a seamless circle */
+  stroke-linecap: round;
+
+  /* Makes sure the animation starts at the top of the circle */
+  transform: rotate(90deg);
+  transform-origin: center;
+
+  /* One second aligns with the speed of the countdown timer */
+  transition: 1s linear all;
+
+  /* Allows the ring to change color when the color value updates */
+  stroke: currentColor;
+}
+
+.base-timer__svg {
+  /* Flips the svg and makes the animation to move left-to-right */
+  transform: scaleX(-1);
+}
+
+.base-timer__path-remaining.green {
+  color: #00FFFF;
+}
+
+.base-timer__path-remaining.orange {
+  color: #cb00b3;
+}
+
+.base-timer__path-remaining.red {
+  color: red;
+}

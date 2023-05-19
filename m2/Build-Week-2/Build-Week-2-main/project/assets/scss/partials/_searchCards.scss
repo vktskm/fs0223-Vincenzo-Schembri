@@ -1,0 +1,76 @@
+#rowPrincipal{
+    color: #ffffff;
+        #button-addon1{
+            background-color: #1b1b1b;
+            border: none;
+            color: #ffffff;
+            &:hover{
+                color: white;
+            }
+        }
+        .form-control{
+            background-color: #1b1b1b;
+            border: none;
+            color: #ffffff;
+            &::placeholder{
+                color: #ffffff;
+            }
+        }
+    #searchCards{
+        .card{
+            height: 120px;
+            background-color: #e13300;
+            overflow: hidden;
+            border-radius: 5px;
+            position: relative;
+            color: #ffffff;
+            border: none;
+            a{
+                text-decoration: none;
+                color: #ffffff ;
+        
+            }
+            img{
+                width: 100px;
+                border-radius: 10px;
+                transform: rotate(30deg);
+                position: absolute;
+                right: -20px;
+                bottom: -10px;
+                z-index: 0 !important;
+                @media screen and (max-width:576px) {
+                    width: 80px;
+                }
+            }
+            h4{
+                font-size: 25px;
+                position: relative;
+                @media screen and (max-width:576px) {
+                    font-size: 20px !important;
+                }
+                z-index: 222 !important;
+            }
+        }
+        .card2{
+            background-color: #1e3264;
+        }
+        .card3{
+            background-color: #e8125c;
+        }
+        .card4{
+            background-color: #158a08;
+        }
+        .card5{
+            background-color: #bc5800;
+        }
+        .card6{
+            background-color: #d84000;
+        }
+        .card7{
+            background-color: #cd1382;
+        }
+        .card8{
+            background-color: #8c67ac;
+        }
+    }
+}

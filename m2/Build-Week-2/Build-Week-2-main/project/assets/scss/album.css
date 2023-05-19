@@ -1,0 +1,33 @@
+#album-contenitor {
+  background-color: #121212;
+}
+#album-contenitor .play-button {
+  cursor: pointer;
+  color: #1ED760;
+}
+#album-contenitor .icon-row {
+  cursor: pointer;
+  color: #A6A6A6;
+}
+#album-contenitor .icon-row:hover {
+  color: white;
+  fill: #1ED760;
+}
+#album-contenitor .track-list-header {
+  color: #A6A6A6;
+}
+#album-contenitor .track:hover {
+  background-color: #121212;
+}
+#album-contenitor .track .track-artist-name {
+  text-decoration: none;
+  color: #A6A6A6;
+}
+#album-contenitor .track .track-artist-name:hover {
+  color: white;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}/*# sourceMappingURL=album.css.map */

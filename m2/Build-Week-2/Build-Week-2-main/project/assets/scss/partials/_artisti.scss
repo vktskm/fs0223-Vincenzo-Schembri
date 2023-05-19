@@ -1,0 +1,12 @@
+#artistThumbnail {
+    height : 400px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: start center;
+  }
+  #popularList li{
+    &:hover{
+      background-color: rgba($color: #121212, $alpha: 1.0);
+  } 
+
+  }

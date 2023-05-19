@@ -46,7 +46,7 @@ fetch('https://jsonplaceholder.typicode.com/photos')
             /div>
         </div>
         `
-      mainRow.appendChild(col)
+      mainRow.appendChild(col) 
     })
   })
   .catch((error) => {
@@ -59,7 +59,10 @@ fetch('https://jsonplaceholder.typicode.com/photos')
 localStorage.setItem('cart', '[]')
 
 let currentCart = localStorage.getItem('cart')
+console.log( "currenctCart è " , currentCart)
 currentCart = JSON.parse(currentCart)
+console.log( "currenctCart è " , currentCart)
 currentCart.push({ id: 5 })
 currentCart = JSON.stringify(currentCart)
-localStorage.setItem(cart, currentCart)
+console.log( "currenctCart è " , currentCart)
+localStorage.setItem( 'cart', currentCart)
