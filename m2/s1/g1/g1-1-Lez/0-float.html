@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Float property example</title>
+    
     <style>
       .container {
         width: 100%;
@@ -33,23 +34,28 @@
         list-style-type: none;
       }
 
-      aside#f-left {
-        float: left;
+      #f-left {
+        float: left; 
         /* float: left allinea l'elemento sul lato dx/sx del contenitore, scorporandolo tuttavia
         dal regolare flow della pagina! tutti gli elementi successivi si posizioneranno nel "lato libero"... */
         /* ...fino a che non "resettiamo" il regolare flow degli elementi settando ad un certo punto clear: left */
       }
 
-      aside#f-right {
-        float: right;
+      #f-right {
+        float: right; 
+      }
+
+      section{
+        /* resetto il flow: con clear:both ambo i lati.
+        Se non resetto il flow il testo incomincia fra lo spazio delle due immagini */
+        clear:both;
+        background-color: aliceblue;
       }
 
       footer {
         background-color: blueviolet;
         color: white;
         text-align: center;
-        /* resetto il flow: */
-        clear: left;
       }
 
       footer p {
@@ -63,20 +69,23 @@
           /* centro il container */
           margin: 0 auto;
           /* 2 valori in margin specificano:
-          1) top/bottom
-          2) left/right
-           */
+          1) top/bottom 2) left/right */
         }
 
         nav ul li {
-          display: inline;
+          /* fino a quando la pagina è sotto 768px di larghezza mostra la lista
+          in sequenza , quando passa i 768px mostra la nav inline */
+          display: inline; 
           padding: 0 20px;
         }
       }
     </style>
+
   </head>
   <body>
+
     <div class="container">
+
       <header>
         <h1>EPICODE</h1>
         <nav>
@@ -88,7 +97,8 @@
             <li>REACT</li>
           </ul>
         </nav>
-      </header>
+      </header><!-- fine header -->
+      
       <main>
         <aside id="f-left">
           <!-- questa vorrei diventasse una "colonna" affiancata a sx  -->
@@ -118,11 +128,20 @@
             reprehenderit optio eum ut omnis totam commodi eligendi fuga illo ex
             nulla eos.
           </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid
+            consequatur libero sequi, fugit rerum ducimus quas debitis
+            reprehenderit optio eum ut omnis totam commodi eligendi fuga illo ex
+            nulla eos.
+          </p>
         </section>
+        
         <footer>
           <p>EPICODE</p>
         </footer>
       </main>
-    </div>
+    
+    </div><!-- fine container -->
+
   </body>
 </html>
