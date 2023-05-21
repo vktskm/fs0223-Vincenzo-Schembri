@@ -1,7 +1,5 @@
 // import './modules/quiz.js';
 
-
-
 (function acceptButton() {
     //seleziono tramite id gli elementi del dom che ci servono
     const btn = document.getElementById('acceptBtn');
