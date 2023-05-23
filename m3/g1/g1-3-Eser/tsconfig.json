@@ -1,0 +1,17 @@
+{
+
+"compilerOptions": {
+       
+    "target": "es2017",
+    "module": "esnext",
+    "sourceMap": true,
+    "lib": ["dom","es6"],
+    "allowJs": true,
+    "experimentalDecorators":true
+    
+},
+        
+
+    
+       
+}
