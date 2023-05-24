@@ -1,0 +1,74 @@
+main {
+  margin-left: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main #contenitore_input_select {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main #contenitore_input_select #contenitore1 #tipo_lavoro {
+  width: 500px;
+  height: 50px;
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 25px;
+}
+main #contenitore_input_select #contenitore2 {
+  display: flex;
+  align-items: center;
+}
+main #contenitore_input_select #contenitore2 #fatturato {
+  width: 360px;
+  height: 75px;
+  text-align: center;
+  font-size: 1.7rem;
+}
+main #contenitore_input_select #contenitore2 #button_resetta_importo {
+  height: 40px;
+  font-weight: 500;
+  border: 1px solid black;
+  padding: 5px 10px;
+  margin-left: 10px;
+}
+main #contenitore_input_select #button_calcola {
+  width: 50%;
+  font-weight: 700;
+  font-size: 2rem;
+  border: 1px solid black;
+  padding: 5px 15px;
+  margin: 25px 0 50px 0;
+}
+main #risultati p {
+  font-size: 1.5rem;
+  margin-bottom: 25px;
+  font-size: 2rem;
+  font-weight: 700;
+}
+main #tasse_inps,
+main #tasse_irpef,
+main #totale_tasse {
+  font-size: 2rem;
+  font-weight: 500;
+  color: red;
+}
+main #reddito_netto {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: green;
+}
+
+* {
+  list-style: none;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  background-color: lightgray;
+  display: flex;
+  align-items: center;
+}/*# sourceMappingURL=style.css.map */

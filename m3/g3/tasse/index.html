@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasse</title>
+    <link rel="stylesheet" href="scss/style.css">
+</head>
+
+<body>
+
+    <main>
+        <h1>Calcolo delle tasse</h1>
+        <div id="contenitore_input_select">
+            <div id="contenitore1" class="contenitore">
+                <select name="tipo_lavoro" id="tipo_lavoro">
+                    <option id="option_lavoro_default" value="default">Categoria </option>
+                    <option id="art" value="art">Artigiano</option>
+                    <option id="mark" value="mark">Marketing</option>
+                    <option id="inf" value="inf">informatico</option>
+                </select>
+            </div>
+            <div id="contenitore2" class="contenitore">
+                <input type="number" id="fatturato" placeholder="Importo lordo">
+                <button id="button_resetta_importo">Resetta importo</button>
+            </div>
+            <button id="button_calcola">Calcola</button>
+        </div>
+        <div id="risultati">
+            <p>Tasse INPS € <span id="tasse_inps"></span></p>
+            <p>Tasse IRPEF € <span id="tasse_irpef"></span></p>
+            <p>Tasse totali € <span id="totale_tasse"></span></p>
+            <p>Il tuo reddito annuo netto è di € <span id="reddito_netto"></span></p>
+        </div>
+    </main>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
