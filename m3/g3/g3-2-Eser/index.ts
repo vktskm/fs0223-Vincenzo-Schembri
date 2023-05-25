@@ -1,32 +1,41 @@
 abstract class PagamentiTasse {
-    tasseInps: number;
-    tasseIrpef: number;
+    public tasseInps: number;
+    public tasseIrpef: number;
     constructor(tasseInps: number, tasseIrpef: number) {
         this.tasseInps = tasseInps;
         this.tasseIrpef = tasseIrpef;
     }
+
+
+    // public getTasseInps ():number{
+    //     return tasseInps;
+    // }
+
+    // public getTasselrpef():number{
+    //     return tasseIrpef;
+    // } 
+
+
     
 }
 
 class Lavoratore extends PagamentiTasse {
-    codiceReddito:number;
-    redditoAnnuoLordo:number;
+    public codiceReddito:number;
+    public redditoAnnuoLordo:number;
     constructor(tasseInps: number,tasseIrpef: number, codiceReddito:number, redditoAnnuoLordo:any) {
         super(tasseInps, tasseIrpef);
         this.codiceReddito = codiceReddito;
         this.redditoAnnuoLordo = redditoAnnuoLordo;
     }
-
-    
 }
 
 let fatturato = <HTMLInputElement>document.querySelector('#fatturato');
 let tipo_lavoro = (<HTMLSelectElement>document.querySelector('#tipo_lavoro'));
 //Elementi option
 let option_lavoro_default = <HTMLOptionElement>document.querySelector('#option_lavoro_default');
-let art = <HTMLOptionElement>document.querySelector('#art');
-let mark = <HTMLOptionElement>document.querySelector('#mark');
-let inf = <HTMLOptionElement>document.querySelector('#inf');
+let artigiano = <HTMLOptionElement>document.querySelector('#artigiano');
+let marketing = <HTMLOptionElement>document.querySelector('#marketing');
+let informatico = <HTMLOptionElement>document.querySelector('#informatico');
 //Elementi button
 let button_resetta_importo = <HTMLButtonElement>document.querySelector('#button_resetta_importo');
 let button_calcola = <HTMLButtonElement>document.querySelector('#button_calcola');
@@ -36,9 +45,13 @@ let tasse_irpef = <HTMLSpanElement>document.querySelector('#tasse_irpef');
 let totale_tasse = <HTMLSpanElement>document.querySelector('#totale_tasse');
 let reddito_netto = <HTMLSpanElement>document.querySelector('#reddito_netto');
 
-let Art = new Lavoratore(0.25,0.23,1,fatturato);
-let Mark = new Lavoratore(0.25,0.23,2,fatturato);
-let Inf = new Lavoratore(0.25,0.23,3,fatturato);
+let Artigiano = new Lavoratore(0.25,0.23,1,fatturato);
+let Marketing = new Lavoratore(0.25,0.23,2,fatturato);
+let Informatico = new Lavoratore(0.25,0.23,3,fatturato);
+
+
+//console.log( Artigiano.getTasseInps);
+//console.log( Artigiano.getTasselrpef);
 
 let tassaIrpef;
 function variabileIrpef() {
@@ -61,6 +74,7 @@ function resettaImporti() {
     totale_tasse.innerHTML = '';
     reddito_netto.innerHTML = '';
 }
+
 function calcoli() {
     let calcoloTasseInps:any = parseInt(fatturato.value)*(0.25);
     tasse_inps.innerHTML = calcoloTasseInps;

@@ -97,7 +97,7 @@
         console.log('--------------mother account----------------------------------'+'\n');
         console.log(mother);
           // stampo i versamenti-prelievi fatti ed il saldo attuale del conto
-        console.log('deposit:+'+mother.deposit(1000));
+        console.log('deposit:+'+ mother.deposit(1000));
         console.log('withdraw:-'+ mother.oneWithdraw(500));
         console.log('withdraw:-'+ mother.twoWithdraw(400));
         console.log('totalBalance:'+mother.totalBalance());

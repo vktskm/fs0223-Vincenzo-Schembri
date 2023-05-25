@@ -28,15 +28,18 @@ var Lavoratore = /** @class */ (function (_super) {
         _this.redditoAnnuoLordo = redditoAnnuoLordo;
         return _this;
     }
+    Lavoratore.prototype.getTasseInps = function () {
+        return this.tasseInps;
+    };
     return Lavoratore;
 }(PagamentiTasse));
 var fatturato = document.querySelector('#fatturato');
 var tipo_lavoro = document.querySelector('#tipo_lavoro');
 //Elementi option
 var option_lavoro_default = document.querySelector('#option_lavoro_default');
-var art = document.querySelector('#art');
-var mark = document.querySelector('#mark');
-var inf = document.querySelector('#inf');
+var artigiano = document.querySelector('#artigiano');
+var marketing = document.querySelector('#marketing');
+var informatico = document.querySelector('#informatico');
 //Elementi button
 var button_resetta_importo = document.querySelector('#button_resetta_importo');
 var button_calcola = document.querySelector('#button_calcola');
@@ -45,9 +48,11 @@ var tasse_inps = document.querySelector('#tasse_inps');
 var tasse_irpef = document.querySelector('#tasse_irpef');
 var totale_tasse = document.querySelector('#totale_tasse');
 var reddito_netto = document.querySelector('#reddito_netto');
-var Art = new Lavoratore(0.25, 0.23, 1, fatturato);
-var Mark = new Lavoratore(0.25, 0.23, 2, fatturato);
-var Inf = new Lavoratore(0.25, 0.23, 3, fatturato);
+var Artigiano = new Lavoratore(0.25, 0.23, 1, fatturato);
+var Marketing = new Lavoratore(0.25, 0.23, 2, fatturato);
+var Informatico = new Lavoratore(0.25, 0.23, 3, fatturato);
+console.log(Artigiano.getTasseInps);
+//console.log( Artigiano.getTasselrpef);
 var tassaIrpef;
 function variabileIrpef() {
     var result = (parseInt(fatturato.value) <= 15000) ? tassaIrpef = 0.23 : (parseInt(fatturato.value) >= 15001) &&
