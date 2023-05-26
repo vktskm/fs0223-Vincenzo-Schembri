@@ -48,10 +48,10 @@ var User = /** @class */ (function () {
             }
         });
         if (chiamateFiltrate.length == 0) {
-            console.log("%cNON CI SONO RISULTATI", "color:red");
+            console.log("Risultato della funzione filtro è nullo");
         }
         else {
-            console.log("%cCI SONO " + chiamateFiltrate.length + " RISULTATI", "color:green");
+            console.log("La funzione filtro ha trovato N chiamate: " + chiamateFiltrate.length);
             console.log(chiamateFiltrate);
         }
     };
@@ -95,13 +95,17 @@ var FirstUser = /** @class */ (function (_super) {
 }(User));
 console.log("---Andrea ---");
 var andrea = new FirstUser('Andrea', 0, 0);
-andrea.ricarica(34);
-andrea.chiamata(6);
+andrea.ricarica(100); //ricarica 100
+andrea.chiamata(4); //chiama 4 minuti
+andrea.chiamata(2); //chiama 2 munuti
+andrea.chiamata(1); //chiama 1 minuto
 console.log("---Andrea numero chiamata ---", andrea.getNumeroChiamate());
 //Credito Residuo
 console.log("Credito 404 ", andrea.numero404());
 console.log("---Andrea numero chiamata ---", andrea.getNumeroChiamate());
 andrea.getNumeroChiamate();
+//Filtra le chiamate perchè sono effettivamente le ore 14 del giorno 26 ed abbiamo 3 chiamate effettuate
+//Ma se effettui il filtraggio successivamente non filtra niente o devi aggiornare il giorno e l'ora
 andrea.filtraChiamatePerDataOra(26, 14);
 console.log("Azzerra chiamata");
 andrea.azzeraChiamate();
@@ -120,17 +124,12 @@ giuseppe.ricarica(7);
 giuseppe.chiamata(4);
 giuseppe.getNumeroChiamate();
 console.log(giuseppe);
-////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////    COMPILAZIONE HTML   /////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////////
+//Parte Html
 var arrayUtenti = [andrea, enzo, giuseppe];
 for (var i = 0; i < arrayUtenti.length; i++) {
     var contenuto = document.querySelector('.row');
     contenuto.innerHTML += "\n        <div class=\"col-4\">\n            <div class=\"card\" style=\"width: 20rem;\">\n              <div class=\"card-body\">\n                <h2 class=\"card-title text-center\">".concat(arrayUtenti[i].nome, "</h2>\n                <div class=\"screen\">\n                <p id=\"").concat(arrayUtenti[i].nome, "-carica-soldi\">Il saldo di ").concat(arrayUtenti[i].nome, " \u00E8 di ").concat(arrayUtenti[i].carica, " \u20AC</p>\n                <p id=\"").concat(arrayUtenti[i].nome, "-chiamate-fatte\">Il numero di chiamate effettuate da ").concat(arrayUtenti[i].nome, " \u00E8 di ").concat(arrayUtenti[i].numeroChiamate, "</p>\n                </div>\n                <div class=\"d-flex flex-column align-items-center \">\n                    <div class=\"mb-3 w-100 row justify-content-center\">\n                        <input type=\"text\" placeholder=\"Quanto ricarichi?\" class=\"col-7 ricarica-valore\" id=\"").concat(arrayUtenti[i].nome, "-ricarica-valore\">\n                        <button class=\"col-5 ricarica-bottone\" id=\"").concat(arrayUtenti[i].nome, "-ricarica\">Effettua Ricarica</button>\n                    </div>\n                </div>\n              </div>\n            </div>  ");
 }
-////////////////////////////////////////////////////////////////////////////////////
-/////////////////////////////    FUNZIONI     //////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////////
 var andreaCaricaSoldi = document.querySelector('#Andrea-carica-soldi');
 var valoreRicaricaAndrea = document.querySelector('#Andrea-ricarica-valore');
 var bottoneRicaricaAndrea = document.querySelector('#Andrea-ricarica');
@@ -140,12 +139,13 @@ var bottoneRicaricaEnzo = document.querySelector('#Enzo-ricarica');
 var giuseppeCaricaSoldi = document.querySelector('#Giuseppe-carica-soldi');
 var valoreRicaricaGiuseppe = document.querySelector('#Giuseppe-ricarica-valore');
 var bottoneRicaricaGiuseppe = document.querySelector('#Giuseppe-ricarica');
+//con eval ho forzato so che non si dovrebbe usare 
 bottoneRicaricaAndrea.addEventListener('click', function () {
-    andreaCaricaSoldi.textContent = "Il saldo di Andrea \u00E8 di ".concat((andrea.carica + eval(valoreRicaricaAndrea.value)), " \u20AC");
+    andreaCaricaSoldi.textContent = "Il saldo di Andrea \u00E8 di ".concat(andrea.carica + eval(valoreRicaricaAndrea.value), " \u20AC");
     valoreRicaricaAndrea.value = '';
 });
 bottoneRicaricaEnzo.addEventListener('click', function () {
-    enzoCaricaSoldi.textContent = "Il saldo di Dino \u00E8 di ".concat(enzo.carica + eval(valoreRicaricaEnzo.value), " \u20AC");
+    enzoCaricaSoldi.textContent = "Il saldo di Vincenzo \u00E8 di ".concat(enzo.carica + eval(valoreRicaricaEnzo.value), " \u20AC");
     valoreRicaricaEnzo.value = '';
 });
 bottoneRicaricaGiuseppe.addEventListener('click', function () {

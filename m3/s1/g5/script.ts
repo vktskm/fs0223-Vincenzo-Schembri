@@ -48,7 +48,7 @@ class User implements Smartphone {
     getRegistroChiamate(): void{
         console.log(this.registroChiamate);
     };
-   
+
     filtraChiamatePerDataOra(data:number, ora:number): void {
         let chiamateFiltrate:Chiamata[] = []
         this.registroChiamate.forEach((call:Chiamata) => {
@@ -57,9 +57,9 @@ class User implements Smartphone {
             }
         })
         if(chiamateFiltrate.length == 0){
-            console.log("%cNON CI SONO RISULTATI","color:red")
+            console.log("Risultato della funzione filtro è nullo")
         }else{
-            console.log("%cCI SONO " + chiamateFiltrate.length + " RISULTATI","color:green")
+            console.log("La funzione filtro ha trovato N chiamate: " + chiamateFiltrate.length)
             console.log(chiamateFiltrate)
         }
     }
@@ -105,14 +105,18 @@ class FirstUser extends User {
 
 console.log("---Andrea ---")
 let andrea = new FirstUser('Andrea', 0, 0);
-andrea.ricarica(34);
-andrea.chiamata(6);
+andrea.ricarica(100);//ricarica 100
+andrea.chiamata(4);//chiama 4 minuti
+andrea.chiamata(2);//chiama 2 munuti
+andrea.chiamata(1);//chiama 1 minuto
 console.log("---Andrea numero chiamata ---", andrea.getNumeroChiamate() );
 //Credito Residuo
 console.log( "Credito 404 ", andrea.numero404());
 
 console.log("---Andrea numero chiamata ---", andrea.getNumeroChiamate() );
 andrea.getNumeroChiamate();
+//Filtra le chiamate perchè sono effettivamente le ore 14 del giorno 26 ed abbiamo 3 chiamate effettuate
+//Ma se effettui il filtraggio successivamente non filtra niente o devi aggiornare il giorno e l'ora
 andrea.filtraChiamatePerDataOra(26,14);
 console.log("Azzerra chiamata")
 andrea.azzeraChiamate();
@@ -128,7 +132,6 @@ enzo.chiamata(4);
 enzo.getNumeroChiamate();
 console.log(enzo);
 
-
 console.log("\n---Giuseppe ---")
 let giuseppe = new FirstUser('Giuseppe', 0, 0);
 giuseppe.ricarica(7);
@@ -136,10 +139,7 @@ giuseppe.chiamata(4);
 giuseppe.getNumeroChiamate();
 console.log(giuseppe);
 
-////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////    COMPILAZIONE HTML   /////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////////
-
+//Parte Html
 let arrayUtenti: any[] = [andrea, enzo, giuseppe];
 for (let i = 0; i < arrayUtenti.length; i++) {
     let contenuto: HTMLDivElement = <HTMLDivElement>document.querySelector('.row');
@@ -162,10 +162,6 @@ for (let i = 0; i < arrayUtenti.length; i++) {
             </div>  `
 }
 
-////////////////////////////////////////////////////////////////////////////////////
-/////////////////////////////    FUNZIONI     //////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////////
-
 let andreaCaricaSoldi = <HTMLParagraphElement>document.querySelector('#Andrea-carica-soldi');
 let valoreRicaricaAndrea = <HTMLInputElement>document.querySelector('#Andrea-ricarica-valore');
 let bottoneRicaricaAndrea = <HTMLButtonElement>document.querySelector('#Andrea-ricarica');
@@ -178,14 +174,17 @@ let giuseppeCaricaSoldi = <HTMLParagraphElement>document.querySelector('#Giusepp
 let valoreRicaricaGiuseppe = <HTMLInputElement>document.querySelector('#Giuseppe-ricarica-valore');
 let bottoneRicaricaGiuseppe = <HTMLButtonElement>document.querySelector('#Giuseppe-ricarica');
 
+//con eval ho forzato so che non si dovrebbe usare 
 bottoneRicaricaAndrea.addEventListener('click', () => {
-    andreaCaricaSoldi.textContent = `Il saldo di Andrea è di ${(andrea.carica + eval(valoreRicaricaAndrea.value))} €`;
+    andreaCaricaSoldi.textContent = `Il saldo di Andrea è di ${andrea.carica + eval(valoreRicaricaAndrea.value)} €`;
     valoreRicaricaAndrea.value = '';
 });
+
 bottoneRicaricaEnzo.addEventListener('click', () => {
-    enzoCaricaSoldi.textContent = `Il saldo di Dino è di ${enzo.carica + eval(valoreRicaricaEnzo.value)} €`;
+    enzoCaricaSoldi.textContent = `Il saldo di Vincenzo è di ${enzo.carica + eval(valoreRicaricaEnzo.value)} €`;
     valoreRicaricaEnzo.value = '';
 });
+
 bottoneRicaricaGiuseppe.addEventListener('click', () => {
     giuseppeCaricaSoldi.textContent = `Il saldo di Giuseppe è di ${giuseppe.carica + eval(valoreRicaricaGiuseppe.value)} €`;
     valoreRicaricaGiuseppe.value = '';
