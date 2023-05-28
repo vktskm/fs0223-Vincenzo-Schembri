@@ -8,10 +8,10 @@ che non è stato spiegato a lezione
 - Per farlo puoi utilizzare il terminale Bash, quello di VSCode o quello del tuo sistema 
 operativo (se utilizzi macOS o Linux)
 */
-8
+
 /* ESERCIZIO 1
-Elenca e descrivi i principali datatype in JavaScript. 
-Prova a spiegarli come se volessi farli comprendere a un bambino.
+ Elenca e descrivi i principali datatype in JavaScript. 
+ Prova a spiegarli come se volessi farli comprendere a un bambino.
 Dato 'Stringa' indica sia il singolo carattere che la sequenza finita di caratteri. Possono essere modificate e manipolate tramite metodi.
 Si dichiarano scrivendoli in mezzo agli apostrofi 'così', o alle  virgolette "così".
 

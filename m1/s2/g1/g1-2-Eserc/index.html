@@ -1,25 +1,28 @@
 <!DOCTYPE html>
-<html lang="it">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Esercizio 1</title>
+    <title>Document</title>
 </head>
-
 <body>
 
-    <h1>Iniziamo la nostra pratica</h1>
+    <!-- Id collegati ai script diquesta pagina -->
+    <div id="frase"></div>
+    <div id="modo"></div>
+    
+    <!--script che funziona solo nella pagina corrente-->
     <script>
-        document.write('output');
+        //Mi stampa prima il contenuto di innerHtml e poi il contenuto di innerTest
+        document.getElementById("modo").innerText = '<b>Ciao mondo</b>';//InnerText non funzionano tag Html
+        document.getElementById("frase").innerHTML = '<b>Eseguo elemento script interno al HTML </b><hr>';
     </script>
-
-    <!--POSIZIONE CONSIGLIATA PER GLI SCRIPT-->
-
-    <script src="js/index.js"></script>
+    
+    <!-- Eseguo tutti i script che sono dentro index.js -->
+    <script src="js/index.js" ></script>
+    
+    <!-- Eseguo tutti i script che sono dentro naming.js -->
     <script src="js/naming.js"></script>
-
 </body>
-
 </html>

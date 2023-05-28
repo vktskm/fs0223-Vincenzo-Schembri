@@ -16,4 +16,4 @@ function accendiLuceVerde(){
     document.getElementById('yellow').classList.remove('on');
 }
 
-setInterval(accendiLuceRossa, 1000)
+setInterval(accendiLuceRossa, 3000)
