@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        let frutto = 'Kiwy';
+        switch(frutto){
+            case 'Mela':
+                document.write('La Mela costa 0.50€');
+                break;
+            case 'Pera':
+                document.write('La Pera costa 0.40€');
+                break;
+            case 'Mango':
+            case 'Papaya':
+                document.write('Il Mango e la Papaya costano 2.40€');
+                break;
+            default:
+                document.write(`Non abbiamo ${frutto}`)
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        //gestione apici/virgolette
+
+        var html = "<div class=\"prova\">Ciao</div>";
+        document.write(html);
+        var html2 = '<div class="prova">Che bello l\'html</div>';
+        document.write(html2);
+
+
+        //interpolazione o template string
+
+        var nome = 'Mario';
+        var anni = 30;
+
+        let fraseConcatenata = 'Ciao, mi chiamo' + nome + ' ed ho ' + anni + ' anni';
+
+        //uso il simbolo backtik `
+        document.write(`Ciao, mi chiamo ${nome} ed ho ${anni} anni`);
+
+        /**
+         * 
+         * windows => alt+9 alt+6
+         * mac => option+9
+        */
+
+    </script>
+
+</body>
+</html>

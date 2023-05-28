@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        //var non è soggetta a blockscope
+        var a = 0;
+        {
+            console.log(a)//raggiungibile perchè è una var ed è fuori dal blocco
+        }
+
+        {
+            var b = 0;
+        }
+        console.log(b);//raggiungibile perchè è una var
+
+        //let è soggetta a blockscope
+        let c = 1
+        {
+            console.log(c)//raggiungibile perchè è esterna al blocco
+        }
+
+        {
+            let d = 2;//nasce e muore nel blocco
+            console.log(d);
+        }
+        //console.log(d)//non visibile, perchè nasce nel blocco precedente
+
+        
+        let e;//ora è globale
+        {
+            e = 10;//modifico la let globale
+        }
+        console.log(e);//10
+
+
+        //casi particolari
+
+        //var e = 8; l'identificatore e è già in uso sotto forma di let
+        var f = 9;
+        {
+            //console.log(f)//la var f creata fuori dal blocco viene eliminata, e non posso accedere alla variabile f sottostante prima della sua inizializzazione
+            let f = 11;
+            console.log(f)
+        }
+        console.console.log(f);//9
+
+        //const
+
+        const NOME_UTENTE = 'Mario';
+
+        //NOME_UTENTE = 'Giacomo'; => errore
+
+        const OGGETTO = {
+            nome : 'Mario',
+            anni : 30
+        }
+
+        //Object.freeze(OGGETTO) SE SI VOLESSE BLOCCARE I RIASSEGNAMENTI ANCHE PER I VALORI DEGLI OGGETTI
+
+        OGGETTO.nome = 'Maria';//avviene il riassegnamento
+        console.log(OGGETTO);
+
+
+        //scope variabili nelle funzioni
+
+        let p = 0;
+        function prova(){
+            console.log(p);//raggiunge la variabile p
+        }
+
+        prova();
+
+        function prova2(){
+            var y = 200;
+        }
+        console.log(y);//non raggiungibile
+
+    </script>
+    
+</body>
+</html>

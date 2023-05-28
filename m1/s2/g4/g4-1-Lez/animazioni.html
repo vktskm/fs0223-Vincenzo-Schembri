@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #blocco{
+            border-radius: 100%;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="blocco"></div>
+
+    <button onclick="clearInterval(timer)">Stop</button>
+
+    <script>
+
+        let margin = 0;
+        let blocco = document.getElementById("blocco");
+
+        let timer = setInterval(function(){
+
+            
+            blocco.style.marginLeft = margin + 'px';
+
+            if(margin >= 300){
+                margin = 0;
+            }else{
+                margin += 3;
+            }
+
+        }, 30);
+
+
+        let c = 0;
+        let parole = ['Benvenuto','nel mio', 'sito'];
+        let title = document.getElementsByTagName('title')[0];
+
+        setInterval(function(){
+
+            title.textContent = parole[c];
+            if(c == parole.length -1){
+                c = 0;
+            }else{
+                c++;
+            }
+
+
+        }, 2000);
+
+    </script>
+
+</body>
+</html>

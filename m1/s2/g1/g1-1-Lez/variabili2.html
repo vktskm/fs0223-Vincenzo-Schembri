@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        var a;
+        console.log(a);//undefined
+
+        //esempio di hoisting su variabile
+        console.log(b);//viene sollevata la variabile, ma non il suo valore
+        var b = 0;
+        console.log(b);//0
+
+        //riassegnamento
+        b = 1;
+        console.log(b);
+
+        /**
+         * 
+         * operatori matematici
+         *    
+         *  *(asterisco) => moltiplicazione
+         *  / => diviso
+         *  + => somma
+         *  - => sottrazione        
+        */
+
+        
+        //concatenamento / somma
+
+        var n = 5;
+        var t = 6;
+        console.log(n + t);//11
+        var risultato = n + t;
+        console.log(risultato);
+
+        var saluto = 'Ciao';
+        var nome = "Mario";
+        console.log(saluto + ' ' + nome);
+
+        //conversione di numeri in stringhe
+        var anni = 30;
+        console.log(nome + ' ha ' + anni + ' anni' );
+        console.log('4' + 2);//42
+
+        //conversione di stringa in numero
+        console.log('4' * 2);//8
+        console.log('4a' * 2);//NaN
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        for(let i = 0; i < 10; i++){
+            document.write(i + '<br>');
+        } 
+
+        document.write('<br>');
+
+        for(let y = 10; y > 0;y--){
+            document.write(y + '<br>');
+        }
+
+        document.write('<hr>');
+        
+        //ciclare un array con for
+        let pizze = ['Margherita','Diavola','Marinara','Mimosa'];
+        
+        for(let c = 0; c < pizze.length; c++){
+            
+            document.write(pizze[c] + '<br>');
+            
+        }
+        
+        document.write('<hr>');
+
+        //ciclare un array for of
+        let menu = ['Margherita','Diavola','Marinara','Mimosa'];
+        for(let pizza of menu){
+            document.write(pizza + '<br>');
+        }
+
+        document.write('<hr>');
+
+        let menuCompleto = [
+            {
+                gusto: 'Margherita',
+                prezzo: 5,
+                disponibile : true
+            },
+            {
+                gusto: 'Diavola',
+                prezzo: 1,
+                disponibile : true
+            },
+            {
+                gusto: 'Hawayana',
+                prezzo: 5000,
+                disponibile : false
+            }
+        ]
+
+        let campiVisualizzati = ['gusto'];
+
+        document.write('<ul>');
+        for(let pizza of menuCompleto){
+            for(let prop in pizza){
+
+                //includes restituisce true se la parola tra parentesi è presente nell'array campiVisualizzati
+                if(campiVisualizzati.includes(prop)){
+                    document.write(`<li>${prop}:${pizza[prop]} </li>` )
+                }
+                
+            }
+        }
+        document.write('</ul>');
+
+        document.write('<hr>');
+
+
+        //ciclare un oggetto
+        let persona = {
+            nome: 'Mario',
+            cognome: 'Rossi',
+            anni: 30
+        }
+
+        console.log(persona.nome);//mario
+        console.log(persona['nome']);//mario
+
+        document.write('<ul>');
+        for(let prop in persona){
+            document.write(`<li>${prop}: ${persona[prop]}</li>`)
+        }
+        document.write('</ul>');
+
+
+    </script>
+
+</body>
+</html>

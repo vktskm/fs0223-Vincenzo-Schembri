@@ -1,0 +1,11 @@
+#bulb{
+    background-color: grey;
+    height: 300px;
+    width: 300px;
+    border-radius: 100%;
+}
+
+#bulb.on{
+    background-color: yellow;
+    box-shadow: 3px 3px 5px orange;
+}

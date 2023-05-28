@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        
+        let anni = 30;
+        console.log(anni < 50);//true
+        console.log(anni > 50);//false
+        console.log(anni > 30);//false perché 30 è uguale a 30 
+        console.log(anni >= 30);//true 
+        console.log(anni <= 30);//true 
+        console.log(anni == 30);//true perché sono uguali
+        console.log(anni != 30);//false perché sono uguali
+        
+        console.log(anni == '30');//true con valore uguale e tipo diverso
+        console.log(anni === '30');//false perché sono diversi nel tipo di dato, anche se il valore sarebbe lo stesso
+        console.log(anni !== '30');//true perché sono diversi
+
+        //operatori logici 
+
+        //AND
+        console.log(anni >= 18 && anni <= 120);
+        console.log(anni >= 31 && anni <= 120);
+
+        //OR
+
+        let email = 'info@esempio.it';
+        let username = 'info';
+        console.log(email == 'info@esempio.it' || username == 'info');
+        console.log(email == 'info@esempio.it' || username == 'Mario');
+
+       //utilizzo le parentesi per far si che l'operazione al loro interno venga eseguita prima che l'operatore not abbia effetto
+        console.log( !(email == 'info@esempio.it') );
+
+        let dato = [];
+        console.log(Array.isArray(dato));//verifico se il dato è un array
+        console.log(!Array.isArray(dato));//verifico se il dato non è un array
+
+
+        document.getElementById('test')
+        .innerHTML = 'Ciao';
+
+    </script>
+</body>
+</html>

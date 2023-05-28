@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <span id="testo"></span>
+    
+    <script>
+
+        //scrive nell'elemento con id = testo
+        document.getElementById("testo").innerHTML = 'Hello World!';
+        //Mostra un alert (un po-up)
+       // alert('Hello World!');
+        //scrive un messaggio in console(utile per gli sviluppatori)
+        console.log('Hello World!');
+        //scrive nel body, subito dopo lo script
+        document.write('<br>Hello World');
+        //attenzione: se viene eseguito dopo il primo load di pagina andrà ad eliminare tutto il contenuto del documento
+
+    </script>
+</body>
+</html>

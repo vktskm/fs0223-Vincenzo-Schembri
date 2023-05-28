@@ -1,0 +1,24 @@
+#semaforo{
+    background-color: black;
+    width:100px
+}
+.luce{
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+    opacity: 0.2;
+}
+.luce.on{
+    opacity: 1;
+}
+
+#red{
+    background-color:red;
+}
+#yellow{
+    background-color:yellow;
+}
+#green{
+    background-color:green;
+}
+

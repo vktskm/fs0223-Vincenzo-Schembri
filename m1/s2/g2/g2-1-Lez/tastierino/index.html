@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #display, #tastierino{
+            width: 300px;
+        }
+        #display{
+            height: 70px;
+        }
+        .bottone{
+            display: inline-block;
+            width: calc(100% / 4 - 3px);
+            height: 50px;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    
+    <input type="text" id="display">
+    <div id="tastierino">
+        <button class="bottone" onclick="addNumber(1)">1</button>
+        <button class="bottone" onclick="addNumber(2)">2</button>
+        <button class="bottone" onclick="addNumber(3)">3</button>
+        <button class="bottone" onclick="addNumber(4)">4</button>
+        <button class="bottone" onclick="addNumber(5)">5</button>
+        <button class="bottone" onclick="addNumber(6)">6</button>
+        <button class="bottone" onclick="addNumber(7)">7</button>
+        <button class="bottone" onclick="addNumber(8)">8</button>
+        <button class="bottone" onclick="addNumber(9)">9</button>
+        <button class="bottone" onclick="addNumber(0)">0</button>
+        <button class="bottone" onclick="addNumber('x')">x</button>
+        <button class="bottone" onclick="addNumber('+')">+</button>
+        <button class="bottone" onclick="total()">=</button>
+    </div>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>

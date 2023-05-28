@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        
+        let arrVuoto = [];
+
+        let numeri = [0,2,5,7,9];
+
+        document.write(numeri);
+
+        console.log(numeri);
+
+
+        let pizze = [
+            'Margherita',
+            'Diavola',
+            'Marinara'
+        ]
+        //lettura
+        console.log(pizze[1]);
+        //scrittura
+        pizze[2] = 'Mimosa';
+        console.log(pizze);
+
+        //attenzione a non creare buchi
+        console.log(pizze[4]); 
+        //verifico che l'elemento 4 esista prima di assegnarvi un valore
+        //per evitare la creazione di buchi 
+        if(pizze[4] != undefined){
+            pizze[4] = 'Boscaiola';
+            console.log(pizze);
+        }
+        
+        //aggiungere alla fine di un array evitando buchi
+        //questo metodo è da preferire!!
+        pizze.push('Boscaiola','Napoli');
+        console.log(pizze);
+        
+        //rimuovere dalla fine di un array
+        pizze.pop();
+        console.log(pizze);
+        
+        //aggiungere all'inizio
+        pizze.unshift('Norcina');
+        console.log(pizze);
+        
+        //rimuovere dall'inizio
+        pizze.shift();
+        console.log(pizze);
+
+
+        //leggere la lunghezza degli array (e delle stringhe)
+        console.log(pizze.length);
+        let stringa = 'Normalize pizza mimosa';
+        console.log(stringa.length);//il numero dei caratteri della stringa comprensivo di spazi
+        //lettura dell'ultimo elemento dell'array
+        console.log( pizze[pizze.length - 1] )
+
+        console.error('===============Esercizio================')
+        //array multidimensionali
+
+        let arr = [
+            1,
+            2,
+            50,
+            ['a','b','c',[
+                {
+                    p1 : 'Hello World'
+                },
+                {
+                    p1 : 'Ciao Mondo!'
+                }
+                ]
+            ]
+        ]
+
+
+        console.log(arr[2]);
+        console.log(arr[3][1]);
+        console.log(arr[3][3][1].p1);
+
+
+        //mai fare questo
+        let arraySbagliato = [];
+
+        arraySbagliato['gusto'] = 'Margherita';
+        arraySbagliato['prezzo'] = 5;
+        console.log(arraySbagliato);
+        console.log(arraySbagliato.gusto);
+
+
+        //verifica tipo di dato
+
+        console.log(typeof []); //object
+        console.log(Array.isArray([])); //true
+        console.log(Array.isArray({})); //false
+
+
+
+        //riordinare l'array
+
+        let lettere = ['b','z','c','a','d'];
+        
+        lettere.sort();///rirdino in ordine alfabetico
+        lettere.reverse();//inverte l'ordine attuale
+        
+        console.log(lettere);
+
+
+        //per riordinare in base al valore numerico, e non all'ordine alfabetico dei numeri
+        let num = [1,100,20,22,101];
+
+        num.sort(function(a,b){
+            return a - b
+        });
+
+        console.log(num);
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

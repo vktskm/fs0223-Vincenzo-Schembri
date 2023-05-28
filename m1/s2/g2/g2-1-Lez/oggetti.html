@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="test"></div>
+    
+    <script>
+
+        let obj = {};
+        
+        let pizza = {
+            gusto : 'Margherita',
+            prezzo : 5,
+            mostraPrezzo : function(){
+                let contenitore = document.getElementById('test')
+                contenitore.innerHTML = `La pizza ${this.gusto} costa ${this.prezzo} euro`;
+            }
+        };
+        //lettura di una proprietà
+        console.log(pizza.gusto);
+        
+        //scrittura di una proprietà
+        pizza.prezzo = 4;
+
+        document.write(pizza.prezzo)//4
+
+        console.log(pizza);
+
+        //lancio di un metodo
+        pizza.mostraPrezzo();
+
+    </script>
+</body>
+</html>
