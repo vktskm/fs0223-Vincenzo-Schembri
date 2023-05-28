@@ -6,7 +6,6 @@
     font-family: 'Montserrat', sans-serif;
     line-height: 1.5;
     margin: 15px 0px;
-    
 }
 .generali{
     padding: 30px 70px 10px 70px;
@@ -22,6 +21,7 @@ body{
     font-family: 'Open Sans', sans-serif;
     line-height: 1.65;
 }
+
 /* RELATIVE TO HEADER */
 img{
     width: 100%;
@@ -70,7 +70,9 @@ button{
     justify-content: center;
     margin: 100px 0px;
 }
-#colonne{text-align:center;}
+#colonne{
+    text-align:center;
+}
 #img-circle-w{
     padding: 35px;
 }
@@ -103,8 +105,7 @@ article{
 }
 .articoli{
     border: 1px solid #dee1e3;
-    height: 50vh;
-    
+    height: 50vh;   
 }
 .articles-img{
     height: 30vh;
@@ -137,7 +138,7 @@ a{
     color: #c8e7f0;
 }
 hr{
-    width: 210px;
+    width: 300px;
     margin-top: 20px;
     margin-bottom: 20px;
 }

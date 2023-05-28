@@ -9,7 +9,7 @@ abstract class Veicolo{
         this.velMax = velMax;
     }
 
-    fermaVeicolo(){
+    fermaVeicolo():void{
         this.vel = 0;
     }
 

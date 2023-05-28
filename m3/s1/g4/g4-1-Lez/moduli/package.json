@@ -1,0 +1,11 @@
+{
+  "name": "g4",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "ts-main-files": "tsc script script2 --outfile js/script.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
