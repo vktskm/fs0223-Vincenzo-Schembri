@@ -1,0 +1,32 @@
+[
+    {
+      "id": 1,
+      "body": "Lorem ipsum dolor sit amet, consectetur adip, lorem pili dolor let amet et, consectetur sopa.",
+      "title": "POST NUMERO UNO",
+      "active": true
+    },
+    {
+      "id": 2,
+      "body": "Lorem ipsum dolor sit amet, consectetur adip, lorem pili dolor let amet et, consectetur sopa.",
+      "title": "POST NUMERO DUE",
+      "active": true
+    },
+    {
+      "id": 3,
+      "body": "Lorem ipsum dolor sit amet, consectetur adip, lorem pili dolor let amet et, consectetur sopa.",
+      "title": "POST NUMERO TRE",
+      "active": true
+    },
+    {
+      "id": 4,
+      "body": "Lorem ipsum dolor sit amet, consectetur adip, lorem pili dolor let amet et, consectetur sopa.",
+      "title": "POST NUMERO QUATTRO",
+      "active": false
+    },
+    {
+      "id": 5,
+      "body": "Lorem ipsum dolor sit amet, consectetur adip, lorem pili dolor let amet et, consectetur sopa.",
+      "title": "POST NUMERO CINQUE",
+      "active": false
+    }
+  ]
