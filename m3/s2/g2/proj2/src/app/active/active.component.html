@@ -1,0 +1,16 @@
+<!-- mi stampa
+{{arrayPost | json}} -->
+
+<table class="table">
+  <tr>
+    <th>id</th>
+    <th>name</th>
+    <th>title</th>
+  </tr>
+
+<tr *ngFor="let user of arrayPost">
+    <td>{{user.id}}</td>
+    <td>{{user.body}}</td>
+    <td>{{user.title}}</td>
+</tr>
+</table>
