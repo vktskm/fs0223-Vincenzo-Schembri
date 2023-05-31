@@ -1,0 +1,20 @@
+<!--form con proprietà indipendenti-->
+<form>
+
+  <input type="text" name="nome" [(ngModel)]="nome">
+  <input type="text" name="cognome" [(ngModel)]="cognome">
+
+</form>
+
+{{nome}}
+<hr>
+
+<!--form con proprietà derivanti da un oggetto-->
+<form>
+
+  <input type="text" name="nome" [(ngModel)]="user.nome">
+  <input type="text" name="cognome" [(ngModel)]="user.cognome">
+
+</form>
+<!--converto l'oggetto in json così da poterlo vedere in formato stringa-->
+{{ user | json }}

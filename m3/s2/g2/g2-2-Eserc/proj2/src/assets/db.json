@@ -1,0 +1,22 @@
+[
+  {
+    "id":1,
+    "title":"Lorem ipsum1",
+    "active":true
+  },
+  {
+    "id":2,
+    "title":"Lorem ipsum2",
+    "active":false
+  },
+  {
+    "id":3,
+    "title":"Lorem ipsum3",
+    "active":false
+  },
+  {
+    "id":4,
+    "title":"Lorem ipsum4",
+    "active":true
+  }
+]

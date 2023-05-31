@@ -1,0 +1,28 @@
+<!-- Pulsante mostra nascondi -->
+<!--
+
+  (click)="toggle()" è a tutti gli effetti un event listener
+
+  $event permette di registrare info sull'evento fornendo un oggetto Event al metodo toggle
+-->
+<button
+(click)="toggle($event)"
+[innerText]="visibile ? 'Nascondi' : 'Mostra'"
+class="btn btn-success"
+></button>
+
+<!--stesso pulsante ma senza metodo al click-->
+<!--[innerText]="visibile ? 'Nascondi' : 'Mostra'" => è un ternario che definisce quale valore assegnare alla prop innerText-->
+<button
+(click)="visibile = !visibile"
+[innerText]="visibile ? 'Nascondi' : 'Mostra'"
+class="btn btn-success"
+></button>
+
+<!-- ngif distrugge l'elemento a cui è assegnato se riceve un bool false-->
+<p *ngIf="visibile">
+  Elemento 1
+</p>
+<p *ngIf="!visibile">
+  Elemento2
+</p>

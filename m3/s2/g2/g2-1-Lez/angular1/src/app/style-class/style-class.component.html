@@ -1,0 +1,40 @@
+<!--
+  La classe alert-success appare solo se la proprietà success == true
+  [class.alert-success]="success" -->
+<div class="alert"
+(mouseover)="success = !success"
+[class.alert-danger]="!success"
+[class.alert-success]="success"
+>
+  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam quisquam soluta error consequuntur quod rem, veniam deleniti sapiente illum. Nam dolorem modi id perspiciatis cumque recusandae voluptate facilis deleniti magnam.
+</div>
+
+<!--ngClass è una direttiva che permette di definire un oggetto pieno di classi associate a valori booleani, i suddetti valori mostrano la classe associata solo se pari a true-->
+<div
+(mouseover)="success = !success"
+[ngClass]="{'alert':true, 'alert-danger':!success, 'alert-success':success}"
+>
+  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam quisquam soluta error consequuntur quod rem, veniam deleniti sapiente illum. Nam dolorem modi id perspiciatis cumque recusandae voluptate facilis deleniti magnam.
+</div>
+
+<!--
+  red è un valore, quindi si usano anche gli apici singoli
+  [style.background-color]="'red'"
+-->
+<div [style.background-color]="'red'">
+  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+</div>
+
+<!--
+  NG STYLE NON è E NON DEVE ESSERE UN SOSTITUTO DEL CSS/SCSS
+-->
+<div
+(click)="color = 'green'"
+[ngStyle]="{
+  'background-color':'yellow',
+  'color':color
+}">
+  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+</div>
+
+
