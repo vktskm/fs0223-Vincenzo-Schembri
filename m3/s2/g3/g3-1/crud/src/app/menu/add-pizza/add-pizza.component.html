@@ -1,0 +1,21 @@
+<form>
+
+  <input
+    type="text" name="gusto"
+    placeholder="Gusto"
+    class="form-control"
+    [(ngModel)]="pizza.gusto"
+   >
+   <input
+    type="number" name="prezzo"
+    placeholder="Prezzo"
+    class="form-control"
+    [(ngModel)]="pizza.prezzo"
+   >
+
+   <button (click)="create()" class="btn btn-primary">Crea</button>
+
+
+</form>
+
+{{pizza | json}}

@@ -1,0 +1,30 @@
+<app-menu></app-menu>
+
+<app-proiezione [titolo]="'Ecco il titolo in input'">
+    <p>Ecco il contenuto Proiettato</p>
+</app-proiezione>
+
+<app-proiezione [titolo]="'Ecco un nuovo titolo'">
+    <p>Ecco il contenuto Proiettato</p>
+</app-proiezione>
+
+<app-card
+[immagine]="'https://picsum.photos/id/237/200/300'"
+titolo="Titolo della card"
+>
+<!--slot indica quale ng-content andrà a popolare questo contenuto-->
+<h3 slot="area1">Questo è un tag proiettato nell'area1</h3>
+<p slot="area2">Questo è un tag p proiettato nell'area2</p>
+
+</app-card>
+
+<hr>
+
+<app-local-variable>
+  <p #paragrafo>Testo del paragrafo proiettato</p>
+</app-local-variable>
+
+
+<div #elemento>
+  Elemento marchiato
+</div>

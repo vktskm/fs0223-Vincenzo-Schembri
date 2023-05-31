@@ -1,0 +1,16 @@
+
+<div class="container">
+  <div class="row">
+    <div class="col-6">
+      <table class="table">
+        <tr *ngFor="let pizza of menuPizze">
+          <td>{{pizza.gusto}}</td>
+          <td>{{pizza.prezzo}}€</td>
+        </tr>
+      </table>
+    </div>
+    <div class="col-6">
+      <app-add-pizza (onCreate)="addPizza($event)"></app-add-pizza>
+    </div>
+  </div>
+</div>

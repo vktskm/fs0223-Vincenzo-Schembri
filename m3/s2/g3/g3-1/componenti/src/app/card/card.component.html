@@ -1,0 +1,14 @@
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top" [src]="immagine" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">{{titolo}}</h5>
+    <p class="card-text">
+      <!--al posto di questo ng-content verrà inserito il contenuto marcato con slot="area1"-->
+        <ng-content select="[slot='area1']"></ng-content>
+    </p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+    <p class="card-text">
+      <ng-content select="[slot='area2']"></ng-content>
+    </p>
+  </div>
+</div>

@@ -1,0 +1,6 @@
+Ci sono {{menuGenitore.length}} pizze;
+<ul>
+  <!-- richiamo il componente app-pizza e gli passo il valore legato alla prop menuGenitore[] -->
+  <!--ondelete è un evento custom predisposto nel componente app (è la proprietà onDelete che contiene un EventEmitter) -->
+  <app-pizza (onDelete)="removePizza($event)" [menu]="menuGenitore"></app-pizza>
+</ul>
