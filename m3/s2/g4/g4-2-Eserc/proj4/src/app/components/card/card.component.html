@@ -1,0 +1,7 @@
+<div *ngFor="let post of postTotali" [ngClass]="{'bg-warning': post.type=='news', 'bg-dark text-white': post.type=='politics', 'bg-info': post.type=='education'}"
+    class="container p-3 mt-3 mb-3">
+    <h2>{{post.title}}</h2>
+    <p>{{post.body}}</p>
+    <p>L'autore del post è {{post.author}}</p>
+    <p>Il tema è <span class="fs-4 fw-bold">{{post.type}}</span></p>
+</div>
