@@ -1,0 +1,15 @@
+
+<div *ngIf="loading">Loading...</div>
+<div *ngIf="pizze.length == 0 && !loading">Non ci sono pizze</div>
+
+<table class="table">
+  <tr *ngFor="let pizza of pizze">
+    <td>{{pizza.id}}</td>
+    <td>{{pizza.gusto}}</td>
+    <td>{{pizza.prezzo | currency : 'EUR'}}</td>
+    <td>
+      <a [routerLink]="['/menu','aggiorna',pizza.id]"  class="btn btn-warning">Modifica</a>
+      <button class="btn btn-danger" (click)="delete(pizza.id)">Elimina</button>
+    </td>
+  </tr>
+</table>

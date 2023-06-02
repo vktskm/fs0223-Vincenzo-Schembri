@@ -1,0 +1,7 @@
+<h1>Modifica una pizza</h1>
+<form>
+
+  <input [(ngModel)]="pizza.gusto" type="text" class="form-control" placeholder="Gusto" name="gusto">
+  <input [(ngModel)]="pizza.prezzo" type="number" class="form-control" placeholder="Prezzo" name="prezzo">
+  <button (click)="update()" class="btn btn-primary">Update</button>
+</form>

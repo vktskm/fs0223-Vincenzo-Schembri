@@ -1,0 +1,29 @@
+<p appColora>Elemento con la direttiva colora</p>
+<p appColora [colore]="'green'">Elemento con la direttiva colora</p>
+<p appColora [colore]="'red'">Elemento con la direttiva colora</p>
+
+<button appEvento>In attesa di un evento</button>
+<hr>
+
+<button (click)="display = !display">Mostra / nascondi</button>
+
+<div *ngIf="display">
+  vero
+</div>
+<div *ngNotIf="display">
+  falso
+</div>
+
+<hr>
+
+{{pizza | json}}
+
+<br>
+{{pizza.prezzo | currency : 'EUR' : 'symbol'}}
+<br>
+{{oggi | date}}
+<br>
+
+{{oggi | date : 'dd/MM/Y'}}
+<br>
+{{testo | cut}}
