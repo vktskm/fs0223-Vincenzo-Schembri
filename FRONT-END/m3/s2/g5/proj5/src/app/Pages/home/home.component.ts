@@ -13,7 +13,7 @@ export class HomeComponent implements OnInit{
   arrayT: Itodo[]=[];
   todo: Todo = new Todo('', false );
   loading: boolean = true;
-
+  innerTest:string = "";
   constructor(private todoSvc:TodosService){}
 
   ngOnInit(){
@@ -35,6 +35,7 @@ export class HomeComponent implements OnInit{
 
   create(){
      this.todoSvc.addToDo(this.todo).then(res=>this.getToDos());
+     this.innerTest="";
   }
 
 
