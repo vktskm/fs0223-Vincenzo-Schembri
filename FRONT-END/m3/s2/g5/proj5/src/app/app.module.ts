@@ -7,7 +7,7 @@ import { TodosComponent } from './Pages/todos/todos.component';
 import { CompletatiComponent } from './Pages/completati/completati.component';
 import { HomeComponent } from './Pages/home/home.component';
 import { NavbarComponent } from './Pages/navbar/navbar.component';
-
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -20,7 +20,8 @@ import { NavbarComponent } from './Pages/navbar/navbar.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

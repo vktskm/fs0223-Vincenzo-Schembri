@@ -15,21 +15,16 @@ export class MenuComponent implements OnInit {
   constructor(private pizzeSvc:PizzeService){}
 
   ngOnInit(){
-
     this.getPizze();
-
   }
-
 
   delete(id?:number){
 
     this.pizzeSvc.deletePizza(id)
     .then(res => {
 
-
       console.log('pizza Eliminata');
       this.getPizze();
-
     })
   }
 
@@ -39,5 +34,4 @@ export class MenuComponent implements OnInit {
       this.loading = false;
     })
   }
-
 }

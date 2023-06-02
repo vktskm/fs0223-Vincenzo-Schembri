@@ -1,1 +1,13 @@
-<p>home works!</p>
+<div>
+  <form>
+
+
+    <p *ngIf="loading">Loading...</p>
+    <p *ngIf="arrayT.length == 0 && !loading">pesce</p>
+
+     <label type="DoToList">Crea ToDoList</label>
+     <input name="title" [(ngModel)]="todo.title" type="text" placeholder="Inserisci cosa da fare" required>
+
+     <button (click)="create()">Inserisci</button>
+  </form>
+</div>
