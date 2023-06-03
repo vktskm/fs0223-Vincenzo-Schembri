@@ -1,5 +1,5 @@
-<div *ngFor="let data of arrayTodos">
 
+<div class="card" *ngFor="let data of arrayTodos">
       <div>
          <p>{{data.id}}</p>
          <p>{{data.title}}</p>
@@ -13,5 +13,4 @@
           <button *ngIf="data.completed==false" (click)="complete(data.id)">Modifica</button>
           <button (click)="deleteToDo(data.id)">Delete</button>
        </div>
-
 </div>

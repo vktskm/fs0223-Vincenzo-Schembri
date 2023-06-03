@@ -1,1 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+  margin: 0px;
+}
+
+// todos card
+.card{
+    background-color: darkblue;
+    color: white;
+    border-radius: 50px;
+    margin:20px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    box-shadow: 0 0 10px darkblue;
+          button{
+                  border-radius: 50px;
+                  background-color: white;
+                  color: darkblue;
+                  border: none;
+                  &:focus{
+                            background-color: aqua;
+                            box-shadow: 0 0 10px white;
+                         }
+          }
+}
