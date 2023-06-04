@@ -1,79 +1,24 @@
 {
   "todos": [
     {
-      "title": "hjhjjhas",
-      "completed": true,
-      "id": 25
-    },
-    {
-      "title": "hjhjjhas",
-      "completed": false,
-      "id": 26
-    },
-    {
-      "title": "Milan",
-      "completed": false,
-      "id": 27
-    },
-    {
-      "title": "Milan",
-      "completed": false,
-      "id": 28
-    },
-    {
-      "title": "Milan",
-      "completed": false,
-      "id": 29
-    },
-    {
-      "title": "torino",
-      "completed": false,
-      "id": 30
-    },
-    {
-      "title": "torino",
-      "completed": false,
-      "id": 31
-    },
-    {
-      "title": "torino",
-      "completed": false,
-      "id": 32
-    },
-    {
-      "title": "kkkk",
-      "completed": false,
-      "id": 33
-    },
-    {
-      "title": "ghh",
-      "completed": false,
-      "id": 34
-    },
-    {
-      "title": "kkkk",
-      "completed": false,
-      "id": 35
-    },
-    {
-      "title": "JJJJJJ",
-      "completed": false,
-      "id": 36
-    },
-    {
-      "title": "",
-      "completed": false,
-      "id": 37
-    },
-    {
       "title": "Andare a MARE",
-      "completed": false,
+      "completed": true,
       "id": 38
     },
     {
-      "title": "Andare a Milano",
-      "completed": false,
+      "title": "Imparare Java",
+      "completed": true,
       "id": 39
+    },
+    {
+      "title": "Imparare Angular",
+      "completed": false,
+      "id": 40
+    },
+    {
+      "title": "Imparare Bootstrap",
+      "completed": false,
+      "id": 41
     }
   ]
 }
