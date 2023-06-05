@@ -3,33 +3,11 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "pipe-direttive": {
+    "proj": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
-          "style": "scss",
-          "skipTests": true
-        },
-        "@schematics/angular:class": {
-          "skipTests": true
-        },
-        "@schematics/angular:directive": {
-          "skipTests": true
-        },
-        "@schematics/angular:guard": {
-          "skipTests": true
-        },
-        "@schematics/angular:interceptor": {
-          "skipTests": true
-        },
-        "@schematics/angular:pipe": {
-          "skipTests": true
-        },
-        "@schematics/angular:resolver": {
-          "skipTests": true
-        },
-        "@schematics/angular:service": {
-          "skipTests": true
+          "style": "scss"
         }
       },
       "root": "",
@@ -39,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/pipe-direttive",
+            "outputPath": "dist/proj",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -52,6 +30,7 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -87,10 +66,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "pipe-direttive:build:production"
+              "browserTarget": "proj:build:production"
             },
             "development": {
-              "browserTarget": "pipe-direttive:build:development"
+              "browserTarget": "proj:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -98,7 +77,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "pipe-direttive:build"
+            "browserTarget": "proj:build"
           }
         },
         "test": {
@@ -124,6 +103,6 @@
     }
   },
   "cli": {
-    "analytics": "7f41bca9-748e-46e0-9304-ceb96653fdc0"
+    "analytics": "8f2649ff-71aa-4f09-aef9-99c92fa4ceb4"
   }
 }

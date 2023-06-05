@@ -3,33 +3,11 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "pipe-direttive": {
+    "proj4": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
-          "style": "scss",
-          "skipTests": true
-        },
-        "@schematics/angular:class": {
-          "skipTests": true
-        },
-        "@schematics/angular:directive": {
-          "skipTests": true
-        },
-        "@schematics/angular:guard": {
-          "skipTests": true
-        },
-        "@schematics/angular:interceptor": {
-          "skipTests": true
-        },
-        "@schematics/angular:pipe": {
-          "skipTests": true
-        },
-        "@schematics/angular:resolver": {
-          "skipTests": true
-        },
-        "@schematics/angular:service": {
-          "skipTests": true
+          "style": "scss"
         }
       },
       "root": "",
@@ -39,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/pipe-direttive",
+            "outputPath": "dist/proj4",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -87,10 +65,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "pipe-direttive:build:production"
+              "browserTarget": "proj4:build:production"
             },
             "development": {
-              "browserTarget": "pipe-direttive:build:development"
+              "browserTarget": "proj4:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -98,7 +76,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "pipe-direttive:build"
+            "browserTarget": "proj4:build"
           }
         },
         "test": {
@@ -124,6 +102,6 @@
     }
   },
   "cli": {
-    "analytics": "7f41bca9-748e-46e0-9304-ceb96653fdc0"
+    "analytics": "6429e10c-7c63-47f4-81f6-c94bb5429609"
   }
 }
