@@ -1,0 +1,63 @@
+<div class="container">
+  <form (ngSubmit)="submit(f)" #f="ngForm">
+    <div class="form-group col-12">
+      <input type="text" #username="ngModel" required class="form-control" ngModel name="username" placeholder="Username">
+      <!--
+          #username="ngModel"
+          con questa dicitura noi identifichiamo il campo con la variabile #username e indichiamo che si riferisce ad una istanza di ngModel
+
+        username.invalid && username.touched
+        con questa condizione il tag appare solo se dopo essere stato "toccato" il suo valore non è ancora valido
+      -->
+      <span *ngIf="username.invalid && username.touched">Devi inserire lo username</span>
+    </div>
+
+
+    <div ngModelGroup="authData" #authGroup="ngModelGroup" class="form-row row">
+      <div class="form-group col-6">
+        <input type="email" required class="form-control" ngModel name="email" placeholder="E-mail">
+      </div>
+      <div class="form-group col-6">
+          <input type="password" class="form-control" ngModel name="password" placeholder="Password">
+      </div>
+
+      <span *ngIf="authGroup.invalid && authGroup.touched">Dati non corretti</span>
+    </div>
+
+    <div class="form-row row">
+      <div class="form-group col-6">
+        <select name="city" class="form-control" ngModel>
+          <option value="" selected>--Scegli città--</option>
+          <option value="milano">Milano</option>
+          <option value="roma">Roma</option>
+          <option value="napoli">Napoli</option>
+        </select>
+      </div>
+      <div class="form-group col-6">
+        <input type="text" placeholder="cap" ngModel class="form-control" name="cap">
+      </div>
+
+      <div class="form-group">
+        <div class="form-check">
+          <div *ngFor="let genere of generi">
+            <label class="form-check-label" [for]="genere">{{genere}}</label>
+            <input
+            type="radio"
+            [value]="genere" [id]="genere"
+            ngModel name="genere"
+            class="form-check-input">
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="form-check">
+          <label class="form-check-label" for="consentCheck">Acconsento al trattamento dei dati </label>
+          <input ngModel type="checkbox" class="form-check-input" name="consent" id="consentCheck">
+        </div>
+      </div>
+    </div>
+    <button type="button" (click)="setDati()" class="btn btn-danger">Fill</button>
+    <button [disabled]="f.invalid" class="btn btn-success">Invia</button>
+  </form>
+</div>

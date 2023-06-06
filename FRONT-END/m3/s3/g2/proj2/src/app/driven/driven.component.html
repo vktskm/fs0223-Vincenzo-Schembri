@@ -1,0 +1,56 @@
+<div class="container">
+      <div class="row">
+           <div class="col-8">
+            <div>
+              <form >
+                <div>
+
+                   <div class="form-group mb-3">
+                        <label for="name">Nome</label>
+                        <input type="text" id="name" [ngModel]="userForm.defUserName" name="name"
+                            class="form-control" required #name="ngModel">
+                    </div>
+
+                    <div class="form-group mb-3">
+                        <label for="alterEgo">Alter-Ego</label>
+                        <input type="text" id="alterEgo" [ngModel]="userForm.alterEgo" name="alterEgo"
+                            class="form-control" required #alterEgo="ngModel">
+                    </div>
+
+                    <div class="form-group mb-3">
+                        <label for="power">Super potere</label>
+                        <select name="power" id="power" required #power class="form-select"
+                            [ngModel]="userForm.power">
+                            <option value="Superforza">Superforza</option>
+                            <option value="Supervelocità">Supervelocità</option>
+                            <option value="Telecinesi">Telecinesi</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group mb-3">
+                        <label for="nemico">Nemico</label>
+                        <input type="text" id="nemico" [ngModel]="userForm.nemico"  name="nemico"
+                            class="form-control" required #nemico="ngModel">
+                    </div>
+
+                    <div class="form-group mb-3">
+                        <label for="pianeta">Pianeta</label>
+                        <input type="text" id="pianeta" [ngModel]="userForm.pianeta" name="pianeta"
+                            class="form-control" required #pianeta="ngModel">
+                    </div>
+
+                    <div class="form-group mb-3">
+                        <label for="debolezza">Debolezza</label>
+                        <input type="text" id="debolezza" [ngModel]="userForm.debolezza" name="debolezza"
+                            class="form-control" #debolezza="ngModel">
+                    </div>
+                </div>
+            </form>
+
+            </div>
+           </div><!-- end class col -->
+      </div><!-- end class row -->
+</div><!-- end class container -->
+
+
+

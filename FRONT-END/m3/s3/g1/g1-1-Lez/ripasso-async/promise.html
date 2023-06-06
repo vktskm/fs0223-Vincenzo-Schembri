@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+
+        let pizze = [];
+
+        let p = new Promise((resolve)=>{
+
+            setTimeout(()=>{
+    
+                //pizze.push('Margherita','Marinara','Diavola')
+                let datoDaInviareAiThen = ['Margherita','Marinara','Diavola'];
+                resolve(datoDaInviareAiThen)//invio notifica a tutti i then collegati a questa promise
+    
+            }, 500);
+
+        });
+
+
+        p.then((dati)=>{
+            //dentro dati(che potevo chiamare pippo) c'è il valore inserito tra le parentesi di resolve alla riga 22
+            pizze.push(...dati)
+            console.log(pizze);
+        })
+        
+        p.then((dati)=>{
+            pizze.push(...dati)
+            console.log(pizze);
+        })
+
+
+
+    </script>
+
+</body>
+</html>

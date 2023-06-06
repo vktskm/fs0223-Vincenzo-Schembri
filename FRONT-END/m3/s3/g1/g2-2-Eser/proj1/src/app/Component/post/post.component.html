@@ -1,0 +1,10 @@
+<h1>Ti piaciano le card {{likeArr.length}}</h1>
+<div class="card"  *ngFor="let data of postArr" style="width: 18rem;">
+  <img src="{{data.thumbnailUrl}}" class="card-img-top" alt="title">
+  <div class="card-body">
+    <h5 class="card-title">Title  {{data.title}}</h5>
+    <p class="card-text"> Id {{data.id}}</p>
+    <button class="btn btn-outline-danger m-1" (click)="deleteArr(data.id)"> Delete</button>
+    <button class="btn btn-outline-warning m-1" (click)="like(data.id)" > Like</button>
+  </div>
+</div>

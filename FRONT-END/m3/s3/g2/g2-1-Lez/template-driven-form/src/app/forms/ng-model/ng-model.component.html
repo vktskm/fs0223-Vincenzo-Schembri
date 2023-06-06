@@ -1,0 +1,13 @@
+<form>
+  <input type="text" class="form-control"
+  placeholder="Nome" [(ngModel)]="user.nome"
+  name="nome"
+  >
+  <input type="text" class="form-control"
+  placeholder="Cognome" [(ngModel)]="user.cognome"
+  name="cognome">
+  <button class="btn btn-primary">Crea</button>
+</form>
+
+
+{{user.nome}} {{user.cognome}}
