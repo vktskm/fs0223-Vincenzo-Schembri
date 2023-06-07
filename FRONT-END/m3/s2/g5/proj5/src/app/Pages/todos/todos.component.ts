@@ -24,10 +24,10 @@ export class TodosComponent implements OnInit{
       .then(res => {
         this.getToDo()
       })
-     }
+    }
 
-     getToDo(){
-     this.todoSvc.getToDo().then((res)=>{
+    getToDo(){
+    this.todoSvc.getToDo().then((res)=>{
        this.arrayTodos =res;
      })
     };
