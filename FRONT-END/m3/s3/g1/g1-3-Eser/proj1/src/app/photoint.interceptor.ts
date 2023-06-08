@@ -12,8 +12,14 @@ export class PhotointInterceptor implements HttpInterceptor {
 
   constructor() {}
 
-  intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
+  /* Gli interceptor HTTP sono utilizzati per intercettare le richieste HTTP in uscita
+   e in ingresso per effettuare delle operazioni aggiuntive come l'aggiunta di header,
+   la gestione degli errori, la modifica dei dati, ecc.*/
 
+  intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
+    /* Questa funzione intercept accetta due parametri: l'oggetto request che rappresenta la
+    richiesta HTTP originale e l'oggetto next che è un'istanza della classe HttpHandler.
+    */
     if(request.method === 'GET'){
       console.log('hai fatto una richiesta get');
     }
@@ -24,6 +30,7 @@ export class PhotointInterceptor implements HttpInterceptor {
       .append('firma','xyz')
     })
 
-    return next.handle(request);
+    return next.handle(request);//return next.handle(newReq);
   }
+
 }

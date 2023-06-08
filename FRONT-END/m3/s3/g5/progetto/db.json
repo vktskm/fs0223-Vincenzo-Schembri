@@ -1,0 +1,145 @@
+{
+  "users": [
+    {
+      "email": "pippo@gmail.it",
+      "password": "$2a$10$v0r.VhDuIIddoHNq4uz2s.kPIMmUPGl1S22S16ZC6fXbUc9WNk7hC",
+      "name": "mario",
+      "surname": "rossi",
+      "id": 1
+    },
+    {
+      "email": "pippoSolo@gmail.it",
+      "password": "$2a$10$t7wsvrDOJ2l0l7eMZPjuxe778oimjDTLVdXDVCSQi6.yZIpEeGXIS",
+      "name": "mario",
+      "surname": "rossi",
+      "id": 2
+    },
+    {
+      "email": "franco@libero.it",
+      "password": "$2a$10$mHl359/kIu6RmeAO0PCQlucwEpKMgDaxYmCNPesYFUOhI7cD2K8Li",
+      "name": "franco",
+      "surname": "rossi",
+      "id": 3
+    },
+    {
+      "email": "sadfasdf@asdfasd.it",
+      "password": "$2a$10$AWGNSj/C4bvd1q5MUpgmbeseskZHWlc4NzmV1ZzWY6UPyfO3RYc06",
+      "name": "mawsdf",
+      "surname": "sdgasd<fasd",
+      "id": 4
+    },
+    {
+      "email": "dasdasdasd@gmail.it",
+      "password": "$2a$10$smtpYZNA0ek.NA/WKGh8H.Bd6uPf57uze/8.PZ4/c2QxAb70tASEK",
+      "name": "dfghdfghdfg",
+      "surname": "gfdxhfghdgf",
+      "id": 5
+    },
+    {
+      "email": "dsfsdfsdf@gmail.com",
+      "password": "$2a$10$G6GA/G6TM8eaxwO7DEC/IO7ZQLQ5ckuxu5dR23JoTqKw3Y5tb8Y.C",
+      "name": "dfxgbdfgbzdfx",
+      "surname": "dfzxgbvzd",
+      "id": 6
+    },
+    {
+      "email": "paolosi@libero.it",
+      "password": "$2a$10$bQ/2EiC7K3YAcq/PsKk2Y.8FQ..IN1hh3eKdE5SFTmiIJiyokldAC",
+      "name": "mario",
+      "surname": "rossi",
+      "id": 7
+    },
+    {
+      "email": "asdasd@sdfgdf.it",
+      "password": "$2a$10$1uVJ4YT/Xj.zYZ62BUvoJ.TIaZZDmN1m6bQ7wvJqCye/2PP1I8EKu",
+      "name": "dhsfgghdfgh",
+      "surname": "dhfgjdftghdfg",
+      "id": 8
+    },
+    {
+      "email": "alesmsaposdij@gmail.com",
+      "password": "$2a$10$N8lkD5K5nIgQvBlfGh1XNOCd1jJTGx61O8R/YK7svW7cZz62mnSny",
+      "name": "sldknfsdoil",
+      "surname": "sldfnsdlkjf",
+      "id": 9
+    },
+    {
+      "email": "daslkdjaskld@asdskjd.it",
+      "password": "$2a$10$0SLbaQlEnEhFC.FVWYM2PeoX0DevsWCdqvkYOzlPUg9yJtDkUOHA6",
+      "name": "sldkfgnsd",
+      "surname": "sldkfnsdf",
+      "id": 10
+    },
+    {
+      "email": "asdkljkhas@ajshdgb.it",
+      "password": "$2a$10$MZdrHWckKyYRMjq4sE4JauxGOYiTcBpbDg.T0ucmL0TcFA1SaKVde",
+      "name": "asldkfjnasdlj",
+      "surname": "sldkfnsdklf",
+      "id": 11
+    },
+    {
+      "email": "srgerge@askjdfas.it",
+      "password": "$2a$10$L29LfxbYop6Nx1WDo8IWnOtittUqwBveHXPpwKpferltsOPyb5TzK",
+      "name": "sljdbfgnsd",
+      "surname": "sdlkfnsd",
+      "id": 12
+    },
+    {
+      "email": "asdasdasd@asddkhjbas.it",
+      "password": "$2a$10$rTwoseKChHIIHHlTYtXD2O.XUmo9GP1YJ3AnTPl60l5w5W49ssASG",
+      "name": "asdljkfnasd",
+      "surname": "asdldkfmasd",
+      "id": 13
+    },
+    {
+      "email": "asdasd@asikdjhas.it",
+      "password": "$2a$10$nbTTi/sQrciD5nYitxlPief/lPegq8bRrs1DK296CwQP/kOgygMeq",
+      "name": "sdkjlfnsd",
+      "surname": "sdlkfnsd",
+      "id": 14
+    },
+    {
+      "email": "asdasdas@afbasij.ir",
+      "password": "$2a$10$6Rux1nas7OPs17WB5kbPFOgMjvGBMo2cV0btgM3bVzaDffXNCJX36",
+      "name": "jghfhj",
+      "surname": "kjhbkj",
+      "id": 15
+    },
+    {
+      "email": "dasdasda@dasdas.it",
+      "password": "$2a$10$e0Jerj8yFNc5IguDGAzE3uzg1tsbypuCZQ.jqQkgRrSOFUDg1qlpm",
+      "name": "skdujjfhb",
+      "surname": "saadlifhsd",
+      "id": 16
+    },
+    {
+      "email": "asdasdas@asdjnas.it",
+      "password": "$2a$10$pa42K.ecbQ8S8Ht7klMu..EWbYcgMsoOu57ll91xn1PU5ddqfARWi",
+      "name": "laskdfn",
+      "surname": "sdlkfgnsd",
+      "id": 17
+    },
+    {
+      "email": "asdasdas@asdj.it",
+      "password": "$2a$10$6tIZcHoIpfcPwpuC/1Zxl.SiciePCAkuUFyOqAGTfkMsS0dJuI.96",
+      "name": "jhgvujyhfvj",
+      "surname": "kjugbkujb",
+      "id": 18
+    },
+    {
+      "email": "asdasdas@asdasjd.it",
+      "password": "$2a$10$E88AQykWX1WlXZVqXxZJZ.w1l..v84e88lFjo1xi5d9zBBa1CvOiy",
+      "name": "htgfdtyhgf",
+      "surname": "hjvjhgvluhjv",
+      "id": 19
+    },
+    {
+      "email": "asdsadasd@dasdas.it",
+      "password": "$2a$10$UYJoFFerQ9.35iHpa0/izu1ogzsbGSXK.AKnYHAh7zjk9WoFhkJzC",
+      "name": "iokhjoikhjoih",
+      "surname": "iokhnoihjoij",
+      "id": 20
+    }
+  ],
+  "posts": []
+}
