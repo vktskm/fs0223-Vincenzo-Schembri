@@ -1,0 +1,23 @@
+<form>
+
+  <input
+  type="email" placeholder="email"
+  name="email" [(ngModel)]="data.email"
+  class="form-control">
+  <input
+  type="password" placeholder="Password"
+  name="password" [(ngModel)]="data.password"
+  class="form-control">
+  <input
+  type="text" placeholder="Name"
+  name="name" [(ngModel)]="data.name"
+  class="form-control">
+  <input
+  type="text" placeholder="Surname"
+  name="surname" [(ngModel)]="data.surname"
+  class="form-control">
+
+  <button class="btn btn-primary" (click)="register()">Registrati</button>
+
+
+</form>

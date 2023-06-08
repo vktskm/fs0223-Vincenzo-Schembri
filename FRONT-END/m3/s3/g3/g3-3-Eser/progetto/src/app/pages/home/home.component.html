@@ -1,0 +1,45 @@
+<p>home works!</p>
+<button routerLink="/todo">Vai a Todo</button>
+<button routerLink="/home/completed">Vai a Completed</button>
+<a [routerLink]="['/auth','login']">Accedi</a>
+<a [routerLink]="['/auth','register']">Registrati</a>
+<div>
+  Per creare un progetto Angular con tre pagine (home, todo e completed), dove todo e completed sono figli di home e utilizzano il lazy loading, puoi seguire questi passaggi:
+  - creare le pagine (componenti)
+  - per ogni pagina che voglio rendere lazy eseguire il seguente comando: <br>
+
+    ng generate module NOMEDELMODULE --route NOMEDELMODULE --module app.module <br>
+
+    n.b. = se stanno dentro una cartella ad es: <br>
+    ng generate module nomePagina/NOMEDELMODULE --route NOMEDELMODULE --module app.module <br>
+
+    Dopo aver creato i moduli home, todo e completed, puoi definire le pagine all'interno dei rispettivi moduli generati. Ecco come puoi farlo:
+
+  Modulo "HomeModule":
+
+  All'interno della cartella del modulo "HomeModule", troverai un file chiamato "home-routing.module.ts". Apri questo file.
+  Aggiungi le definizioni di route per la pagina home. Ad esempio, puoi definire una route vuota ('') che corrisponderà alla pagina home. Puoi utilizzare il componente HomeComponent come componente per la pagina home.
+  Assicurati di importare il componente HomeComponent dal suo percorso corretto e definire la route corrispondente nel modulo "HomeModule".
+  Modulo "TodoModule":
+
+  All'interno della cartella del modulo "TodoModule", troverai un file chiamato "todo-routing.module.ts". Apri questo file.
+  Aggiungi le definizioni di route per la pagina todo. Puoi utilizzare il componente TodoComponent come componente per la pagina todo.
+  Assicurati di importare il componente TodoComponent dal suo percorso corretto e definire la route corrispondente nel modulo "TodoModule".
+  Modulo "CompletedModule":
+
+  All'interno della cartella del modulo "CompletedModule", troverai un file chiamato "completed-routing.module.ts". Apri questo file.
+  Aggiungi le definizioni di route per la pagina completed. Puoi utilizzare il componente CompletedComponent come componente per la pagina completed.
+  Assicurati di importare il componente CompletedComponent dal suo percorso corretto e definire la route corrispondente nel modulo "CompletedModule".
+  Configurazione del routing globale:
+
+  Nel file "app-routing.module.ts" nella cartella principale del tuo progetto, dovrai configurare il routing globale per gestire il routing tra le pagine.
+  Assicurati di importare i moduli "HomeModule", "TodoModule" e "CompletedModule" dai loro percorsi corretti.
+  Definisci le route per le pagine home, todo e completed utilizzando i path corrispondenti. Ad esempio, puoi definire la route per la pagina home come path: 'home', loadChildren: () => import('./pages/home/home.module').then(m => m.HomeModule).
+  Assicurati di importare i componenti delle pagine home, todo e completed dai loro percorsi corretti.
+
+  nel componente home per collegare le altre posso fare ad esempio:
+  <!-- <button routerLink="/todo">Vai a Todo</button>
+  <button routerLink="/home/completed">Vai a Completed</button> -->
+
+  togliere le importazioni dei componenti lazy nell'app module
+</div>

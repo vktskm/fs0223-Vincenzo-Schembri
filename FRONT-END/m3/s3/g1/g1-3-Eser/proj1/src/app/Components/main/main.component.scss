@@ -1,0 +1,23 @@
+.example-card {
+  max-width: 300px;
+  margin: 10px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.example-header-image {
+  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-size: cover;
+}
+
+.photo-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.prova{
+  p{
+    color: white;
+  }
+}

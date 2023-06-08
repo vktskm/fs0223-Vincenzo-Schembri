@@ -1,0 +1,18 @@
+{
+  "users": [
+    {
+      "email": "magekure@mailinator.com",
+      "password": "$2a$10$qFAPIZzUGS/cZYIqp8X4EuflHV6TASs6FekwKzmPM6MKFgQ7Q9Y56",
+      "name": "Jin Acosta",
+      "surname": "Yates",
+      "id": 1
+    },
+    {
+      "email": "feqamefy@mailinator.com",
+      "password": "$2a$10$ATzfUBo6kB4QVgATfjTdSOyrLEzoO/pakCpfchii1iSj.a.YzTwb2",
+      "name": "Charde Barrera",
+      "surname": "Lindsay",
+      "id": 2
+    }
+  ]
+}

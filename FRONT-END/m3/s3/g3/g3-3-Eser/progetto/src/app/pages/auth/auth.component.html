@@ -1,0 +1,47 @@
+<p>auth works!</p>
+<div>
+  npm install -D json-server json-server-auth
+  Create a db.json file with a users collection :
+<!--
+  {
+    "users": []
+  }
+ -->
+  json-server db.json -m ./node_modules/json-server-auth
+  json-server-auth db.json
+
+  creo componente auth + il suo service + il suo module + il suo interceptor + il suo guard (*can activate (forse anche cancactivatechild))
+    - nell'interc:  puoi implementare la logica dell'interceptor. Ad esempio, puoi gestire l'aggiunta dell'header di autenticazione a tutte
+      le richieste HTTP in uscita.
+      Per utilizzarlo, devi registrarlo nel tuo modulo principale (app.module.ts) o in un modulo specifico.
+
+      Ad esempio, nel tuo modulo principale app.module.ts, importa il modulo HTTP_INTERCEPTORS da @angular/common/http e aggiungilo all'array dei
+      providers, insieme al tuo interceptor
+
+    - nel guard: puoi implementare la logica dell'interceptor. Ad esempio, puoi gestire l'aggiunta dell'header di autenticazione a tutte le
+      richieste HTTP in uscita.
+
+      puoi implementare la logica della guardia. Ad esempio, puoi verificare se l'utente è autenticato o se ha i privilegi necessari per accedere
+      a una determinata rotta.
+
+      Nel codice di esempio sopra, AuthService è un servizio che fornisce metodi per verificare se l'utente è autenticato.
+
+      Ora la guardia è stata creata. Per utilizzarla, devi registrare la guardia nel modulo che contiene le rotte.
+
+      Ad esempio, nel tuo modulo di routing (app-routing.module.ts), importa la guardia AuthGuard e utilizzala per proteggere una determinata
+      rotta:
+
+      <!--
+        const routes: Routes = [
+          { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] },
+          // altre rotte...
+        ];
+       -->
+
+       Nell'esempio sopra, la rotta dashboard è protetta dalla guardia AuthGuard, il che significa che solo gli utenti autenticati possono
+       accedere a quella rotta.
+
+  creare componenti annidati dentro la cartella auth: register e login
+  continuare a leggere nelle pagine relative per completare il lavoro
+
+</div>

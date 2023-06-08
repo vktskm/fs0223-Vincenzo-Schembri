@@ -1,0 +1,65 @@
+<div>
+  <form [formGroup]="form" (ngSubmit)="onSubmit(form)">
+    <div formGroupName="authData">
+      <mat-form-field appearance="outline" >
+        <mat-label>es: Iron Man</mat-label>
+        <input
+          type="text"
+          matInput
+          formControlName="nome"
+          >
+        <mat-hint>Name</mat-hint>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Alter Ego</mat-label>
+        <input
+          type="text"
+          matInput
+          formControlName="alterego"
+          >
+        <mat-hint>Alter Ego</mat-hint>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Seleziona</mat-label>
+        <mat-select name="superpotere" formControlName="superpotere">
+          <mat-option *ngFor="let pow of superPoteri" value="{{pow}}">{{pow}}</mat-option>
+        </mat-select>
+        <mat-hint>Super Potere</mat-hint>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Massimo 10 caratteri</mat-label>
+        <input
+          type="text"
+          matInput
+          formControlName="nemico"
+        >
+        <mat-hint>Nemico</mat-hint>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Minimo 5 caratteri</mat-label>
+        <input
+          type="text"
+          matInput
+          formControlName="pianeta"
+         >
+        <mat-hint>Pianeta</mat-hint>
+      </mat-form-field>
+
+      <div formArrayName="debolezze" class="formArray">
+        <mat-form-field appearance="outline" *ngFor="let weak of getDebolezze(); let i = index">
+            <mat-label>es: energia</mat-label>
+            <input matInput [formControlName]="i">
+            <a (click)="removeWeakness(i)" *ngIf="debolezzaAggiunta === true"><mat-icon matSuffix color="primary" >delete_sweep</mat-icon><span>Cancella campo</span></a>
+            <mat-hint>Debolezza</mat-hint>
+        </mat-form-field>
+        <button mat-raised-button color="primary" (click)="addDebolezza()">Aggiungi Debolezza</button>
+      </div>
+
+      <button mat-raised-button color="primary" type="submit" [disabled]="form.invalid">INVIA!</button>
+    </div>
+  </form>
+</div>

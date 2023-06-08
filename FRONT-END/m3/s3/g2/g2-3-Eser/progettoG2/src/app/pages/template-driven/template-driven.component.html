@@ -1,0 +1,99 @@
+<div>
+  <form (ngSubmit)="submit(form)" #form="ngForm">
+    <mat-form-field appearance="outline" >
+      <mat-label>Outline form field</mat-label>
+      <input
+        type="text"
+        matInput
+        placeholder="Placeholder"
+        name="nome"
+        #nome="ngModel"
+        ngModel
+        required
+        >
+      <mat-icon matSuffix color="accent" *ngIf="nome.valid" color="accent">sentiment_very_satisfied</mat-icon>
+      <mat-icon matSuffix color="accent" *ngIf="nome.invalid && nome.touched" color="primary">sentiment_very_dissatisfied</mat-icon>
+      <mat-hint>Name</mat-hint>
+    </mat-form-field>
+    <!-- <mat-card *ngIf="nome.invalid && nome.touched" color="secondary" >
+      <mat-card-content>Il nome è richiesto</mat-card-content>
+    </mat-card> -->
+
+    <mat-form-field appearance="outline">
+      <mat-label>Outline form field</mat-label>
+      <input
+        type="text"
+        matInput
+        placeholder="Placeholder"
+        name="alterego"
+        #AlterEgo="ngModel"
+        ngModel
+        required
+        >
+        <mat-icon matSuffix color="accent" *ngIf="AlterEgo.valid" color="accent">sentiment_very_satisfied</mat-icon>
+        <mat-icon matSuffix color="accent" *ngIf="AlterEgo.invalid && AlterEgo.touched" color="primary">sentiment_very_dissatisfied</mat-icon>
+      <mat-hint>Alter Ego</mat-hint>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Seleziona</mat-label>
+      <mat-select ngModel name="superpotere" required>
+        <mat-option value="Super forza">Super forza</mat-option>
+        <mat-option value="Programmare in angular">Programmare in angular</mat-option>
+      </mat-select>
+      <mat-hint>Super Potere</mat-hint>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Massimo 10 caratteri</mat-label>
+      <input
+        type="text"
+        matInput
+        placeholder="Placeholder"
+        name="nemico"
+        #Nemico="ngModel"
+        ngModel
+        required
+        maxlength="10"
+      >
+      <mat-icon matSuffix color="accent" *ngIf="Nemico.valid" color="accent">sentiment_very_satisfied</mat-icon>
+      <mat-icon matSuffix color="accent" *ngIf="Nemico.invalid && Nemico.touched && Nemico.value > 10" color="primary">sentiment_very_dissatisfied</mat-icon>
+      <mat-hint>Nemico</mat-hint>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Minimo 5 caratteri</mat-label>
+      <input
+        type="text"
+        matInput
+        placeholder="Placeholder"
+        name="pianeta"
+        #Pianeta="ngModel"
+        ngModel
+        required
+        minlength="5"
+       >
+       <mat-icon matSuffix color="accent" *ngIf="Pianeta.valid" color="accent">sentiment_very_satisfied</mat-icon>
+       <mat-icon matSuffix color="accent" *ngIf="Pianeta.invalid && Pianeta.touched" color="primary">sentiment_very_dissatisfied</mat-icon>
+      <mat-hint>Pianeta</mat-hint>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Outline form field</mat-label>
+      <input
+        type="text"
+        matInput
+        placeholder="Placeholder"
+        name="debolezza"
+        #Debolezza="ngModel"
+        ngModel
+        required
+       >
+       <mat-icon matSuffix color="accent" *ngIf="Debolezza.valid" color="accent">sentiment_very_satisfied</mat-icon>
+       <mat-icon matSuffix color="accent" *ngIf="Debolezza.invalid && Debolezza.touched" color="primary">sentiment_very_dissatisfied</mat-icon>
+      <mat-hint>Debolezza</mat-hint>
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" type="submit" [disabled]="form.invalid">INVIA!</button>
+  </form>
+</div>
