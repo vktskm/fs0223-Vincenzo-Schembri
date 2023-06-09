@@ -1,5 +1,26 @@
-<p>login works!</p>
-<form>
+<!-- <p>login works!</p> -->
+
+<form class="example-form">
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Email</mat-label>
+    <input matInput class="form-control" type="email" placeholder="email"
+           name="email" [(ngModel)]="data.email">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Password</mat-label>
+    <input matInput class="form-control" type="password" placeholder="password"
+    name="password" [(ngModel)]="data.password">
+  </mat-form-field>
+
+
+  <button class="bottone" (click)="login()">Registrati</button>
+
+</form>
+
+
+<!-- <form>
 
   <input class="form-control" type="email" placeholder="email"
   name="email" [(ngModel)]="data.email">
@@ -12,5 +33,6 @@
   class="btn btn-primary"
   >Login</button>
 
-</form>
+</form> -->
+
 <button [routerLink]="['../register']">non sei ancora registrato? registrai qui</button>

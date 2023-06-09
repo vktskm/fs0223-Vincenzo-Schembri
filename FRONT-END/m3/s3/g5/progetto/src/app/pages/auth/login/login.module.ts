@@ -3,7 +3,9 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { LoginRoutingModule } from './login-routing.module';
 import { LoginComponent } from './login.component';
-
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import {MatButtonModule} from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -12,7 +14,10 @@ import { LoginComponent } from './login.component';
   imports: [
     CommonModule,
     LoginRoutingModule,
-    FormsModule
+    FormsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatButtonModule
   ]
 })
 export class LoginModule { }

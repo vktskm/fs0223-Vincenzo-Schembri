@@ -1,6 +1,38 @@
-<p>register works!</p>
-<form>
+<!-- <p>register works!</p> -->
 
+<form class="example-form">
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Email</mat-label>
+    <input matInput class="form-control" type="email" placeholder="email"
+           name="email" [(ngModel)]="data.email">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Password</mat-label>
+    <input matInput class="form-control" type="password" placeholder="password"
+    name="password" [(ngModel)]="data.password">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Nome</mat-label>
+    <input matInput class="form-control" type="text" placeholder="Name"
+    name="name" [(ngModel)]="data.name">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Cognome</mat-label>
+    <input matInput class="form-control" type="text" placeholder="surname"
+    name="surname" [(ngModel)]="data.surname">
+  </mat-form-field>
+
+
+  <button class="bottone" (click)="register()">Registrati</button>
+
+</form>
+
+<!--
+<form>
   <input class="form-control" type="email" placeholder="email"
   name="email" [(ngModel)]="data.email">
 
@@ -18,5 +50,4 @@
   class="btn btn-primary"
   >Registrati</button>
 
-
-</form>
+</form> -->
