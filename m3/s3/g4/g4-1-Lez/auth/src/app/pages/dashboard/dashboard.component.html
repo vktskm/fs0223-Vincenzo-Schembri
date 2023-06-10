@@ -1,0 +1,17 @@
+
+<form>
+  <input type="text" class="form-control" name="gusto" [(ngModel)]="newPizza.gusto">
+  <input type="number" class="form-control" name="prezzo" [(ngModel)]="newPizza.prezzo">
+  <button class="btn btn-primary" (click)="create()">Aggiungi pizza</button>
+</form>
+
+<table class="table mt-5">
+  <tr *ngFor="let pizza of pizze">
+    <td>{{pizza.gusto}}</td>
+    <td>{{pizza.prezzo}} €</td>
+    <td>
+      <button class="btn btn-warning" [routerLink]="['/dashboard','edit',pizza.id]">Modifica</button>
+      <button class="btn btn-danger" (click)="delete(pizza.id)">Delete</button>
+    </td>
+  </tr>
+</table>

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { LoginData } from '../interfaces/login-data';
 import { AuthService } from '../auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -10,7 +11,8 @@ import { AuthService } from '../auth.service';
 export class LoginComponent {
 
   constructor(
-    private authSvc: AuthService
+    private authSvc: AuthService,
+    private router: Router
   ){}
 
 
@@ -22,7 +24,7 @@ export class LoginComponent {
   login(){
     this.authSvc.login(this.data)
     .subscribe(accessData => {
-      alert(`Sei loggato come ${accessData.user.name}`)
+        this.router.navigate(['/dashboard'])
     })
   }
 

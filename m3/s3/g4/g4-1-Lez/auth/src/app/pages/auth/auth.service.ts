@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { JwtHelperService } from '@auth0/angular-jwt';
 import { environment } from 'src/environments/environment.development';
 import { AccessData } from './interfaces/access-data';
-import { BehaviorSubject, map, tap } from 'rxjs';
+import { BehaviorSubject, catchError, map, tap, throwError } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { RegisterData } from './interfaces/register-data';
@@ -41,8 +41,9 @@ export class AuthService {
 
       const expDate = this.jwtHelper
       .getTokenExpirationDate(data.accessToken) as Date;
+      this.autoLogout(expDate)
     }),
-      //catchError()
+      catchError(this.errors)
     )
   }
 
@@ -61,7 +62,8 @@ export class AuthService {
   }
 
   signUp(data:RegisterData){
-    return this.http.post<AccessData>(this.apiUrl + '/register', data);
+    return this.http.post<AccessData>(this.apiUrl + '/register', data)
+    .pipe(catchError(this.errors));
   }
 
   logout(){
@@ -78,6 +80,27 @@ export class AuthService {
     this.authLogoutTimer = setTimeout(()=>{
       this.logout();
     }, expMs)
+  }
+
+
+  errors(err: any) {
+    switch (err.error) {
+        case "Email and Password are required":
+            return throwError('Email e password obbligatorie');
+            break;
+        case "Email already exists":
+            return throwError('Utente esistente');
+            break;
+        case 'Email format is invalid':
+            return throwError('Email scritta male');
+            break;
+        case 'Cannot find user':
+            return throwError('utente inesistente');
+            break;
+            default:
+        return throwError('Errore');
+            break;
+    }
   }
 
 

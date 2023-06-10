@@ -7,5 +7,17 @@
       "surname": "Dickson",
       "id": 1
     }
+  ],
+  "pizze": [
+    {
+      "gusto": "Diavola",
+      "prezzo": 1,
+      "id": 2
+    },
+    {
+      "gusto": "Margherita",
+      "prezzo": 3,
+      "id": 3
+    }
   ]
 }
