@@ -1,1 +1,34 @@
-<p>home works!</p>
+<form class="example-form">
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Nome</mat-label>
+    <input matInput type="text" class="form-control" name="nome" [(ngModel)]="newPost.nome">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Cognome</mat-label>
+    <input matInput type="text" class="form-control" name="cognome" [(ngModel)]="newPost.cognome">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Eta</mat-label>
+    <input matInput  type="number" class="form-control" name="eta" [(ngModel)]="newPost.eta">
+  </mat-form-field>
+
+  <button mat-button color="primary" (click)="create()">Aggiungi Post</button>
+</form>
+
+
+<table class="table mt-5">
+  <tr *ngFor="let data of postAr">
+    <td>{{data.id}}</td>
+    <td>{{data.nome}}</td>
+    <td>{{data.cognome}} </td>
+    <td>{{data.eta}}</td>
+    <td>
+      <button mat-button color="primary" [routerLink]="['/home','edit',data.id]" >Modifica </button>
+      <button mat-button color="accent" (click)="delete(data.id)">Delete </button>
+    </td>
+
+  </tr>
+</table>

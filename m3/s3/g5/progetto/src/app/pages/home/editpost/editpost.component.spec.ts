@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CrudComponent } from './crud.component';
+import { EditpostComponent } from './editpost.component';
 
-describe('CrudComponent', () => {
-  let component: CrudComponent;
-  let fixture: ComponentFixture<CrudComponent>;
+describe('EditpostComponent', () => {
+  let component: EditpostComponent;
+  let fixture: ComponentFixture<EditpostComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [CrudComponent]
+      declarations: [EditpostComponent]
     });
-    fixture = TestBed.createComponent(CrudComponent);
+    fixture = TestBed.createComponent(EditpostComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

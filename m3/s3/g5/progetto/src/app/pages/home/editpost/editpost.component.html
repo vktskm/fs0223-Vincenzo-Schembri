@@ -1,0 +1,20 @@
+<form class="example-form">
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Nome</mat-label>
+    <input matInput type="text" class="form-control" name="nome" [(ngModel)]="post.nome">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Cognome</mat-label>
+    <input matInput type="text" class="form-control" name="cognome" [(ngModel)]="post.cognome">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Eta</mat-label>
+    <input matInput  type="number" class="form-control" name="eta" [(ngModel)]="post.eta">
+  </mat-form-field>
+
+  <button mat-button color="primary" (click)="edit()" >Modifica Post</button>
+
+</form>
