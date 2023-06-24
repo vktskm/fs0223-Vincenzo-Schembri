@@ -14,8 +14,7 @@ export class AppComponent {
 
     setTimeout(() => {
         this.title = 'Nuovo valore'
-    }, 3000);
+    }, 5000);
 
   }
-
 }

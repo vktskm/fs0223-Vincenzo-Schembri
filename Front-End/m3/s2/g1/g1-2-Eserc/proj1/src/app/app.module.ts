@@ -3,16 +3,16 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { Componet1Component } from './componet1/componet1.component';
+import { Component1Component } from './component1/component1.component';
 import { Component2Component } from './component2/component2.component';
-import { Componet3Component } from './componet3/componet3.component';
+import { Component3Component } from './component3/component3.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    Componet1Component,
+    Component1Component,
     Component2Component,
-    Componet3Component
+    Component3Component
   ],
   imports: [
     BrowserModule,
