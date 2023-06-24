@@ -1,0 +1,58 @@
+main{
+  background-color: black;
+  height: 100%;
+  div.todos-container{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    p.message{
+      color: white;
+      font-size: 2rem;
+      margin-top: 20px;
+    }
+    div.card-todo{
+      border: 1px solid greenyellow;
+      border-radius: 20px;
+      background: linear-gradient(15deg, rgba(32,244,0,1) 0%, rgba(0,0,0,0.9097690101431197) 12%);
+      width: 250px;
+      height: 250px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      margin: 10px 0;
+      transition: transform 0.1s linear;
+      p{
+        font-weight: bold;
+        font-size: 1.5rem;
+        color: white;
+      }
+      h3{
+        font-size: 1.7rem;
+        font-style: italic;
+        color: greenyellow;
+        word-wrap: break-word;
+        margin: 0 10px;
+      }
+      button{
+        font-size: 0.8rem;
+        border: 1 px solid black;
+        border-radius: 20px;
+        padding: 10px;
+      }
+      button:hover{
+        background-color: red;
+        color: white;
+        border: 1px solid white;
+        cursor: pointer;
+      }
+    }
+    div.card-todo:hover{
+      transform: scale(1.05);
+      box-shadow: 0px 0px 10px 0px greenyellow;
+      h3{
+        font-weight: bold;
+      }
+    }
+  }
+}

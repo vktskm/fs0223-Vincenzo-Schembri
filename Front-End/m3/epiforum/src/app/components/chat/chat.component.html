@@ -1,0 +1,22 @@
+<div class="d-flex flex-column h-100">
+    <div class="heading pt-3 pb-2 border-bottom border-1 border-black">
+        <h4 class="m-0 ms-2"># Canale Discode {{ chatName }}</h4>
+    </div>
+    <div #chatContainer class="body flex-grow-1 overflow-y-auto px-2 my-2">
+        <div *ngFor="let msg of messaggi" class="flex flex-column my-1">
+            <div class="d-flex text-light align-items-center">
+                <h5 class="m-0 purple pe-3">{{ msg.sender }}</h5>
+                <p *ngIf="msg.date != null" class="m-0">{{ msg.date | date : 'short' }}</p>
+            </div>
+            <p *ngIf="!isImage(msg.content)" class="mt-1">{{ msg.content }}</p>
+            <img *ngIf="isImage(msg.content)" [src]="msg.content" class="my-2 image-chat">
+        </div>
+    </div>
+    <div class="footer-input">
+        <form (submit)="sendMessage()" class="input-group mb-3">
+            <input [(ngModel)]="myMessage" type="text" name="myMessage"
+                class="form-control bg-dark border-0 rounded-0 shadow-none text-white" placeholder="Scrivi..">
+            <button class="btn btn-dark border-0 border-1 border-start border-secondary">Invia</button>
+        </form>
+    </div>
+</div>

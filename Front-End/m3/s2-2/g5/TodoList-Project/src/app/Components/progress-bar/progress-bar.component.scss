@@ -1,0 +1,54 @@
+.loading-bar {
+  width: 100%;
+  height: 15px;
+  background-color: #ccc;
+  position: relative;
+}
+
+.bar {
+  height: 100%;
+  /* background-color: #007bff; */
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: loading-animation 2.2s infinite;
+}
+
+@keyframes loading-animation {
+  0% {
+    width: 0%;
+    background-color: red;
+  }
+  50% {
+    width: 50%;
+    background-color: yellow;
+  }
+  75% {
+    width: 75%;
+    background-color: greenyellow;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.loading-more-bar {
+  height: 100%;
+  background-color: #007bff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: loading-more-animation 4s infinite;
+}
+
+@keyframes loading-more-animation {
+  0% {
+    width: 0%;
+  }
+  50% {
+    width: 50%;
+  }
+  100% {
+    width: 100%;
+  }
+}

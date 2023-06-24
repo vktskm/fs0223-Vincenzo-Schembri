@@ -1,0 +1,15 @@
+<p>active-posts works!</p>
+
+<div class="container">
+  <div class="row" *ngFor="let obj of objects">
+    <div
+    class="col-3 card text-bg-success mb-3" style="max-width: 18rem;"
+    *ngIf="obj.active">
+      <div class="card-header">Nmr. post: {{obj.id}}</div>
+      <div class="card-body">
+        <h5 class="card-title">{{obj.title}}</h5>
+        <p class="card-text">{{obj.body}}</p>
+      </div>
+    </div>
+  </div>
+</div>

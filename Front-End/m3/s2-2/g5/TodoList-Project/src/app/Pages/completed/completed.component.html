@@ -1,0 +1,14 @@
+<app-progress-bar (showProgressBarChange)="onShowProgressBarChange($event)" *ngIf="isLoading"></app-progress-bar>
+<main>
+  <div class="todos-container">
+    <p class="message" *ngIf="completedTodos.length === 0">Oh, you should get busy! You haven't completed any tasks! :(</p>
+    <div class="card-todo" *ngFor="let singleTodo of completedTodos">
+      <p>Task:</p>
+      <h3>{{singleTodo.title}}</h3>
+      <div>
+        <button type="button" (click)="markAsNotCompleted(singleTodo.id)">Mark as not completed</button>
+      </div>
+    </div>
+  </div>
+</main>
+

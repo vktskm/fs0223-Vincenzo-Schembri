@@ -1,0 +1,42 @@
+section {
+  background-image: url("/assets/img/bg-epicode.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: calc(12vh);
+
+  .container {
+    max-width: 960px;
+
+    .row {
+      input {
+        margin-bottom: 15px;
+      }
+
+      label {
+        margin-bottom: 3px;
+        color: white;
+      }
+
+      button {
+        color: white;
+      }
+
+      .custom-gradient {
+        width: 75%;
+        background: rgb(32, 32, 32);
+        background: radial-gradient(circle,
+            rgba(32, 32, 32, 1) 0%,
+            #401677 76%,
+            rgba(25, 25, 25, 1) 100%);
+
+        &:hover {
+          background: radial-gradient(circle,
+              rgba(32, 32, 32, 1) 0%,
+              #5211a7 76%,
+              rgba(25, 25, 25, 1) 100%);
+          border: 1px solid #5211a7;
+        }
+      }
+    }
+  }
+}

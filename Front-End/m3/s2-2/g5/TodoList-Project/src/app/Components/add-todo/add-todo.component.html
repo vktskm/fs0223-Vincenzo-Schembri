@@ -1,0 +1,11 @@
+<div class="add-todo-container">
+  <button class="openForm" (click)="visualizeForm()"> + </button>
+  <span>Add new task</span>
+</div>
+<div [ngClass]="myClasses">
+  <form class="myForm">
+    <span class="close-modal">Press ESC to close this modal</span>
+    <input [(ngModel)]="singleTodo.title" type="text" class="form-control" placeholder="New Task" name="title">
+    <button (click)="createTodo()" type="button" class="create-button">Create</button>
+  </form>
+</div>

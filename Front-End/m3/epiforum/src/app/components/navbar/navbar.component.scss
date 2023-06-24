@@ -1,0 +1,50 @@
+.wi {
+  width: 160px;
+}
+
+.purple {
+  color: #781795;
+}
+
+nav {
+  border-bottom: 1px solid #781795;
+}
+a:hover {
+  text-decoration: underline !important;
+  text-decoration-color: rgb(105, 4, 122) !important;
+  text-decoration-thickness: 2px !important;
+}
+#avatar {
+  width: 35px;
+  height: 35px;
+  margin-right: 10px;
+}
+a {
+  margin-right: 15px;
+
+  @media screen and (max-width: 576px) {
+    margin-right: 0;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  div.desktop {
+    display: none !important;
+  }
+}
+
+@media screen and (min-width: 577px) {
+  div.mobile {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #spanRes {
+    display: none !important;
+
+    @media screen and (min-width: 576px) {
+      display: flex;
+    }
+  }
+}

@@ -1,0 +1,77 @@
+main{
+  background-color: black;
+  height: 100%;
+  p.message{
+    color: white;
+    font-size: 2rem;
+    margin: 20px 0;
+    text-align: center;
+    }
+  div.todos-container{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    div.card-todo{
+      border: 1px solid white;
+      border-radius: 20px;
+      background-color: black;
+      width: 250px;
+      height: 250px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      margin: 10px 0;
+      transition: background-color 0.2s linear, transform 0.1s linear;
+      p{
+        font-weight: bold;
+        font-size: 1.5rem;
+        color: white;
+      }
+      h3{
+        font-size: 1.7rem;
+        font-style: italic;
+        color: white;
+        word-wrap: break-word;
+        margin: 0 10px;
+        transition: font-weight 0.2s linear;
+      }
+      button{
+        font-size: 0.8rem;
+        border: 1 px solid black;
+        border-radius: 20px;
+        padding: 10px;
+      }
+      button:hover{
+        background-color: green;
+        color: white;
+        border: 1px solid white;
+        cursor: pointer;
+      }
+      a{
+        color: white;
+        padding: 10px;
+        border: 1px solid white;
+        border-radius: 100%;
+      }
+      a.yellow:hover{
+        background-color: yellow;
+        cursor: pointer;
+        color: black;
+      }
+      a.red:hover{
+        background-color: red;
+        cursor: pointer;
+      }
+    }
+    div.card-todo:hover{
+      background-color: purple;
+      transform: scale(1.05);
+      box-shadow: 0px 0px 10px 0px white;
+
+      h3{
+        font-weight: bold;
+      }
+    }
+  }
+}

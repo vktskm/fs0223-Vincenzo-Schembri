@@ -1,0 +1,29 @@
+app-navbar {
+  height: 10vh;
+
+  @media screen and (max-width: 576px) {
+    height: 18vh;
+  }
+}
+
+main {
+  height: 82vh;
+  margin-bottom: calc(8vh);
+
+  @media screen and (max-width: 768px) {
+    height: 90vh;
+    margin-bottom: 0;
+  }
+}
+
+app-footer {
+  position: fixed;
+  bottom: 0;
+  height: 8vh;
+  width: 100%;
+  background-color: #1e1f22;
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+}

@@ -1,0 +1,17 @@
+<app-add-todo (todoCreated)="handleTodoCreated()"></app-add-todo>
+<app-progress-bar (showProgressBarChange)="onShowProgressBarChange($event)" *ngIf="isLoading"></app-progress-bar>
+<main>
+  <p class="message" *ngIf="!isLoading">Oh! You have {{todos.length}} tasks to complete!</p>
+  <div class="todos-container">
+    <p class="message" *ngIf="todos.length === 0">Oooops! Your life is boring, you have no tasks to complete :(</p>
+    <div class="card-todo" *ngFor="let singleTodo of todos">
+      <p>Task:</p>
+      <h3>{{singleTodo.title}}</h3>
+      <div>
+        <button type="button" (click)="markAsCompleted(singleTodo.id)">Mark as completed</button>
+        <a (click)="deleteTodo(singleTodo.id)" class="red"><i class="bi bi-trash3-fill"></i></a>
+        <a [routerLink]="'/edit/' + singleTodo.id" class="yellow"><i class="bi bi-pencil-square"></i></a>
+      </div>
+    </div>
+  </div>
+</main>

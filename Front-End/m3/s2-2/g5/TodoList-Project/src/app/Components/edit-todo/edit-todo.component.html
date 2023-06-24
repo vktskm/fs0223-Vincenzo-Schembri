@@ -1,0 +1,8 @@
+<app-progress-bar (showProgressBarChange)="onShowProgressBarChange($event)" *ngIf="isLoading"></app-progress-bar>
+<div #editContainer class="edit-todo-container form-container" *ngIf="dataLoaded">
+  <form class="myFormEdit">
+    <h1>Edit Task:</h1>
+    <input [(ngModel)]="singleTodo.title" type="text" class="form-control" placeholder="Edit Task Name" name="title">
+    <button (click)="editThisTodo()" type="button" class="create-button">Edit Task</button>
+  </form>
+</div>

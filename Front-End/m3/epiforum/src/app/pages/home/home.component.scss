@@ -1,0 +1,54 @@
+.selected {
+  background-color: #36373d;
+}
+
+ul {
+  li:hover {
+    background-color: #36373d;
+    cursor: pointer;
+  }
+}
+
+.custom-gradient {
+  background: rgb(32, 32, 32);
+  background: radial-gradient(
+    circle,
+    rgba(32, 32, 32, 1) 0%,
+    #401677 76%,
+    rgba(25, 25, 25, 1) 100%
+  );
+
+  &:hover {
+    background: radial-gradient(
+      circle,
+      rgba(32, 32, 32, 1) 0%,
+      #5211a7 76%,
+      rgba(25, 25, 25, 1) 100%
+    );
+    border: 1px solid #5211a7;
+  }
+}
+
+.mobile-col {
+  height: max-content;
+}
+
+@media screen and (max-width: 768px) {
+  .desktop {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .mobile {
+    display: none;
+  }
+}
+
+.bg-custom {
+  background-color: #2b2d31;
+}
+
+.bg-custom-alt {
+   background: linear-gradient(to right, #47118479 0%, #212529 50%);
+}

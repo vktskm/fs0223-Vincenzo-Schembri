@@ -1,0 +1,13 @@
+<div class="modal-header">
+    <h4 class="modal-title text-white" id="modal-basic-title">
+        {{ title }} <span class="text-purple">{{ userName }}</span>
+    </h4>
+</div>
+<div class="modal-body bg-dark text-white">
+    <p class="m-0">{{ content }}</p>
+</div>
+<div class="modal-footer py-1">
+    <button type="button" class="btn btn-sm btn-outline-secondary px-4" (click)="close()">
+        Close
+    </button>
+</div>
